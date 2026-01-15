@@ -91,10 +91,6 @@ button {
     padding: 5px 0 6px;
 }
 
-#headerWrap .headInner, #headerWrap .headNavBar .navInner, #headerWrap .lyNavWrap {
-    width: 1260px;
-}
-
 #headerWrap #header .headInner .jkLogo {
     height: 70px;
     margin: 0;
@@ -839,6 +835,10 @@ li {
 
 #headerWrap .headInner, #headerWrap .headNavBar .navInner, #headerWrap .lyNavWrap {
     width: 1260px;
+}
+
+#headerWrap.gnbTheme1200 .headInner, #headerWrap.gnbTheme1200 .headNavBar .navInner {
+    width: 1200px;
 }
 
 #headerWrap.gnbTheme1200 .lyNavWrap {

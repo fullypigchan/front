@@ -103,6 +103,8 @@ body {
 .skill-log-nav-div {
     display: flex;
     flex-direction: column;
+    padding: 20px 0;
+    background-color: white;
 }
 
 .skill-log-blog-a {
@@ -136,6 +138,16 @@ a, a:hover, a:link {
     cursor: pointer;
 }
 
+.nav-list-li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list-li-line-1 {
+    background-color: white;
+}
 
 .nav-list-li {
     display: flex;
@@ -147,7 +159,7 @@ a, a:hover, a:link {
     font-weight: normal;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     transition-delay: 0ms;
     transition-timing-function: cubic-bezier(0.3, 0, 0, 1);
     transition-duration: 150ms;
@@ -160,6 +172,20 @@ a, a:hover, a:link {
     height: 40px;
     font-size: 16px;
 }
+
+.nav-list-li:hover {
+    background-color: #7BA882;
+}
+
+.skill-log-button:hover {
+    background-color: #7BA882;
+    color: white;
+}
+
+.nav-list-li:hover>a div .nav-list-li-text, .nav-list-li:hover>a div .skill-log-channel-font, .nav-list-li:hover>a div .skill-log-ikon-1, .nav-list-li:hover>a div .skill-log-ikon-1 {
+    color: white;
+} 
+
 
 .nav-list-li-line {
     overflow: hidden;
@@ -176,6 +202,10 @@ a, a:hover, a:link {
     text-overflow: ellipsis;
     white-space: nowrap;
     color: black;
+}
+
+.nav-list-li-text:hover {
+    color: white;
 }
 
 .skill-log-big-2 {
@@ -221,7 +251,6 @@ a, a:hover, a:link {
     height: 44px;
     background-color: white;
     cursor: pointer;
-    border-radius: 10px;
     padding: 0px 11px;
 }
 
