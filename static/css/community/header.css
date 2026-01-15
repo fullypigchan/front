@@ -91,10 +91,6 @@ button {
     padding: 5px 0 6px;
 }
 
-#headerWrap .headInner, #headerWrap .headNavBar .navInner, #headerWrap .lyNavWrap {
-    width: 1260px;
-}
-
 #headerWrap #header .headInner .jkLogo {
     height: 70px;
     margin: 0;
@@ -841,6 +837,10 @@ li {
     width: 1260px;
 }
 
+#headerWrap.gnbTheme1200 .headInner, #headerWrap.gnbTheme1200 .headNavBar .navInner {
+    width: 1200px;
+}
+
 #headerWrap.gnbTheme1200 .lyNavWrap {
     width: 1200px;
     min-width: 1200px;
@@ -1139,6 +1139,6 @@ i.emoji32_headset, i.line_line_arrow_right {
     filter: alpha(opacity=30);
 }
 
-.jkNavDimm.on {
+/* .jkNavDimm.on {
     display: block !important;
-}
+} */
