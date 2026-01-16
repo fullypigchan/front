@@ -2,8 +2,96 @@
     --tab-length-by-column : 5;
 }
 
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: swap;
+    src: url("../../font/Pretendard-Regular.subset.woff2") format(woff2);
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: swap;
+    src: url("../../font/Pretendard-SemiBold.subset.woff2") format(woff2);
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-display: swap;
+    src: url("../../font/Pretendard-Bold.subset.woff2") format(woff2);
+}
+
+body {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #666;
+}
+
+#wrap {
+    position: relative;
+    width: 100%;
+    margin: 25px auto 0 auto;
+    text-align: left;
+    zoom: 1;
+}
+
 .stSpImg, .hd .totalNum:after, .gjContainer .explainLists .txViewNum:before, .goodjobnews-list li .txViewNum:before, .stSpAfter:after, .stSpBefore:before, .pageTab .tabs li a .tx:before {
     background: url(/content/images/ver_1/star/sp_star.png?v=20171204) 0 0 no-repeat;
+}
+
+.tplBtn, .tplBtnTy {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.tplPagination .now {
+    color: #333;
+    font-weight: bold;
+    border: 1px solid #666;
+}
+
+.tplPagination.newVer a, .tplPagination.newVer .tplBtn, .tplPagination.newVer .now {
+    display: inline-block;
+    color: #666;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid transparent;
+    background: transparent;
+}
+
+.tplPagination.newVer .now {
+    color: #333;
+    font-weight: bold;
+    border: 1px solid #666;
+}
+
+.tplPagination a, .tplPagination .tplBtn, .tplPagination .now {
+    display: inline-block;
+    color: #999;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.tplPagination {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.tplPagination.newVer {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+    clear: both;
 }
 
 .gjContainer .newIco {
