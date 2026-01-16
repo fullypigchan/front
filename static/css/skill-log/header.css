@@ -1139,6 +1139,6 @@ i.emoji32_headset, i.line_line_arrow_right {
     filter: alpha(opacity=30);
 }
 
-.jkNavDimm.on {
+/* .jkNavDimm.on {
     display: block !important;
-}
+} */
