@@ -87,7 +87,7 @@ button {
     align-items: center;
     position: relative;
     z-index: 4;
-    margin: 0 auto;
+    margin-left:400px;
     padding: 5px 0 6px;
 }
 
@@ -101,7 +101,8 @@ button {
 }
 
 #headerWrap #header .headInner .jkLogo a img {
-    height: 100%;
+   margin-top: 3px;
+    height: 83%;
 }
 
 #headerWrap #header .headInner .search:has(.autoSearch.autoSearchDisabledClose) {
@@ -117,7 +118,7 @@ button {
     width: 440px;
     height: 40px;
     margin-left: 20px;
-    border: 2px solid #003cff;
+    border: 2px solid hsl(154.36deg 100% 21.57%);
     border-radius: 8px;
     background-color: #fff;
 }
@@ -460,7 +461,7 @@ legend {
     height: 36px;
     border: none;
     background-color: rgba(0, 0, 0, 0);
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.833 9.167a4.667 4.667 0 11-9.333 0 4.667 4.667 0 019.333 0zm-.252 4.995a6.667 6.667 0 111.288-1.54.185.185 0 01.005.004l3.333 3.334a1 1 0 01-1.414 1.414l-3.212-3.212z' fill='%23003CFF'/%3E%3C/svg%3E");
+    background-image: url(/static/images/search_icon.png);
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 20px 20px;
@@ -592,7 +593,7 @@ legend {
     -webkit-justify-content: flex-start;
     -moz-box-pack: start;
     justify-content: flex-start;
-    margin: 0 auto;
+    margin-left:400px;
 }
 
 #headerWrap #header .headNavBar .jkNavArea {
