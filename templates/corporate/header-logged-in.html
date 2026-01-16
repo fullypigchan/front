@@ -104,21 +104,28 @@
                     <div class="right-menu logged-in">
                         <ul class="right-menu-list clearfix">
                             <li class="notification">
-                                <a href="" class="bell"></a>
+                                <a href="javascript:;" class="bell"></a>
 
-                                <div class="notification-modal active">
+                                <div class="notification-modal">
                                     <div class="notification-modal-body">
-                                        <div class="no-notification active">
+                                        <div class="no-notification">
                                             <div class="no-notification-content">
-                                                <span>아직 신규 알림이 없네요!</span>
-                                                <a href="" class="notification-setting-button">알림 설정</a>
+                                                <div class="no-notification-header">아직 신규 알림이 없네요!</div>
+                                                <div class="no-notification-description">
+                                                    계정에서 알림 설정을 하고,
+                                                    <br>
+                                                    TRY CATCH 의 새로운 소식을 받아보세요!
+                                                </div>
+                                                <a href="javascript:;" class="notification-setting-button">알림 설정</a>
                                             </div>
                                         </div>
                                         <!-- javascript: 알림이 없다면, active 추가 -->
 
-                                        <!-- <div class="notification-list">
-                                            <ul></ul>
-                                        </div> -->
+                                        <div class="notification-list">
+                                            <ul>
+                                                <li></li>
+                                            </ul>
+                                        </div>
                                         <!-- javascript: 알림이 있다면, active 추가 -->
                                     </div>
                                 </div>
