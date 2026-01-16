@@ -244,51 +244,149 @@ address, caption, em {
     background-repeat: no-repeat;
     background-position: 50%;
 }
-/* .corporate-header .navigation .right-menu.logged-in .notification .bell:before {
+.corporate-header .navigation .right-menu.logged-in .notification .bell:before {
     animation: wobble 1.15s ease-in;
-} */
+}
+
         /* 기업 알림 */
-.notification .notification-modal {
+.notification .notification-menu {
     display: none;
     position: absolute;
     top: 51px;
-    left: -202px;
-    z-index: 334;
+    left: -218px;
+    z-index: 335;
     width: 338px;
     max-height: 556px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .0784313725);
-    background-color: #fff;
-    /* padding-top: 4px; */
-    padding-right: 4px;
-    border-radius: 8px;
-    border: 1px solid #d2d2d2;
-
 }
-.notification .notification-modal.active {
+.notification .notification-menu.active {
     display: block;
+    padding-top: 4px;
+    padding-right: 4px;
+    border: 1px solid #6a6a6a;
+    border-radius: 8px;
+    background-color: #fff;
 }
-.notification .notification-modal .notification-modal-content {
+.notification .notification-menu .notification-menu-body{
     overflow-y: auto;
     width: 100%;
     height: 516px;
     border-bottom: 0;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
+    background-color: #fff;
     scrollbar-width: thin;
-    padding: 10px;
 }
-.contents {
-    width: 100%;
+            /* 알림 없을 때 */
+.notification .notification-menu .notification-menu-body .no-notification.active {
+    display: block;
+}
+.notification .notification-menu .notification-menu-body .no-notification {
+    display: none;
     overflow: hidden;
-    height: 900px;
-    background-color: aquamarine;
+    padding: 6px 6px 10px 10px;
+    width: 100%;
+    height: 100%;
 }
-
-
-
-
-
-
-
+.notification .notification-menu .no-notification .no-notification-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #d9dfea;
+    text-align: center;
+    height: 100%;
+}
+.notification .notification-menu .no-notification .notification-setting-button {
+    display: block;
+    width: 148px;
+    height: 34px;
+    margin: 0 auto;
+    padding-top: 9px;
+    border: 1px solid #39f;
+    border-radius: 17px;
+    font-weight: 700;
+    color: #39f !important;
+    text-decoration: none;
+    font-size: 13px;
+}
+.no-notification-header {
+    /* margin-bottom: 8px; */
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    font-size: 16px;
+}
+.no-notification-description {
+    line-height: 18px;
+}
+            /* 알림 있을 때 */
+.notification .notification-menu .notification-menu-body .notification-list.active {
+    display: block;
+}
+.notification .notification-menu .notification-menu-body .notification-list {
+    display: none;
+    overflow: hidden;
+    padding: 6px 6px 10px 10px;
+    width: 100%;
+}
+.notification .notification-menu .notification-menu-body .notification-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 15px; */
+    /* border: 1px solid #d9dfea; */
+    text-align: center;
+    height: 100%;
+}
+.notification-list ul li {
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    border-bottom: 1px solid #d9dfea;
+}
+.notification-list ul li:last-child {
+    border-bottom: 0;
+}
+.notification-list ul li .sender {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.notification-list ul li .sender span:first-child {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    line-height: 20px;
+    color: #000;
+    font-size: 16px;
+    padding-bottom: 1px;
+}
+.notification-list ul li .sender span:first-child::before {
+    content: "From.";
+    display: inline-block;
+    padding-right: 5px;
+}
+.notification-list ul li .sender span.new-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff4f4f;
+    border-radius: 2px;
+    padding-top: 0;
+    color: #fff;
+    font-size: 10px;
+    width: 30px;
+    height: 16px;
+    margin-bottom: 1px;
+}
+.notification-list ul li .preview {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
 
 
 
@@ -404,3 +502,86 @@ address, caption, em {
     background: #b8ff00;
 }
 /*  */
+
+/* 모달 - 알림창 */
+.common-modal.active {
+    display: block;
+}
+.common-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20000 !important;
+    width: 100%;
+    height: 100%;
+}
+.common-modal .modal-dimmed {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+.common-modal.notification-modal .modal-contents {
+    height: 700px;
+    width: 500px;
+}
+.common-modal .modal-contents {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background: #fff;
+    padding: 30px 35px;
+}
+.common-modal .close-button {
+    position: absolute;
+    z-index: 10;
+    right: 35px;
+    top: 30px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url("https://i.jobkorea.kr/content/images/corporate/main_v2/icon_close.png") no-repeat 50%;
+}
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.common-modal.notification-modal .modal-contents .swiper-wrapper .swiper-slide {
+    height: 640px;
+    width: 430px;
+}
+.common-modal.notification-modal .modal-contents .swiper-wrapper .swiper-slide .header h2 {
+    font-size: 24px;
+    letter-spacing: -.5px;
+    color: #1a1a1a;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.common-modal.notification-modal .modal-contents .swiper-wrapper .swiper-slide .header h2::before {
+    content: "From.";
+    display: inline-block;
+    padding-right: 5px;
+}
+.common-modal.notification-modal .modal-contents .swiper-wrapper .swiper-slide .header .date {
+    color: #666;
+    font-size: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+.common-modal.notification-modal .modal-contents .swiper-wrapper .swiper-slide .content {
+    overflow-y: auto;
+    width: 100%;
+    height: 563px;
+
+    
+}

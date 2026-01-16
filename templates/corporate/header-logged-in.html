@@ -104,10 +104,47 @@
                     <div class="right-menu logged-in">
                         <ul class="right-menu-list clearfix">
                             <li class="notification">
-                                <a href="" class="bell"></a>
-                                <div class="notification-modal active">
-                                    <div class="notification-modal-content">
-                                        <div class="contents"></div>
+                                <a href="javascript:;" class="bell"></a>
+
+                                <div class="notification-menu">
+                                    <div class="notification-menu-body">
+                                        <div class="no-notification">
+                                            <div class="no-notification-content">
+                                                <div class="no-notification-header">아직 신규 알림이 없네요!</div>
+                                                <div class="no-notification-description">
+                                                    계정에서 알림 설정을 하고,
+                                                    <br>
+                                                    TRY CATCH 의 새로운 소식을 받아보세요!
+                                                </div>
+                                                <a href="javascript:;" class="notification-setting-button">알림 설정</a>
+                                            </div>
+                                        </div>
+                                        <!-- javascript: 알림이 없다면, active 추가 -->
+
+                                        <div class="notification-list">
+                                            <ul>
+                                                <li>
+                                                    <a href="">
+                                                        <div class="sender">
+                                                            <span>admin</span>
+                                                            <span class="new-badge">NEW</span>
+                                                        </div>
+                                                        <span class="preview">이 편지는 영국에서 최초로 시작되어 일년에 한 바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다.</span>
+                                                    </a>
+                                                    <!-- javascript: a태그 클릭 시, 알림창 나오도록(모달) -->
+                                                </li>
+                                                <li>
+                                                    <div class="sender">
+                                                        <span>admin</span>
+                                                    </div>
+                                                    <span class="preview">이 편지는 영국에서 최초로 시작되어 일년에 한 바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다.</span>
+                                                </li>
+                                            </ul>
+                                            <div>
+
+                                            </div>
+                                        </div>
+                                        <!-- javascript: 알림이 있다면, active 추가 -->
                                     </div>
                                 </div>
                                 <!-- javascript: click 시, active 추가(모달) -->
@@ -227,6 +264,30 @@
             </div>
         </div>
 
+        <!-- 모달 - 알림창 -->
+        <div class="common-modal notification-modal">
+            <div class="modal-dimmed"></div>
+            <div class="modal-contents">
+                <button class="close-button"></button>
+                <div class="swiper-container swiper-container-horizontal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="header">
+                                <h2>admin</h2>
+                                <div class="date">2026.01.16</div>
+                            </div>
+                            <div class="content">
+                                
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- javascript: 버튼 클릭 시, 이동(슬라이드) -->
+                </div>
+            </div>
+        </div>
+        <!-- javascript: 알림창 클릭 시, active 클래스 추가 -->
     </div>
 </body>
 <script src="/static/js/corporate/home/event.js"></script>

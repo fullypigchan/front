@@ -73,6 +73,10 @@ address, caption, em {
     margin: 0 auto;
     background: #f2f4f7;
 }
+.inner {
+    width: 1260px;
+    margin: 0 auto;
+}
 
 /* footer */
 #footer {
