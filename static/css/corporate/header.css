@@ -136,7 +136,6 @@ address, caption, em {
 }
 .corporate-header .navigation .left-menu-list>li>a {
     font-size: 18px;
-    /* letter-spacing: 0; */
     color: #fff;
     font-weight: 700;
     padding-left: 20px;
@@ -158,6 +157,7 @@ address, caption, em {
 }
 /* javascript: click 했을 때, active 클래스 추가 */
 
+    /* nav 상세(미니 모달) */
 .corporate-header .sub-nav {
     display: none;
     position: absolute;
@@ -178,20 +178,20 @@ address, caption, em {
     padding-left: 16px;
     line-height: 36px;
     font-size: 14px;
-    /* letter-spacing: 0; */
 }
-.corporate-header .navigation .left-menu-list>li .bubble, .corporate-header .navigation .left-menu-list>li .bubble:before {
+
+    /* 잡코리아 인재 추천 메세지 css */
+/* .corporate-header .navigation .left-menu-list>li .bubble, .corporate-header .navigation .left-menu-list>li .bubble:before {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
 }
 .corporate-header .navigation .left-menu-list>li .bubble {
-    /* display: inline-block; */
+    display: inline-block;
     top: -11px;
     height: 20px;
     line-height: 20px;
     font-size: 12px;
-    /* letter-spacing: 0; */
     text-align: center;
     white-space: nowrap;
     color: #fff;
@@ -199,14 +199,15 @@ address, caption, em {
     font-weight: 600;
     border-radius: 22px;
     background-color: #297fff;
-    /* box-sizing: border-box; */
 }
 .corporate-header .navigation .left-menu-list>li .bubble:before {
     content: "";
     border: 8px solid rgba(0, 0, 0, 0);
     border-top-color: #297fff;
     bottom: -13px;
-}
+} */
+
+    /* 기업 이름 */
 .corporate-header .navigation .right-menu {
     float: right;
 }
@@ -217,26 +218,81 @@ address, caption, em {
 }
 .corporate-header .navigation .right-menu-list>li>a {
     font-size: 16px;
-    /* letter-spacing: 0; */
     color: #fff;
     padding-left: 14px;
     padding-right: 14px;
 }
-.corporate-header .sale-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ff4f4f;
-    border-radius: 2px;
-    /* padding-top: 0; */
-    color: #fff;
-    font-size: 10px;
-    /* letter-spacing: 0; */
-    width: 30px;
-    height: 16px;
-    margin-bottom: 1px;
+.corporate-header .navigation .right-menu.logged-in .notification .bell {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+.corporate-header .navigation .right-menu.logged-in .notification .bell:before {
+    position: absolute;
+    top: 15px;
+    left: 4px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    content: "";
+    background-color: #fff;
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMiAzLjc1QTEuMjUgMS4yNSAwIDAwMTAuNzUgNWEuNzUuNzUgMCAwMS0uNDMuNjc4IDYuMjUgNi4yNSAwIDAwLTMuNTcgNS4zNFYxNGEuNzUuNzUgMCAwMS0uMDA1LjA5IDQuNzUgNC43NSAwIDAxLS44MyAyLjE2aDEyLjE3YTQuNzUgNC43NSAwIDAxLS44MjktMi4xNi43NTQuNzU0IDAgMDEtLjAwNi0uMDl2LTIuOTgyYTYuMjUgNi4yNSAwIDAwLTMuNTctNS4zNC43NS43NSAwIDAxLS40My0uNjc4QTEuMjUgMS4yNSAwIDAwMTIgMy43NXptLTEuOTQ0LS42OTVhMi43NSAyLjc1IDAgMDE0LjY1MiAxLjQ2M0E3Ljc1IDcuNzUgMCAwMTE4Ljc1IDExdjIuOTUyYTMuMjUgMy4yNSAwIDAwMS42MiAyLjM5NS43NS43NSAwIDAxLS4zNyAxLjQwM0g0YS43NS43NSAwIDAxLS4zNy0xLjQwMyAzLjI1IDMuMjUgMCAwMDEuNjItMi4zOTVWMTF2LS4wMzVhNy43NSA3Ljc1IDAgMDE0LjA0My02LjQ0NyAyLjc1IDIuNzUgMCAwMS43NjMtMS40NjN6IiBmaWxsPSIjNkE2QTZBIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik05IDE2LjI1YS43NS43NSAwIDAxLjc1Ljc1djFhMi4yNSAyLjI1IDAgMDA0LjUgMHYtMWEuNzUuNzUgMCAwMTEuNSAwdjFhMy43NSAzLjc1IDAgMDEtNy41IDB2LTFhLjc1Ljc1IDAgMDEuNzUtLjc1eiIgZmlsbD0iIzZBNkE2QSIvPjwvc3ZnPg==");
+    /* mask-size: contain; */
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+/* .corporate-header .navigation .right-menu.logged-in .notification .bell:before {
+    animation: wobble 1.15s ease-in;
+} */
+        /* 기업 알림 */
+.notification .notification-modal {
+    display: none;
+    position: absolute;
+    top: 51px;
+    left: -202px;
+    z-index: 334;
+    width: 338px;
+    max-height: 556px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .0784313725);
+    background-color: #fff;
+    /* padding-top: 4px; */
+    padding-right: 4px;
+    border-radius: 8px;
+    border: 1px solid #d2d2d2;
+
+}
+.notification .notification-modal.active {
+    display: block;
+}
+.notification .notification-modal .notification-modal-content {
+    overflow-y: auto;
+    width: 100%;
+    height: 516px;
+    border-bottom: 0;
+    border-radius: 8px 8px 0 0;
+    scrollbar-width: thin;
+    padding: 10px;
+}
+.contents {
+    width: 100%;
+    overflow: hidden;
+    height: 900px;
+    background-color: aquamarine;
 }
 
+
+
+
+
+
+
+
+
+
+/* sub-menu(모달) */
 .corporate-header .all-menu-modal, .corporate-header .sub-nav-bg {
     display: none;
     position: absolute;
@@ -247,17 +303,11 @@ address, caption, em {
     padding-top: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .0784313725);
 }
-
-.corporate-header .all-menu-modal, .corporate-header .sub-nav-bg {
-    /* display: none; */
-    position: absolute;
-    left: 0;
-    top: 136px;
-    width: 100%;
-    background: #fff;
-    padding-top: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .0784313725);
+.corporate-header .all-menu-modal.active {
+    display: block;
 }
+/* javascript: click시 active 클래스 추가 */
+
 /* .corporate-header .sub-nav-bg {
     display: none;
     min-height: 235px;
@@ -265,11 +315,14 @@ address, caption, em {
 } */
  .corporate-header .all-menu-modal {
     padding-bottom: 30px;
-    min-height: 352px;
+    /* min-height: 352px; */
     z-index: 333;
 }
 .corporate-header .all-menu-modal .inner {
     position: relative;
+
+    height: 230px;
+    width: 894px;
 }
 .corporate-header .all-menu-modal .category {
     float: left;
@@ -281,7 +334,6 @@ address, caption, em {
 }
 .corporate-header .all-menu-modal .category .title a {
     font-size: 15px;
-    /* letter-spacing: 0; */
     color: #1a1a1a;
     font-weight: 700;
 }
@@ -302,7 +354,6 @@ address, caption, em {
 }
 .corporate-header .all-menu-modal .category>ul>li>ul>li>a {
     font-size: 12px;
-    /* letter-spacing: 0; */
     line-height: 26px;
 }
 .corporate-header .all-menu-modal .category>ul>li>ul>li>a:before {
@@ -337,11 +388,11 @@ address, caption, em {
     background-size: 19px auto;
     margin-right: 9px;
 }
-
-/* javascript: 마우스 올렸을 때, active 클래스 추가 */
 .corporate-header .navigation .left-menu-list>li.active .sub-nav, .corporate-header .navigation .right-menu-list>li.active .sub-nav {
     display: block;
 }
+/* javascript: 마우스 올렸을 때, active 클래스 추가 */
+
 .corporate-header .navigation .left-menu-list>li+.active-fixed>a:after, .corporate-header .navigation .left-menu-list>li+.active>a:after {
     position: absolute;
     margin: 0 auto;

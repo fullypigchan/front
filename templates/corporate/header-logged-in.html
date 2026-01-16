@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>header</title>
+    <title>header logged-in</title>
     <link rel="stylesheet" href="/static/css/corporate/header.css">
 </head>
 <body>
@@ -20,13 +20,10 @@
                     <!-- 로그인/회원가입 메뉴 -->
                     <ul class="top-menu-list clearfix">
                         <li>
-                            <a href="">회원가입</a>
-                        </li>
-                        <li>
                             <a href="">고객센터</a>
                         </li>
                         <li class="">
-                            <a href="">로그인</a>
+                            <a href="">로그아웃</a>
                         </li>
                     </ul>
                 </div>
@@ -104,7 +101,22 @@
                     </div>
     
                     <!-- 기업 이름(mypage) -->
-                    
+                    <div class="right-menu logged-in">
+                        <ul class="right-menu-list clearfix">
+                            <li class="notification">
+                                <a href="" class="bell"></a>
+                                <div class="notification-modal active">
+                                    <div class="notification-modal-content">
+                                        <div class="contents"></div>
+                                    </div>
+                                </div>
+                                <!-- javascript: click 시, active 추가(모달) -->
+                            </li>
+                            <li>
+                                <a href="">기업 이름</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -209,62 +221,6 @@
                                 
                         </ul>
                     </div>
-
-                    <!-- <div class="category">
-                        <div class="title">
-                            <a href="">인재검색</a>
-                        </div>
-                        <div class="category sub-category">
-                            <div class="title">
-                                <a href="">인재관리</a>
-                            </div>
-                            <ul>
-                                <li>
-                                    <ul>
-                                        <li>
-                                            <a href="">포지션 제안 인재</a>
-                                        </li>
-                                        <li>
-                                            <a href="">스크랩 인재</a>
-                                        </li>
-                                        <li>
-                                            <a href="">최근 본 인재</a>
-                                        </li>
-                                        <li>
-                                            <a href="">우리기업 관심인재</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="category">
-                        <div class="title">
-                            <a href="">원픽</a>
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="">원픽 서비스 안내</a>
-                            </li>
-                            <li>
-                                <a href="">원픽 프리미엄 안내</a>
-                            </li>
-                        </ul>
-                        <div class="category sub-category margin-top">
-                            <div class="title">
-                                <a href="">헤드헌팅 의뢰</a>
-                            </div>
-                            <ul>
-                                <li>
-                                    <a href="">헤드헌팅 의뢰</a>
-                                </li>
-                                <li>
-                                    <a href="">헤드헌팅 의뢰하기</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
 
                     <a href="" class="write-button">프로그램 등록</a>
                 </div>
