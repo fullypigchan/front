@@ -9,10 +9,12 @@ const subNavLis = document.querySelectorAll(".left-menu-list li");
 // corporate-name
 const rightMenu = document.querySelector(".right-menu");
 
-// notification-modal
-const notification = document.querySelector(".notification-modal");
+// notification-menu
+const notification = document.querySelector(".notification-menu");
+const noNotification = document.querySelector(".no-notification");
+const notificationList = document.querySelector(".notification-list");
 const bell = document.querySelector(".bell");
-let hasNotification = true;
+const notifications = [1, 2, 3, 4];
 
 // 이벤트 추가
 // sub-menu-modal
@@ -39,14 +41,20 @@ subNavLis.forEach((li) => {
 //     }
 // });
 
-// notification-modal
+// notification-menu
 bell.addEventListener("click", (e) => {
-    const noNotification = document.querySelector(".no-notification");
-    const notificationList = document.querySelector(".notification-list");
-
     notification.classList.toggle("active");
 
-    (hasNotification ? notificationList : noNotification).classList.toggle(
-        "active"
-    );
+    if (notifications.length === 0) {
+        notificationList.classList.remove("active");
+        noNotification.classList.add("active");
+    } else {
+        noNotification.classList.remove("active");
+        notificationList.classList.add("active");
+    }
+});
+
+notificationList.addEventListener("click", (e) => {
+    const notificationModal = document.querySelector(".notification-modal");
+    notificationModal.classList.add("active");
 });
