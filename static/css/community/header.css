@@ -993,7 +993,7 @@ li {
     margin-bottom: 12px;
     font-size: 13px;
     letter-spacing: 0;
-    color: #0057ff;
+    color: hsl(154.36deg 100% 21.57%);
     font-weight: 700;
     line-height: 24px;
 }
@@ -1099,7 +1099,7 @@ i.charCount, i.watch {
     margin-bottom: 12px;
     font-size: 13px;
     letter-spacing: 0;
-    color: #0057ff;
+    color: hsl(154.36deg 100% 21.57%);
     font-weight: 700;
     line-height: 24px;
 }
@@ -1320,6 +1320,6 @@ i.emoji32_headset, i.line_line_arrow_right {
     text-decoration: underline;
 }
 
-/* .jkNavDimm.on {
+.jkNavDimm.on {
     display: block !important;
-} */
+}
