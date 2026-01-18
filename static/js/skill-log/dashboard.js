@@ -34,13 +34,9 @@ document.querySelectorAll(".tabs li").forEach((li) => {
     });
 });
 
-// 태그 적용
+// 키워드 클릭 변환
 document.querySelectorAll(".keyword button").forEach((btn) => {
     btn.addEventListener("click", (e) => {
         e.currentTarget.classList.toggle("active");
     });
 });
-
-// 키워드 클릭 변환
-
-const pageButtons = document.querySelectorAll(".page-btn");
