@@ -231,7 +231,8 @@ address, caption, em {
     margin-top: 40px;
 }
 .solution-section .inner {
-    background: url("/static/images/corporate/gpt1.png") no-repeat 104px 61px;
+    background: url("/static/images/corporate/gpt3.png") no-repeat 79px -10px;
+    background-size: 908px;
 }
 .solution-section .title-box {
     float: left;
@@ -489,8 +490,8 @@ address, caption, em {
     border-radius: 0 0 0 14px;
 }
 .service-section .service-list li:hover button {
-    color: #39f;
-    border-color: #39f !important;
+    color: #3F8F51;
+    border-color: #3F8F51 !important;
     box-shadow: 0 0 20px rgba(0, 0, 0, .0784313725);
     position: relative;
     z-index: 1;
@@ -577,7 +578,7 @@ address, caption, em {
     letter-spacing: -1px;
     margin-top: 11px;
     font-weight: 700;
-    color: #39f;
+    color: #006E3F;
     line-height: 53px;
 }
 .bottom-article .center-section table {
