@@ -15,16 +15,28 @@
                 <div class="top-menu clearfix">
                     <!-- 로고 -->
                     <h1>
-                        <a href="/"></a>
+                        <a href=""></a>
                     </h1>
                     <!-- 로그인/회원가입 메뉴 -->
                     <ul class="top-menu-list clearfix">
+                        <!-- <li>
+                            <a href="">회원가입</a>
+                        </li> -->
+                        <!-- 로그인된 후엔 숨김 -->
+
                         <li>
                             <a href="">고객센터</a>
                         </li>
-                        <li class="">
+
+                        <li>
                             <a href="">로그아웃</a>
                         </li>
+                        <!-- 로그인되기 전엔 숨김 -->
+
+                        <!-- <li class="">
+                            <a href="">로그인</a>
+                        </li> -->
+                        <!-- 로그인된 후엔 숨김 -->
                     </ul>
                 </div>
 
@@ -108,7 +120,8 @@
 
                                 <div class="notification-menu">
                                     <div class="notification-menu-body">
-                                        <div class="no-notification">
+
+                                        <div class="no-notification active">
                                             <div class="no-notification-content">
                                                 <div class="no-notification-header">아직 신규 알림이 없네요!</div>
                                                 <div class="no-notification-description">
@@ -121,53 +134,83 @@
                                         </div>
                                         <!-- javascript: 알림이 없다면, active 추가 -->
 
-                                        <div class="notification-list">
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <div class="sender">
-                                                            <span>admin</span>
-                                                            <span class="new-badge">NEW</span>
-                                                        </div>
-                                                        <span class="preview">이 편지는 영국에서 최초로 시작되어 일년에 한 바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다.</span>
-                                                    </a>
-                                                    <!-- javascript: a태그 클릭 시, 알림창 나오도록(모달) -->
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <div class="sender">
-                                                            <span>admin</span>
-                                                            <span class="new-badge">NEW</span>
-                                                        </div>
-                                                        <span class="preview">이 편지는 영국에서 최초로 시작되어 일년에 한 바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다.</span>
-                                                    </a>
-                                                    <!-- javascript: a태그 클릭 시, 알림창 나오도록(모달) -->
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <div class="sender">
-                                                            <span>admin</span>
-                                                        </div>
-                                                        <span class="preview">묵시록과 메시아주의의 차이는 우선 시간의 차이로 이해하는 것이 낫겠다. 아감벤에 따르면 묵시록이 '시간의 종말' 그리고 그와 이어지는 어떤 비세속적인 무의 시간을 상상한다면, 메시아주의는 이른바 '종말의 시간' 또는 '시간과 종말 사이에 남아 있는 시간'을 사유한다.</span>
-                                                    </a>
-                                                    <!-- javascript: a태그 클릭 시, 알림창 나오도록(모달) -->
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <div class="sender">
-                                                            <span>admin</span>
-                                                            <span class="new-badge">NEW</span>
-                                                        </div>
-                                                        <span class="preview">이 같은 상황에서 철학자는 현자의 절대적 평정에 결코 이르지 못할 것이다. 그러므로 철학함은 이 같은 고립과 무능을 고통스러워하는 것이 되리라. 그러나 고대 철학은 우리에게 포기하지 말고 계속 합리적으로 행동하며 지혜의 관념이라는 규준에 따라 살기 위해 노력하라고 가르친다.</span>
-                                                    </a>
-                                                    <!-- javascript: a태그 클릭 시, 알림창 나오도록(모달) -->
-                                                </li>
-                                            </ul>
-                                            <div>
-
+                                        <div class="list list-notification-container">
+                                            <div class="header-date">
+                                                <div class="header-date-item header-date-itme-full">26.01.19</div>
+                                                <div class="header-date-item header-date-itme-day">(월)</div>
+                                                <div class="header-date-item">· 오늘</div>
                                             </div>
+                                            <ul>
+                                                <li class="notification-item">
+                                                    <div class="notification-header">
+                                                        <div class="notification-header-item category">Admin</div>
+                                                        <div class="notification-header-item date">00:00</div>
+                                                    </div>
+                                                    <div class="notification-body">
+                                                        <div class="notification-title">
+                                                            행운의 편지가 도착했습니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notification-footer">
+                                                        <div class="buttons">
+                                                            <a href="javascript:;" class="button">자세히보기</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="notification-item">
+                                                    <div class="notification-header">
+                                                        <div class="notification-header-item category">Admin</div>
+                                                        <div class="notification-header-item date">00:00</div>
+                                                    </div>
+                                                    <div class="notification-body">
+                                                        <div class="notification-title">
+                                                            행운의 편지가 도착했습니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notification-footer">
+                                                        <div class="buttons">
+                                                            <a href="javascript:;" class="button">자세히보기</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="notification-item">
+                                                    <div class="notification-header">
+                                                        <div class="notification-header-item category">Admin</div>
+                                                        <div class="notification-header-item date">00:00</div>
+                                                    </div>
+                                                    <div class="notification-body">
+                                                        <div class="notification-title">
+                                                            행운의 편지가 도착했습니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notification-footer">
+                                                        <div class="buttons">
+                                                            <a href="javascript:;" class="button">자세히보기</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="notification-item">
+                                                    <div class="notification-header">
+                                                        <div class="notification-header-item category">Admin</div>
+                                                        <div class="notification-header-item date">00:00</div>
+                                                    </div>
+                                                    <div class="notification-body">
+                                                        <div class="notification-title">
+                                                            행운의 편지가 도착했습니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notification-footer">
+                                                        <div class="buttons">
+                                                            <a href="javascript:;" class="button">자세히보기</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <!-- javascript: hover시, active 클래스 추가 -->
+                                            </ul>
                                         </div>
+
                                         <!-- javascript: 알림이 있다면, active 추가 -->
+
                                     </div>
                                 </div>
                                 <!-- javascript: click 시, active 추가(모달) -->
@@ -179,6 +222,7 @@
                     </div>
                 </div>
             </div>
+            <!-- 로그인되기 전엔 숨김 -->
 
             <!-- sub-menu -->
             <div class="sub-nav-bg"></div>
@@ -296,8 +340,11 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="header">
-                                <h2>admin</h2>
-                                <div class="date">2026.01.16</div>
+                                <h2>Admin</h2>
+                                <div class="date">
+                                    <div class="date-item-full">2026.01.19(월)</div>
+                                    <div class="date-item-time">00:00</div>
+                                </div>
                             </div>
                             <div class="content">
                                 이 편지는 영국에서 최초로 시작되어 일년에 한 바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다.<br>
@@ -316,8 +363,11 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="header">
-                                <h2>admin</h2>
-                                <div class="date">2026.01.12</div>
+                                <h2>Admin</h2>
+                                <div class="date">
+                                    <div class="date-item-full">2026.01.19(월)</div>
+                                    <div class="date-item-time">00:00</div>
+                                </div>
                             </div>
                             <div class="content">
                                 이 편지는 영국에서 최초로 시작되어 일년에 한 바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다.<br>
@@ -330,8 +380,11 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="header">
-                                <h2>admin</h2>
-                                <div class="date">2025.12.03</div>
+                                <h2>Admin</h2>
+                                <div class="date">
+                                    <div class="date-item-full">2026.01.19(월)</div>
+                                    <div class="date-item-time">00:00</div>
+                                </div>
                             </div>
                             <div class="content">
                                 묵시록과 메시아주의의 차이는 우선 시간의 차이로 이해하는 것이 낫겠다. 아감벤에 따르면 묵시록이 '시간의 종말' 그리고 그와 이어지는 어떤 비세속적인 무의 시간을 상상한다면, 메시아주의는 이른바 '종말의 시간' 또는 '시간과 종말 사이에 남아 있는 시간'을 사유한다. 그것은 여전히 세속적인 시간처럼 보이지만, 실제로는 세속적인 것과 구분이 안 되는 형식적으로 존재하는 시간이다. 메시아주의 서사나 담론은 묵시록적인 파국의 환상을 특별히 동반할 필요가 없다. 묵시록적 파국의 환상 속에서 시간은 보통 그것의 종말이 앞당겨지기를 원하는 욕망으로 지탱되며, 이러한 욕망의 기대 지평에 알맞은 환상을 창출한다. 시간의 종말을 앞당기는 플롯으로 짜인 묵시록. 그럼에도 이 구분이 여전히 너무 어렵게 느껴진다면, 묵시록의 대중문화 버전인 좀비 아포칼립스에 구현된 시간을 한번 상상해보면 좋겠다. 예를 들면 대니 보일 감독의 영화 <28일 후>(28 days later, 2002)나 미국 TV 시리즈물인 <워킹 데드>에서 인간 대부분이 파멸하거나 좀비로 변한 뒤에 찾아오는 불편한 고요함이나 인간이 사라진 자연의 이미저리가 주는 무상함 등을. <br>[출처] 짧고 긴 글 모음|작성자 Pete
@@ -339,8 +392,11 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="header">
-                                <h2>admin</h2>
-                                <div class="date">2025.11.18</div>
+                                <h2>Admin</h2>
+                                <div class="date">
+                                    <div class="date-item-full">2026.01.19(월)</div>
+                                    <div class="date-item-time">00:00</div>
+                                </div>
                             </div>
                             <div class="content">
                                 이 같은 상황에서 철학자는 현자의 절대적 평정에 결코 이르지 못할 것이다. 그러므로 철학함은 이 같은 고립과 무능을 고통스러워하는 것이 되리라. 그러나 고대 철학은 우리에게 포기하지 말고 계속 합리적으로 행동하며 지혜의 관념이라는 규준에 따라 살기 위해 노력하라고 가르친다. 무슨 일이 닥치든지, 설령 우리 행위가 지극히 제한된 것으로 보일지라도. 하여, 마르쿠스 아우렐리우스는 이렇게 말한다. "플라톤의 이상 국가를 기대하지 말고 그저 사소한 노력이 결실을 맺으면 만족할 것이며 그 성과를 하찮은 것으로 여기지 말라."<br>[출처] 짧고 긴 글 모음|작성자 Pete

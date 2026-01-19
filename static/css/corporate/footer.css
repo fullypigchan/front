@@ -91,18 +91,18 @@ address, caption, em {
     position: relative;
     width: 1250px;
 }
-/* .clear {
-    zoom: 1;
-} */
 .clear:after {
     content: "";
     display: block;
     height: 0;
     clear: both;
 }
-#footer .jkLogo {
+#footer .tcLogo {
     float: left;
-    margin-top: 24px;
+    margin-top: 30px;
+}
+#footer .tcLogo img {
+    width: 150px;
 }
 #footer .footerWrap {
     padding-left: 210px;
@@ -112,33 +112,33 @@ address, caption, em {
     padding-top: 26px;
     border-bottom: 1px solid #efefef;
 }
-#footer .jkNotice {
+#footer .tcNotice {
     float: right;
     overflow: hidden;
     font-size: 14px;
 }
-#footer .jkNotice p {
+#footer .tcNotice p {
     position: relative;
     width: 330px;
     margin-left: 4px;
 }
-#footer .jkNotice h3, #footer .jkNotice p {
+#footer .tcNotice h3, #footer .tcNotice p {
     display: inline-block;
     white-space: nowrap;
     vertical-align: top;
 }
-#footer .jkNotice h3 a {
+#footer .tcNotice h3 a {
     color: #000;
     font-weight: bold;
 }
-#footer .jkNotice p a {
+#footer .tcNotice p a {
     overflow: hidden;
     display: inline-block;
     max-width: 271px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-#footer .jkNotice p em {
+#footer .tcNotice p em {
     position: absolute;
     /* top: 0; */
     right: 0;
@@ -147,39 +147,39 @@ address, caption, em {
     margin: 1px 0 0 5px;
     /* vertical-align: top; */
 }
-#footer .jkPolicy {
+#footer .tcPolicy {
     float: left;
     font-size: 14px;
     /* text-align: center; */
 }
-#footer .jkPolicy li {
+#footer .tcPolicy li {
     display: inline-block;
 }
-#footer .jkPolicy li a {
+#footer .tcPolicy li a {
     color: #000;
 }
-#footer .jkPolicy li + li {
+#footer .tcPolicy li + li {
     margin-left: 18px;
 }
-#footer .jkHelp {
+#footer .tcHelp {
     color: #888;
     margin-top: 27px;
 }
-#footer .jkHelp dl, #footer .jkHelp dt, #footer .jkHelp dd {
+#footer .tcHelp dl, #footer .tcHelp dt, #footer .tcHelp dd {
     display: inline-block;
 }
-#footer .jkHelp dt:after {
+#footer .tcHelp dt:after {
     content: ":";
     display: inline-block;
     margin-left: 3px;
 }
-#footer .jkHelp dl+:before {
+#footer .tcHelp dl+:before {
     content: "l";
     display: inline-block;
     color: #ccc;
     margin: 0 7px;
 }
-#footer .jkHelp a {
+#footer .tcHelp a {
     color: #888;
 }
 #footer .copyright, #footer .copyright a {

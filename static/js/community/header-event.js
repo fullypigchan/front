@@ -31,12 +31,16 @@ userCorpLogin.addEventListener("mouseleave", (e) => {
 
 // 헤더 네비게이션 마우스 올렸을 때 open-active 클래스 추가 삭제
 const headNav = document.getElementById("headNavBar");
+const navMenu = document.querySelector(".lyNavArea");
 const serviceNavDrop = document.querySelector(".dev-serviceNav"); // ul 선택
+const backgroundColorChange = document.querySelector(".jkNavDimm");
 
 serviceNavDrop.addEventListener("mouseenter", (e) => {
     headNav.classList.add("open-active");
+    backgroundColorChange.classList.add("on");
 });
 
-headNav.addEventListener("mouseleave", () => {
+navMenu.addEventListener("mouseleave", () => {
     headNav.classList.remove("open-active");
+    backgroundColorChange.classList.remove("on");
 });

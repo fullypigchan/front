@@ -6,15 +6,15 @@ const subMenu = document.querySelector(".all-menu-modal");
 // sub-nav
 const subNavLis = document.querySelectorAll(".left-menu-list li");
 
-// corporate-name
-const rightMenu = document.querySelector(".right-menu");
-
 // notification-menu
-const notification = document.querySelector(".notification-menu");
-const noNotification = document.querySelector(".no-notification");
-const notificationList = document.querySelector(".notification-list");
 const bell = document.querySelector(".bell");
-const notifications = [1, 2, 3, 4];
+const notificationMenu = document.querySelector(".notification-menu");
+const noNotification = document.querySelector(".no-notification");
+const notificationContainer = document.querySelector(
+    ".list-notification-container",
+);
+
+const notificationCheck = false;
 
 // 이벤트 추가
 // sub-menu-modal
@@ -33,28 +33,15 @@ subNavLis.forEach((li) => {
     });
 });
 
-// corporate-name
-// document.addEventListener("DOMContentLoaded", (e) => {
-//     // 로그인 검사할 방법 모름
-//     if (true) {
-//         rightMenu.classList.add("active");
-//     }
-// });
-
 // notification-menu
 bell.addEventListener("click", (e) => {
-    notification.classList.toggle("active");
+    notificationMenu.classList.toggle("active");
 
-    if (notifications.length === 0) {
-        notificationList.classList.remove("active");
+    if (notificationCheck) {
+        notificationContainer.classList.remove("active");
         noNotification.classList.add("active");
     } else {
         noNotification.classList.remove("active");
-        notificationList.classList.add("active");
+        notificationContainer.classList.add("active");
     }
-});
-
-notificationList.addEventListener("click", (e) => {
-    const notificationModal = document.querySelector(".notification-modal");
-    notificationModal.classList.add("active");
 });

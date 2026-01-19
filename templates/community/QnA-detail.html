@@ -583,7 +583,7 @@
                                     >직무/기업/동문에게 질문하기</a
                                 >
                             </li>
-                             <li>
+                            <li>
                                 <a
                                     href=""
                                     class="create-menu-item carrier qnaSpB devLoginLayer"
@@ -697,7 +697,10 @@
                                     <span class="point qnaSpB">500</span>
                                 </div>
                                 <p class="tit">
-                                    <img src="/static/images/Q_logo.png" class="q-logo">
+                                    <img
+                                        src="/static/images/Q_logo.png"
+                                        class="q-logo"
+                                    />
                                     test
                                 </p>
                                 <div class="post-state">
@@ -743,7 +746,6 @@
                                 </div>
 
                                 <div class="btmArea">
-                                    
                                     <div class="infoBx">
                                         <a href="" class="my-profile">
                                             <!-- [Dev] 프로필 랜덤 이미지 파일명 : random_1 ~ random_20, 이미지 없음 : random_default -->
@@ -1106,7 +1108,6 @@
                                             </div>
                                         </div>
                                         <!-- // 내 답글 수정 영역 -->
-
                                         <div
                                             class="commentSec"
                                             style="display: none"
@@ -1115,6 +1116,145 @@
                                                 <ul class="cmtList replyWrap">
                                                     <!-- [Dev] 내 댓글일 경우 contSec에 클래스 myCmt 추가, cellBx 버튼: 삭제만 노출 -->
                                                 </ul>
+
+                                                <div
+                                                    class="writeBoxWrap cmtWrite case qnaSpB dev-ComtEditor"
+                                                >
+                                                    <form
+                                                        id=""
+                                                        action=""
+                                                        method="post"
+                                                        oncopy="return false;"
+                                                        oncut="return false;"
+                                                        onpaste="return false;"
+                                                    >
+                                                        <fieldset>
+                                                            <legend>
+                                                                답변하기 입력
+                                                            </legend>
+                                                            <div
+                                                                class="uiPlaceholder"
+                                                            >
+                                                                <span
+                                                                    class="ph ph_1"
+                                                                    >댓글을
+                                                                    입력해주세요.</span
+                                                                >
+                                                                <span
+                                                                    class="ph ph_2"
+                                                                >
+                                                                    개인정보를
+                                                                    공유 및
+                                                                    요청하거나,
+                                                                    명예 훼손,
+                                                                    무단 광고,
+                                                                    불법 정보
+                                                                    유포 시 이에
+                                                                    대한
+                                                                    민형사상
+                                                                    책임은
+                                                                    작성자에게<br />
+                                                                    있습니다.
+                                                                    부적절한
+                                                                    댓글은
+                                                                    비노출 또는
+                                                                    서비스 이용
+                                                                    정지 사유가
+                                                                    될 수
+                                                                    있습니다.
+                                                                </span>
+
+                                                                <textarea
+                                                                    name=""
+                                                                    maxlength="1000"
+                                                                    class="devComtWrite"
+                                                                    title="답변쓰기"
+                                                                ></textarea>
+                                                            </div>
+                                                            <div
+                                                                class="btnWrap"
+                                                            >
+                                                                <div
+                                                                    class="answer-util-wrap"
+                                                                >
+                                                                    <div
+                                                                        class="answer-util-item"
+                                                                    >
+                                                                        <button
+                                                                            type="button"
+                                                                            class="icon-emoticon qnaSpB"
+                                                                        >
+                                                                            이모티콘
+                                                                        </button>
+                                                                    </div>
+                                                                    <div
+                                                                        class="answer-util-item"
+                                                                    >
+                                                                        <button
+                                                                            type="button"
+                                                                            class="button icon-photo qnaSpB"
+                                                                        >
+                                                                            사진
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <span
+                                                                    class="byte"
+                                                                    ><b
+                                                                        id="count"
+                                                                        >0</b
+                                                                    >
+                                                                    /
+                                                                    1,000</span
+                                                                >
+                                                                <button
+                                                                    type="button"
+                                                                    id="btnSubmit"
+                                                                    class="btnSbm devBtnComtWrite"
+                                                                >
+                                                                    등록
+                                                                </button>
+                                                                <div
+                                                                    class="layer-box-wrap emotion-layer"
+                                                                >
+                                                                    <p
+                                                                        class="layer-header"
+                                                                    >
+                                                                        이모티콘
+                                                                    </p>
+                                                                    <ul
+                                                                        class="emotion-area"
+                                                                    >
+                                                                        <!-- [dev] 이모티콘 총 36개 -->
+                                                                        <li
+                                                                            class="emotion-item"
+                                                                        >
+                                                                            <button
+                                                                                type="button"
+                                                                                class="emotion-button"
+                                                                            >
+                                                                                <img
+                                                                                    src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_1.png"
+                                                                                    data-idx="1"
+                                                                                    alt=""
+                                                                                />
+                                                                            </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <button
+                                                                        type="button"
+                                                                        class="btn-layer-close qnaSpB"
+                                                                    >
+                                                                        <span
+                                                                            class="blind"
+                                                                            >닫기</span
+                                                                        >
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
                                             </div>
                                             <button
                                                 type="button"
@@ -1124,6 +1264,7 @@
                                             </button>
                                         </div>
                                     </li>
+
                                     <li>
                                         <!-- [Dev] 내 답변일 경우 contSec에 클래스 myCmt 추가, cellBx 버튼: 수정/삭제만 노출 -->
                                         <div
@@ -1353,6 +1494,41 @@
                                                 <ul class="cmtList replyWrap">
                                                     <!-- [Dev] 내 댓글일 경우 contSec에 클래스 myCmt 추가, cellBx 버튼: 삭제만 노출 -->
                                                 </ul>
+                                                <div class="writeBoxWrap cmtWrite case qnaSpB dev-ComtEditor">
+    <form id="" action="" method="post" oncopy="return false" oncut="return false" onpaste="return false">
+        <fieldset>
+            <legend>답변하기 입력</legend>
+            <div class="uiPlaceholder">
+                <span class="ph ph_1">댓글을 입력해주세요.</span>
+                <span class="ph ph_2">
+                    개인정보를 공유 및 요청하거나, 명예 훼손, 무단 광고, 불법 정보 유포 시 이에 대한 민형사상 책임은 작성자에게<br> 있습니다.
+                    부적절한 댓글은 비노출 또는 서비스 이용 정지 사유가 될 수 있습니다.
+                </span>
+                <textarea name="" maxlength="1000" class="devComtWrite" title="답변쓰기"></textarea>
+            </div>
+            <div class="btnWrap">
+                <div class="answer-util-wrap">
+                    <div class="answer-util-item">
+                        <button type="button" class="icon-emoticon qnaSpB">이모티콘</button>
+                    </div>
+                    <div class="answer-util-item">
+                        <button type="button" class="button icon-photo qnaSpB">사진</button>
+                    </div>
+                </div>
+                <span class="byte"><b id="count">0</b> / 1,000</span>
+                <button type="button" id="btnSubmit" class="btnSbm devBtnComtWrite">등록</button>
+<div class="layer-box-wrap emotion-layer">
+    <p class="layer-header">이모티콘</p>
+    <ul class="emotion-area">
+        <!-- [dev] 이모티콘 총 1개 -->
+        <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_1.png" data-idx="1" alt=""></button></li>
+    </ul>
+    <button type="button" class="btn-layer-close qnaSpB"><span class="blind">닫기</span></button>
+</div>
+            </div>
+        </fieldset>
+    </form>
+</div>
                                             </div>
                                             <button
                                                 type="button"
@@ -1377,7 +1553,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- 목록보기 -->
                         <div class="bottom-btn-wrap">
                             <a
@@ -1585,84 +1761,72 @@
                             <span class="footer__help--icon"></span>
                             <span class="footer__help--text">톡톡상담</span>
                         </a>
-                    </p>
-                    <div class="footerWrap">
-                        <div class="footerCont clear">
-                            <div class="jkNotice">
-                                <h3>
-                                    <a href="">공지사항</a>
-                                    <!-- onclick -->
-                                </h3>
-                                <p>
-                                    <a href=""
-                                        >잡코리아 개인정보처리방침 개정 안내</a
-                                    >
-                                    <!-- onclick -->
-                                    <!-- 새로고침할 때마다 텍스트 바뀜 -->
-                                    <em> 25.12.09</em>
-                                </p>
-                            </div>
-                            <div class="jkPolicy">
-                                <ul>
-                                    <li>
-                                        <a href="">회사소개</a>
-                                    </li>
-                                    <li>
-                                        <a href="" target="_blank">광고문의</a>
-                                    </li>
-                                    <li>
-                                        <a href="" target="_blank">제휴문의</a>
-                                    </li>
-                                    <li>
-                                        <a href="" target="_blank">이용약관</a>
-                                    </li>
-                                    <li>
-                                        <a href="" target="_blank"
-                                            ><strong
-                                                >개인정보처리방침</strong
-                                            ></a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="" target="_blank"
-                                            ><strong
-                                                >위치기반서비스이용약관</strong
-                                            ></a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="jkHelp">
-                            <dl class="first">
-                                <dt>고객센터</dt>
-                                <dd>1588-9350</dd>
-                                <dd>
-                                    (평일 09:00 ~ 19:00 토요일 09:00 ~ 15:00)
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>FAX</dt>
-                                <dd>02-565-9351</dd>
-                            </dl>
-                            <dl>
-                                <dt>Email</dt>
-                                <dd>
-                                    <a href="">helpdesk@jobkorea.co.kr</a>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <p class="copyright">
-                        Copyright ⓒ
-                        <strong><a href="" target="_blank">JOBKOREA</a></strong>
-                        LLC. All Right Reserved.
-                    </p>
+                    </dl>
+
+                    <ul class="footer__sns">
+                        <li class="footer__sns-item">
+                            <a
+                                href="https://blog.naver.com/jobkorea1"
+                                target="_blank"
+                                title="블로그"
+                                class="footer__sns-item--blog"
+                                ><span class="skip">블로그</span></a
+                            >
+                        </li>
+                        <li class="footer__sns-item">
+                            <a
+                                href="https://m.post.naver.com/my.nhn?memberNo=9028903"
+                                target="_blank"
+                                title="포스트"
+                                class="footer__sns-item--post"
+                                ><span class="skip">포스트</span></a
+                            >
+                        </li>
+                        <li class="footer__sns-item">
+                            <a
+                                href="https://www.facebook.com/jobkorea"
+                                target="_blank"
+                                title="페이스북"
+                                class="footer__sns-item--facebook"
+                                ><span class="skip">페이스북</span></a
+                            >
+                        </li>
+                        <li class="footer__sns-item">
+                            <a
+                                href="https://www.instagram.com/jobkorea_albamon/"
+                                target="_blank"
+                                title="인스타그램"
+                                class="footer__sns-item--instagram"
+                                ><span class="skip">인스타그램</span></a
+                            >
+                        </li>
+                        <li class="footer__sns-item">
+                            <a
+                                href="https://www.youtube.com/channel/UCOrdY3p46GJh_CYacfwYieg"
+                                target="_blank"
+                                title="유튜브"
+                                class="footer__sns-item--youtube"
+                                ><span class="skip">유튜브</span></a
+                            >
+                        </li>
+                    </ul>
                 </div>
+
+                <p class="copyright">
+                    ©
+                    <strong
+                        ><a
+                            href="http://company.jobkorea.co.kr/"
+                            target="_blank"
+                            >TRY-CATCH</a
+                        ></strong
+                    >
+                    LLC. All rights reserved.
+                </p>
             </div>
         </div>
     </body>
     <script src="/static/js/community/header-event.js"></script>
+    <script src="/static/js/community/header-event.js"></script>
     <script src="/static/js/community/QnA-detail-event.js"></script>
-
 </html>
