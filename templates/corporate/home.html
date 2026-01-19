@@ -11,7 +11,6 @@
 </head>
 <body>
     <div id="wrap">
-
         <!-- 헤더 -->
         <div class="corporate-header">
             <!-- main-menu -->
@@ -19,19 +18,28 @@
                 <div class="top-menu clearfix">
                     <!-- 로고 -->
                     <h1>
-                        <a href="/"></a>
+                        <a href=""></a>
                     </h1>
                     <!-- 로그인/회원가입 메뉴 -->
                     <ul class="top-menu-list clearfix">
-                        <li>
+                        <!-- <li>
                             <a href="">회원가입</a>
-                        </li>
+                        </li> -->
+                        <!-- 로그인된 후엔 숨김 -->
+
                         <li>
                             <a href="">고객센터</a>
                         </li>
-                        <li class="">
-                            <a href="">로그인</a>
+
+                        <li>
+                            <a href="">로그아웃</a>
                         </li>
+                        <!-- 로그인되기 전엔 숨김 -->
+
+                        <!-- <li class="">
+                            <a href="">로그인</a>
+                        </li> -->
+                        <!-- 로그인된 후엔 숨김 -->
                     </ul>
                 </div>
 
@@ -108,9 +116,116 @@
                     </div>
     
                     <!-- 기업 이름(mypage) -->
-                    
+                    <div class="right-menu logged-in">
+                        <ul class="right-menu-list clearfix">
+                            <li class="notification">
+                                <a href="javascript:;" class="bell"></a>
+
+                                <div class="notification-menu">
+                                    <div class="notification-menu-body">
+
+                                        <div class="no-notification active">
+                                            <div class="no-notification-content">
+                                                <div class="no-notification-header">아직 신규 알림이 없네요!</div>
+                                                <div class="no-notification-description">
+                                                    계정에서 알림 설정을 하고,
+                                                    <br>
+                                                    TRY CATCH 의 새로운 소식을 받아보세요!
+                                                </div>
+                                                <a href="javascript:;" class="notification-setting-button">알림 설정</a>
+                                            </div>
+                                        </div>
+                                        <!-- javascript: 알림이 없다면, active 추가 -->
+
+                                        <div class="list list-notification-container">
+                                            <div class="header-date">
+                                                <div class="header-date-item header-date-itme-full">26.01.19</div>
+                                                <div class="header-date-item header-date-itme-day">(월)</div>
+                                                <div class="header-date-item">· 오늘</div>
+                                            </div>
+                                            <ul>
+                                                <li class="notification-item">
+                                                    <div class="notification-header">
+                                                        <div class="notification-header-item category">Admin</div>
+                                                        <div class="notification-header-item date">00:00</div>
+                                                    </div>
+                                                    <div class="notification-body">
+                                                        <div class="notification-title">
+                                                            행운의 편지가 도착했습니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notification-footer">
+                                                        <div class="buttons">
+                                                            <a href="javascript:;" class="button">자세히보기</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="notification-item">
+                                                    <div class="notification-header">
+                                                        <div class="notification-header-item category">Admin</div>
+                                                        <div class="notification-header-item date">00:00</div>
+                                                    </div>
+                                                    <div class="notification-body">
+                                                        <div class="notification-title">
+                                                            행운의 편지가 도착했습니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notification-footer">
+                                                        <div class="buttons">
+                                                            <a href="javascript:;" class="button">자세히보기</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="notification-item">
+                                                    <div class="notification-header">
+                                                        <div class="notification-header-item category">Admin</div>
+                                                        <div class="notification-header-item date">00:00</div>
+                                                    </div>
+                                                    <div class="notification-body">
+                                                        <div class="notification-title">
+                                                            행운의 편지가 도착했습니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notification-footer">
+                                                        <div class="buttons">
+                                                            <a href="javascript:;" class="button">자세히보기</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="notification-item">
+                                                    <div class="notification-header">
+                                                        <div class="notification-header-item category">Admin</div>
+                                                        <div class="notification-header-item date">00:00</div>
+                                                    </div>
+                                                    <div class="notification-body">
+                                                        <div class="notification-title">
+                                                            행운의 편지가 도착했습니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="notification-footer">
+                                                        <div class="buttons">
+                                                            <a href="javascript:;" class="button">자세히보기</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <!-- javascript: hover시, active 클래스 추가 -->
+                                            </ul>
+                                        </div>
+
+                                        <!-- javascript: 알림이 있다면, active 추가 -->
+
+                                    </div>
+                                </div>
+                                <!-- javascript: click 시, active 추가(모달) -->
+                            </li>
+                            <li>
+                                <a href="">기업 이름</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <!-- 로그인되기 전엔 숨김 -->
 
             <!-- sub-menu -->
             <div class="sub-nav-bg"></div>
@@ -213,62 +328,6 @@
                                 
                         </ul>
                     </div>
-
-                    <!-- <div class="category">
-                        <div class="title">
-                            <a href="">인재검색</a>
-                        </div>
-                        <div class="category sub-category">
-                            <div class="title">
-                                <a href="">인재관리</a>
-                            </div>
-                            <ul>
-                                <li>
-                                    <ul>
-                                        <li>
-                                            <a href="">포지션 제안 인재</a>
-                                        </li>
-                                        <li>
-                                            <a href="">스크랩 인재</a>
-                                        </li>
-                                        <li>
-                                            <a href="">최근 본 인재</a>
-                                        </li>
-                                        <li>
-                                            <a href="">우리기업 관심인재</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="category">
-                        <div class="title">
-                            <a href="">원픽</a>
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="">원픽 서비스 안내</a>
-                            </li>
-                            <li>
-                                <a href="">원픽 프리미엄 안내</a>
-                            </li>
-                        </ul>
-                        <div class="category sub-category margin-top">
-                            <div class="title">
-                                <a href="">헤드헌팅 의뢰</a>
-                            </div>
-                            <ul>
-                                <li>
-                                    <a href="">헤드헌팅 의뢰</a>
-                                </li>
-                                <li>
-                                    <a href="">헤드헌팅 의뢰하기</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
 
                     <a href="" class="write-button">프로그램 등록</a>
                 </div>
@@ -902,17 +961,97 @@
         </div>
         <!-- javascript: 클릭 시, active 클래스 추가 -->
 
+        <!-- 모달 - 알림창 -->
+        <div class="common-modal notification-modal">
+            <div class="modal-dimmed"></div>
+            <div class="modal-contents">
+                <button class="close-button"></button>
+                <div class="swiper-container swiper-container-horizontal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="header">
+                                <h2>Admin</h2>
+                                <div class="date">
+                                    <div class="date-item-full">2026.01.19(월)</div>
+                                    <div class="date-item-time">00:00</div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                이 편지는 영국에서 최초로 시작되어 일년에 한 바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다.<br>
+                                이 편지를 포함해서 7통을 행운이 필요한 사람에게 보내 주셔야 합니다.<br>
+                                복사를 해도 좋습니다. 혹 미신이라 하실지 모르지만 사실입니다.<br>
+                                영국에서 HGXWCH이라는 사람은 1930년에 이 편지를 받았습니다.<br>
+                                그는 비서에게 복사해서 보내라고 했습니다. 며칠 뒤에 복권이 당첨되어 20억을 받았습니다.<br>
+                                어떤 이는 이 편지를 받았으나 96시간 이내 자신의 손에서 떠나야 한다는 사실을 잊었습니다.<br>
+                                그는 곧 사직되었습니다. 나중에야 이 사실을 알고 7통의 편지를 보냈는데 다시 좋은 직장을 얻었습니다.<br>
+                                미국의 케네디 대통령은 이 편지를 받았지만 그냥 버렸습니다. 결국 9일 후 그는 암살 당했습니다.<br>
+                                기억해 주세요. 이 편지를 보내면 7년의 행운이 있을 것이고 그렇지 않으면 3년의 불행이 있을 것입니다.<br>
+                                그리고 이 편지를 버리거나 낙서를 해서는 절대로 안됩니다. 7통입니다.<br>
+                                이 편지를 받은 사람은 행운이 깃들 것입니다. 힘들겠지만 좋은게 좋다고 생각하세요.<br>
+                                7년의 행운을 빌면서...
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="header">
+                                <h2>Admin</h2>
+                                <div class="date">
+                                    <div class="date-item-full">2026.01.19(월)</div>
+                                    <div class="date-item-time">00:00</div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                이 편지는 영국에서 최초로 시작되어 일년에 한 바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다.<br>
+                                이 편지를 포함해서 7통을 행운이 필요한 사람에게 보내 주셔야 합니다.<br>
+                                기억해 주세요. 이 편지를 보내면 7년의 행운이 있을 것이고 그렇지 않으면 3년의 불행이 있을 것입니다.<br>
+                                그리고 이 편지를 버리거나 낙서를 해서는 절대로 안됩니다. 7통입니다.<br>
+                                이 편지를 받은 사람은 행운이 깃들 것입니다. 힘들겠지만 좋은게 좋다고 생각하세요.<br>
+                                7년의 행운을 빌면서...
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="header">
+                                <h2>Admin</h2>
+                                <div class="date">
+                                    <div class="date-item-full">2026.01.19(월)</div>
+                                    <div class="date-item-time">00:00</div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                묵시록과 메시아주의의 차이는 우선 시간의 차이로 이해하는 것이 낫겠다. 아감벤에 따르면 묵시록이 '시간의 종말' 그리고 그와 이어지는 어떤 비세속적인 무의 시간을 상상한다면, 메시아주의는 이른바 '종말의 시간' 또는 '시간과 종말 사이에 남아 있는 시간'을 사유한다. 그것은 여전히 세속적인 시간처럼 보이지만, 실제로는 세속적인 것과 구분이 안 되는 형식적으로 존재하는 시간이다. 메시아주의 서사나 담론은 묵시록적인 파국의 환상을 특별히 동반할 필요가 없다. 묵시록적 파국의 환상 속에서 시간은 보통 그것의 종말이 앞당겨지기를 원하는 욕망으로 지탱되며, 이러한 욕망의 기대 지평에 알맞은 환상을 창출한다. 시간의 종말을 앞당기는 플롯으로 짜인 묵시록. 그럼에도 이 구분이 여전히 너무 어렵게 느껴진다면, 묵시록의 대중문화 버전인 좀비 아포칼립스에 구현된 시간을 한번 상상해보면 좋겠다. 예를 들면 대니 보일 감독의 영화 <28일 후>(28 days later, 2002)나 미국 TV 시리즈물인 <워킹 데드>에서 인간 대부분이 파멸하거나 좀비로 변한 뒤에 찾아오는 불편한 고요함이나 인간이 사라진 자연의 이미저리가 주는 무상함 등을. <br>[출처] 짧고 긴 글 모음|작성자 Pete
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="header">
+                                <h2>Admin</h2>
+                                <div class="date">
+                                    <div class="date-item-full">2026.01.19(월)</div>
+                                    <div class="date-item-time">00:00</div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                이 같은 상황에서 철학자는 현자의 절대적 평정에 결코 이르지 못할 것이다. 그러므로 철학함은 이 같은 고립과 무능을 고통스러워하는 것이 되리라. 그러나 고대 철학은 우리에게 포기하지 말고 계속 합리적으로 행동하며 지혜의 관념이라는 규준에 따라 살기 위해 노력하라고 가르친다. 무슨 일이 닥치든지, 설령 우리 행위가 지극히 제한된 것으로 보일지라도. 하여, 마르쿠스 아우렐리우스는 이렇게 말한다. "플라톤의 이상 국가를 기대하지 말고 그저 사소한 노력이 결실을 맺으면 만족할 것이며 그 성과를 하찮은 것으로 여기지 말라."<br>[출처] 짧고 긴 글 모음|작성자 Pete
+                            </div>
+                        </div>
+                    </div>
+                    <!-- javascript: 버튼 클릭 시, 이동(슬라이드) -->
+                </div>
+                <div class="swiper-button swiper-button-next"></div>
+                <div class="swiper-button swiper-button-prev"></div>
+                <!-- javascript: 다음/이전 알림이 없으면 swiper-button-disabled 추가 -->
+            </div>
+        </div>
+
         <!-- footer -->
         <div id="footer">
             <div class="inner clear">
-                <p class="jkLogo">
+                <p class="tcLogo">
                     <a href="/">
-                        <img src="https://i.jobkorea.kr/content/images/ver_1/mtc/common/mtc_jk_logo.png?20240226">
+                        <img src="/static/images/logo.png">
                     </a>
                 </p>
                 <div class="footerWrap">
                     <div class="footerCont clear">
-                        <div class="jkNotice">
+                        <div class="tcNotice">
                             <h3>
                                 <a href="">공지사항</a>
                                 <!-- onclick -->
@@ -924,7 +1063,7 @@
                                 <em> 25.12.09</em>
                             </p>
                         </div>
-                        <div class="jkPolicy">
+                        <div class="tcPolicy">
                             <ul>
                                 <li>
                                     <a href="">회사소개</a>
@@ -947,21 +1086,21 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="jkHelp">
+                    <div class="tcHelp">
                         <dl class="first">
                             <dt>고객센터</dt>
-                            <dd>1588-9350</dd>
+                            <dd>1234-5678</dd>
                             <dd>(평일 09:00 ~ 19:00 토요일 09:00 ~ 15:00)
                             </dd>
                         </dl>
                         <dl>
                             <dt>FAX</dt>
-                            <dd>02-565-9351</dd>
+                            <dd>02-111-1111</dd>
                         </dl>
                         <dl>
                             <dt>Email</dt>
                             <dd>
-                                <a href="">helpdesk@jobkorea.co.kr</a>
+                                <a href="">test@.com</a>
                             </dd>
                         </dl>
                     </div>
@@ -971,7 +1110,7 @@
         </div>
     </div>
 </body>
-<!-- <script src="/static/js/corporate/header/event.js"></script> -->
-<!-- <script src="/static/js/corporate/notification/event.js"></script> -->
+<script src="/static/js/corporate/header/event.js"></script>
+<script src="/static/js/corporate/notification/event.js"></script>
 <script src="/static/js/corporate/home/event.js"></script>
 </html>

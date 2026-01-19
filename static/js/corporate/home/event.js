@@ -32,16 +32,16 @@ noticeBanner.style.height = "260px";
 setInterval(() => {
     noticeCount++;
     noticeBanner.style.transform = `translate(0, -${52 * noticeCount}px)`;
-    noticeBanner.style.transition = `transform 0.5s`;
+    noticeBanner.style.transition = `transform 0.3s`;
 
     if (noticeCount === 4) {
         setTimeout(() => {
             noticeBanner.style.transform = `translate(0px)`;
             noticeBanner.style.transition = `transform 0s`;
-        }, 500);
+        }, 300);
         noticeCount = 0;
     }
-}, 2000);
+}, 3500);
 
 // 이벤트
 // 이전/다음 버튼
