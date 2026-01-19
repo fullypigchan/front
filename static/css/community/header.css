@@ -109,7 +109,7 @@ button {
     align-items: center;
     position: relative;
     z-index: 4;
-    margin-left:12%;
+    margin:0 auto;
     padding: 5px 0 6px;
 }
 
@@ -615,7 +615,7 @@ legend {
     -webkit-justify-content: flex-start;
     -moz-box-pack: start;
     justify-content: flex-start;
-    margin-left:10%;
+    margin:0 auto;
 }
 
 #headerWrap #header .headNavBar .jkNavArea {
