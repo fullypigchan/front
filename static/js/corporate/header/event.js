@@ -14,7 +14,7 @@ const notificationContainer = document.querySelector(
     ".list-notification-container",
 );
 
-const notificationCheck = false;
+const notificationCheck = true;
 
 // 이벤트 추가
 // sub-menu-modal
@@ -37,11 +37,10 @@ subNavLis.forEach((li) => {
 bell.addEventListener("click", (e) => {
     notificationMenu.classList.toggle("active");
 
-    if (notificationCheck) {
-        notificationContainer.classList.remove("active");
-        noNotification.classList.add("active");
-    } else {
-        noNotification.classList.remove("active");
-        notificationContainer.classList.add("active");
-    }
+    notificationContainer.classList.remove("active");
+    noNotification.classList.remove("active");
+
+    (notificationCheck ? notificationContainer : noNotification).classList.add(
+        "active",
+    );
 });

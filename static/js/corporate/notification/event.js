@@ -29,12 +29,9 @@ notificationSwiperWrapper.style.width = `${notificationButtons.length * 430}px`;
 // // 이벤트
 // 알림 버튼 효과
 notificationItems.forEach((item) => {
-    item.lastElementChild;
-
     item.addEventListener("mouseenter", (e) => {
         item.classList.add("active");
     });
-
     item.addEventListener("mouseleave", (e) => {
         item.classList.remove("active");
     });
@@ -54,9 +51,6 @@ notificationButtons.forEach((button, index) => {
             notificationPrevButton.classList.add("swiper-button-disabled");
         } else if (notificationCount === notificationButtons.length - 1) {
             notificationNextButton.classList.add("swiper-button-disabled");
-        } else {
-            notificationPrevButton.classList.remove("swiper-button-disabled");
-            notificationNextButton.classList.remove("swiper-button-disabled");
         }
     });
 });
