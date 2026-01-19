@@ -163,7 +163,7 @@ a:hover, a:active, a:focus {
 .qnaSpB:before, .qnaSpA:after, .qnaSpM:before, .qnaSpM:after {
     content: "";
     display: inline-block;
-    background-image: url(/static/images/sp_qna.png);
+    background-image: url(/static/images/sp_qna_recolor.png);
     background-repeat: no-repeat;
     background-position: 0 0;
     vertical-align: middle;
@@ -723,11 +723,7 @@ address, caption, em {
     color: #333;
 }
 
-.icon-like:before {
-    width: 14px;
-    height: 13px;
-    background: url(data:image/svg+xml;base64,DQo8c3ZnIGlkPSJpY29uX2xpa2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE0LjMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNC4zIDEzIj4NCiAgPGcgaWQ9Iu2MqOyKpF8yMzIxIiBkYXRhLW5hbWU9Iu2MqOyKpCAyMzIxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMiAtMikiIGZpbGw9Im5vbmUiPg0KICAgIDxwYXRoIGQ9Ik0yLDE1SDUuNDEyVjcuMkgyWk0xNi4zLDcuODVBMS4zLDEuMywwLDAsMCwxNSw2LjU1SDEwLjlsLjYyMS0yLjk3MWExLjAzOSwxLjAzOSwwLDAsMCwuMDIzLS4yLjk3My45NzMsMCwwLDAtLjI4Ni0uNjg5TDEwLjU2LDIsNi4yOCw2LjI4YTEuMzA4LDEuMzA4LDAsMCwwLS4zOC45MnY2LjVBMS4zLDEuMywwLDAsMCw3LjIsMTVoNS44NWExLjMsMS4zLDAsMCwwLDEuMi0uNzkzbDEuOTYtNC41ODJBMS4zLDEuMywwLDAsMCwxNi4zLDkuMTVWNy45MDVMMTYuMjkzLDcuOVoiIHN0cm9rZT0ibm9uZSIvPg0KICAgIDxwYXRoIGQ9Ik0gMTMuMDQ5OTk5MjM3MDYwNTUgMTMuNzc5OTk5NzMyOTcxMTkgQyAxMy4xMDA2NTkzNzA0MjIzNiAxMy43Nzk5OTk3MzI5NzExOSAxMy4xMTkwNzk1ODk4NDM3NSAxMy43Mzk1ODk2OTExNjIxMSAxMy4xMjEwMDk4MjY2NjAxNiAxMy43MzQ5Nzk2Mjk1MTY2IEwgMTMuMTI0MjY5NDg1NDczNjMgMTMuNzI3Mjc5NjYzMDg1OTQgTCAxNS4wNzM4MDEwNDA2NDk0MSA5LjE2ODY3MzUxNTMxOTgyNCBDIDE1LjA3ODUzMzE3MjYwNzQyIDkuMTU1MTA5NDA1NTE3NTc4IDE1LjA3OTgzOTcwNjQyMDkgOS4xNDgxNTEzOTc3MDUwNzggMTUuMDc5OTk5OTIzNzA2MDUgOS4xNDkxMDEyNTczMjQyMTkgTCAxNS4wNzk5OTk5MjM3MDYwNSA4LjQxMDU5MDE3MTgxMzk2NSBMIDE1LjAwNDUxOTQ2MjU4NTQ1IDguMzM1MTA5NzEwNjkzMzU5IEwgMTUuMDczNDMyOTIyMzYzMjggNy44MTgyNjI1NzcwNTY4ODUgQyAxNS4wNjExMjM4NDc5NjE0MyA3Ljc4OTg5NDEwNDAwMzkwNiAxNS4wMzI4Mzk3NzUwODU0NSA3Ljc2OTk5OTk4MDkyNjUxNCAxNSA3Ljc2OTk5OTk4MDkyNjUxNCBMIDkuMzkzOTQ5NTA4NjY2OTkyIDcuNzY5OTk5OTgwOTI2NTE0IEwgMTAuMTU0Mjg3MzM4MjU2ODQgNC4xMzE1NTIyMTkzOTA4NjkgTCA3LjE0NzQ5NDMxNjEwMTA3NCA3LjEzODM0NTI0MTU0NjYzMSBDIDcuMTM0NjM2ODc4OTY3Mjg1IDcuMTUxNzgyOTg5NTAxOTUzIDcuMTE5OTk5NDA4NzIxOTI0IDcuMTczMDEzMjEwMjk2NjMxIDcuMTE5OTk5NDA4NzIxOTI0IDcuMTk5OTk5ODA5MjY1MTM3IEwgNy4xMTk5OTk0MDg3MjE5MjQgMTMuNjk5OTk5ODA5MjY1MTQgQyA3LjExOTk5OTQwODcyMTkyNCAxMy43NDQxMTAxMDc0MjE4OCA3LjE1NTg4OTUxMTEwODM5OCAxMy43Nzk5OTk3MzI5NzExOSA3LjE5OTk5OTgwOTI2NTEzNyAxMy43Nzk5OTk3MzI5NzExOSBMIDEzLjA0OTk5OTIzNzA2MDU1IDEzLjc3OTk5OTczMjk3MTE5IE0gNC4xOTI0OTk2Mzc2MDM3NiAxMy43Nzk5OTk3MzI5NzExOSBMIDQuMTkyNDk5NjM3NjAzNzYgOC40MjAwMDAwNzYyOTM5NDUgTCAzLjIxOTk5OTU1MTc3MzA3MSA4LjQyMDAwMDA3NjI5Mzk0NSBMIDMuMjE5OTk5NTUxNzczMDcxIDEzLjc3OTk5OTczMjk3MTE5IEwgNC4xOTI0OTk2Mzc2MDM3NiAxMy43Nzk5OTk3MzI5NzExOSBNIDEzLjA0OTk5OTIzNzA2MDU1IDE1IEwgNy4xOTk5OTk4MDkyNjUxMzcgMTUgQyA2LjQ4MTc0OTUzNDYwNjkzNCAxNSA1Ljg5OTk5OTYxODUzMDI3MyAxNC40MTgyNTAwODM5MjMzNCA1Ljg5OTk5OTYxODUzMDI3MyAxMy42OTk5OTk4MDkyNjUxNCBMIDUuODk5OTk5NjE4NTMwMjczIDcuMTk5OTk5ODA5MjY1MTM3IEMgNS44OTk5OTk2MTg1MzAyNzMgNi44NDI1MDAyMDk4MDgzNSA2LjA0NjI0OTM4OTY0ODQzOCA2LjUxNzQ5OTkyMzcwNjA1NSA2LjI4MDI0OTU5NTY0MjA5IDYuMjgwMjUwMDcyNDc5MjQ4IEwgMTAuNTYwNDk5MTkxMjg0MTggMiBMIDExLjI1Mjc0OTQ0MzA1NDIgMi42ODU3NTAwMDc2MjkzOTUgQyAxMS40MjgyNDkzNTkxMzA4NiAyLjg2MTI0OTkyMzcwNjA1NSAxMS41Mzg3NDk2OTQ4MjQyMiAzLjEwNTAwMDAxOTA3MzQ4NiAxMS41Mzg3NDk2OTQ4MjQyMiAzLjM3NDc0OTg5ODkxMDUyMiBDIDExLjUzODc0OTY5NDgyNDIyIDMuNDQ2MjQ5OTYxODUzMDI3IDExLjUyODk5OTMyODYxMzI4IDMuNTE0NDk5OTAyNzI1MjIgMTEuNTE1OTk5Nzk0MDA2MzUgMy41Nzk0OTk5NTk5NDU2NzkgTCAxMC44OTUyNDkzNjY3NjAyNSA2LjU1MDAwMDE5MDczNDg2MyBMIDE1IDYuNTUwMDAwMTkwNzM0ODYzIEMgMTUuNzE4MjQ5MzIwOTgzODkgNi41NTAwMDAxOTA3MzQ4NjMgMTYuMjk5OTk5MjM3MDYwNTUgNy4xMzE3NTAxMDY4MTE1MjMgMTYuMjk5OTk5MjM3MDYwNTUgNy44NDk5OTk5MDQ2MzI1NjggTCAxNi4yOTM0OTg5OTI5MTk5MiA3Ljg5ODc0OTgyODMzODYyMyBMIDE2LjI5OTk5OTIzNzA2MDU1IDcuOTA1MjUwMDcyNDc5MjQ4IEwgMTYuMjk5OTk5MjM3MDYwNTUgOS4xNDk5OTk2MTg1MzAyNzMgQyAxNi4yOTk5OTkyMzcwNjA1NSA5LjMxNTc1MDEyMjA3MDMxMiAxNi4yNjQyNDk4MDE2MzU3NCA5LjQ3NTAwMDM4MTQ2OTcyNyAxNi4yMDU3NDk1MTE3MTg3NSA5LjYyNDUwMDI3NDY1ODIwMyBMIDE0LjI0NTk5OTMzNjI0MjY4IDE0LjIwNjk5OTc3ODc0NzU2IEMgMTQuMDUwOTk5NjQxNDE4NDYgMTQuNjcxNzUwMDY4NjY0NTUgMTMuNTg5NDk5NDczNTcxNzggMTUgMTMuMDQ5OTk5MjM3MDYwNTUgMTUgWiBNIDUuNDEyNDk5NDI3Nzk1NDEgMTUgTCAxLjk5OTk5OTY0MjM3MjEzMSAxNSBMIDEuOTk5OTk5NjQyMzcyMTMxIDcuMTk5OTk5ODA5MjY1MTM3IEwgNS40MTI0OTk0Mjc3OTU0MSA3LjE5OTk5OTgwOTI2NTEzNyBMIDUuNDEyNDk5NDI3Nzk1NDEgMTUgWiIgc3Ryb2tlPSJub25lIiBmaWxsPSIjY2NjIi8+DQogIDwvZz4NCjwvc3ZnPg0K);
-}
+
 
 .btnBookmark:before {
     width: 15px;
@@ -735,16 +731,23 @@ address, caption, em {
     background-position: -195px -30px;
 }
 
+.btnBookmark.on:before {
+    background-position: -195px -55px;
+}
 .viewContWrap .reaction-item button::before {
     margin-right: 3px;
     vertical-align: -4px;
 }
 
+
 .viewContWrap .reaction-item .icon-like::before {
     width: 24px;
     height: 20px;
     background-position: -138px -281px;
-    background-image: url(/content/images/user/qna/sp_qna.png?20220314);
+    background-image: url(/static/images/sp_qna_recolor.png);
+}
+.viewContWrap .reaction-item .icon-like.on::before {
+    background-position: -168px -281px;
 }
 
 .viewContWrap .reaction-item em {
@@ -1165,6 +1168,15 @@ input[type=text], input[type=password], input[type=file], input[type=date], inpu
     background-position: -262px -205px;
 }
 
+.viewListWrap .btnBx .btnHeart.active:before {
+    background-position: -262px -227px;
+}
+
+.viewListWrap .btnBx .btnHeart.active {
+    border-color: hsl(154.36deg 100% 21.57%);
+    color: hsl(154.36deg 100% 21.57%);
+}
+
 .viewListWrap .contSec.modify-answer{
     display: none;
 }
@@ -1188,6 +1200,16 @@ input[type=text], input[type=password], input[type=file], input[type=date], inpu
     margin: 20px 50px 20px 58px;
 }
 
+.viewListWrap .cmtWrite:before {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-position: -216px -127px;
+    position: absolute;
+    top: 6px;
+    left: -28px;
+}
+
 .viewListWrap .contSec.modify-answer .cmtWrite .uiPlaceholder textarea {
     padding: 15px 25px 15px 20px;
 }
@@ -1201,6 +1223,19 @@ input[type=text], input[type=password], input[type=file], input[type=date], inpu
     width: 18px;
     height: 18px;
     font-size: 0;
+}
+
+.answer-util-item > button::before {
+    width: 100%;
+    height: 100%;
+}
+
+.answer-util-item .icon-photo::before {
+    background-position: -50px -434px;
+}
+
+.answer-util-item .icon-emoticon::before {
+    background-position: -75px -434px;
 }
 
 .layer-box-wrap{
@@ -1291,6 +1326,17 @@ input[type=text], input[type=password], input[type=file], input[type=date], inpu
     letter-spacing: 0px;
     color: #666;
     text-align: center;
+}
+
+.lyViewBoard .cmtWrite.case .uiPlaceholder .ph_2 {
+    display: none;
+}
+
+.viewListWrap .btnCmtClose:after {
+    margin: -4px 0 0 10px;
+    width: 11px;
+    height: 6px;
+    background-position: -216px -250px;
 }
 
 .lyViewBoard .commonSecWrap .infoBx {
@@ -1635,5 +1681,17 @@ input[type=text], input[type=password], input[type=file], input[type=date], inpu
 .create-menu-wrap::before{
     left: 50%;
     margin-left: -3px;
+}
+
+.viewContWrap .url-copy-layer.attached {
+    display: table;
+}
+
+.viewContWrap .url-copy-layer .button-close:before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: url(/static/images/tpl_sp_btn.png) no-repeat 0 -65px;
 }
 
