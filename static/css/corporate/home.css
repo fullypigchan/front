@@ -274,7 +274,7 @@ address, caption, em {
     /* display: block; */
     width: 205px;
     height: 28px;
-    /* background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='746' height='162' fill='none'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M154.41 30h23l39.42 63.87V30h23v101.85h-22.55l-39.87-64.59v64.59h-23V30zm118.28 0h-23v101.85h23V30zm32.85 0h-23v101.85h23V67.26l39.87 64.59h22.55V30h-23v63.87L305.54 30zm134.69 0h-62.42v101.84h62.42v-19.71h-39.42v-23h36.14V69.42h-36.14V49.71h39.42V30zm23 0h23v45.21l42.71-13.25V30h23v101.85h-23V84.38l-42.71 13.24v34.23h-23V30zm121.56 0h-23v101.85h23V30zm64.63 57.88c12.38-4.78 22.43-13.01 22.43-26.51 0-11.11-4.78-19.41-11.82-24.48S644.42 30 633.45 30h-38.8v101.85h23V97.62l10.9-3.38 24.34 37.61h25.6l-29.07-43.97zm-5.28-19.54c-.5.27-1.03.5-1.58.67l-.33.1-12.295 3.81-.146.045-12.149 3.765V49.7h22.15c5.03 0 9.05 4.48 9.05 9.5 0 4.33-1.88 7.59-4.71 9.13l.01.01zM745.77 30h-62.42v101.84h62.42v-19.71h-39.42v-23h36.14V69.42h-36.14V49.71h39.42V30z' clip-rule='evenodd'/%3E%3Cpath fill='%23664FFF' fill-rule='evenodd' d='M0 85.31L36.69 30h28.73v31.416L86.26 30h28.73v46.53L78.3 131.85H49.57v-31.422L28.73 131.85H0V85.31z' clip-rule='evenodd'/%3E%3C/svg%3E"); */
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='746' height='162' fill='none'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M154.41 30h23l39.42 63.87V30h23v101.85h-22.55l-39.87-64.59v64.59h-23V30zm118.28 0h-23v101.85h23V30zm32.85 0h-23v101.85h23V67.26l39.87 64.59h22.55V30h-23v63.87L305.54 30zm134.69 0h-62.42v101.84h62.42v-19.71h-39.42v-23h36.14V69.42h-36.14V49.71h39.42V30zm23 0h23v45.21l42.71-13.25V30h23v101.85h-23V84.38l-42.71 13.24v34.23h-23V30zm121.56 0h-23v101.85h23V30zm64.63 57.88c12.38-4.78 22.43-13.01 22.43-26.51 0-11.11-4.78-19.41-11.82-24.48S644.42 30 633.45 30h-38.8v101.85h23V97.62l10.9-3.38 24.34 37.61h25.6l-29.07-43.97zm-5.28-19.54c-.5.27-1.03.5-1.58.67l-.33.1-12.295 3.81-.146.045-12.149 3.765V49.7h22.15c5.03 0 9.05 4.48 9.05 9.5 0 4.33-1.88 7.59-4.71 9.13l.01.01zM745.77 30h-62.42v101.84h62.42v-19.71h-39.42v-23h36.14V69.42h-36.14V49.71h39.42V30z' clip-rule='evenodd'/%3E%3Cpath fill='%23664FFF' fill-rule='evenodd' d='M0 85.31L36.69 30h28.73v31.416L86.26 30h28.73v46.53L78.3 131.85H49.57v-31.422L28.73 131.85H0V85.31z' clip-rule='evenodd'/%3E%3C/svg%3E");
     background-size: auto 38px;
     background-position: top -7px left;
     background-repeat: no-repeat;
@@ -341,7 +341,7 @@ address, caption, em {
 .solution-section .start-list li:nth-child(3) {
     width: 620px;
     background: #fff no-repeat 100% 100%;
-    /* background-image: url("https://i.jobkorea.kr/content/images/corporate/main_v2/icon_start_5_v2.png"); */
+    background-image: url("https://i.jobkorea.kr/content/images/corporate/main_v2/icon_start_5_v2.png");
     background-size: 100%;
 }
 .solution-section .start-list li:nth-child(n+3) {
@@ -349,7 +349,7 @@ address, caption, em {
     margin-left: 20px;
 }
 .solution-section .start-list li:nth-child(3) .contents-box {
-    /* background-image: url("https://i.jobkorea.kr/content/images/corporate/main_v2/icon_start_5.png"); */
+    background-image: url("https://i.jobkorea.kr/content/images/corporate/main_v2/icon_start_5.png");
     background-position-y: 38px;
 }
 .solution-section .start-list li .text-box .description a {
@@ -397,7 +397,6 @@ address, caption, em {
 }
 /* .ad-container a img {
     max-width: 100%;
-    -o-object-fit: contain;
     object-fit: contain;
 } */
 .col-1-small-section:nth-child(n+2) {
@@ -732,6 +731,31 @@ address, caption, em {
     height: 17px;
     background: url("https://i.jobkorea.kr/content/images/corporate/main_v2/arrow_6x17_black.png");
 }
+.common-modal.service-modal .number-list {
+    margin-top: 10px;
+}
+.common-modal.service-modal .number-list>li {
+    position: relative;
+    line-height: 22px;
+    padding-left: 12px;
+}
+.common-modal.service-modal .number-list>li:nth-child(n+2) {
+    margin-top: 10px;
+}
+.common-modal.service-modal .number-list>li .number {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.common-modal.service-modal .number-list>li ul {
+    margin-top: 10px;
+}
+.common-modal.service-modal .number-list>li ul li {
+    line-height: 22px;
+}
+.common-modal.service-modal .number-list>li ul li:before {
+    content: "* ";
+}
 .common-modal.service-modal .swiper-button-next {
     right: -77px;
 }
@@ -762,4 +786,9 @@ address, caption, em {
     height: 125px;
     background: url("/static/images/corporate/arrow_modal_swiper.png");
     margin-top: -62.5px;
+}
+.common-modal.service-modal .contents .text a {
+    display: inline;
+    color: #39f;
+    text-decoration: underline;
 }
