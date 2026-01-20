@@ -226,6 +226,7 @@ label {
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
+
 .tooltip-layer.book-mark-layer {
     display: block;
     opacity: 0;
@@ -2593,11 +2594,7 @@ input[type="number"] {
 }
 
 /* 답변,댓글 메뉴 - 이모티콘 레이어 */
-.emotion-layer {
-    width: 732px;
-    padding: 0;
-    z-index: 10;
-}
+
 
 .emotion-layer .layer-header {
     padding: 30px 28px 10px;
@@ -2935,11 +2932,13 @@ a.link:visited {
     position: fixed !important;
 }
 
+
 /* Display */
 .tplNone,
 .tplHide {
     display: none !important;
 }
+
 
 .tplBlock,
 .tplShow {
@@ -2968,6 +2967,11 @@ a.link:visited {
     color: #ff7a21;
 }
 
+.emotion-layer {
+    width: 732px;
+    padding: 0;
+    z-index: 10;
+}
 /* Title */
 .tpl_hd_1 {
     font-size: 20px;
@@ -3319,9 +3323,6 @@ a.tplBtn_2 span {
     width: 12px;
     height: 12px;
     margin: -3px 3px 0 0;
-}
-
-.tplBtnBdGry span {
 }
 
 .tplBtnBdGry_1 {
