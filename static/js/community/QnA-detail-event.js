@@ -183,36 +183,9 @@ commentReplyButtonList.forEach((btn) => {
 //     buttonBookMark.classList.toggle("on");
 // });
 
-// 요소 선택（로그인）
-const wrapper = document.querySelector(".writeBoxWrap.cmtWrite");
-const textarea = wrapper.querySelector("textarea");
-const uiPlaceholder = wrapper.querySelector(".uiPlaceholder");
-const ph1 = wrapper.querySelector(".ph_1");
-const ph2 = wrapper.querySelector(".ph_2");
-
-// textarea 클릭(focus) 시
-textarea.addEventListener("focus", function (e) {
-    wrapper.classList.remove("case");
-    uiPlaceholder.classList.add("focus");
-    ph1.style.display = "none";
-    if (!textarea.value) {
-        ph2.style.display = "block";
-    }
-});
-
-// 글자 입력 시(로그인)
-textarea.addEventListener("input", function () {
-    if (textarea.value) {
-        ph2.style.display = "none";
-    } else {
-        // 글자가 없으면 ph2 다시 표시
-        ph2.style.display = "block";
-    }
-});
-
 // // 요소 선택（비로그인）
 // const wrapper = document.querySelector(".writeBoxWrap.cmtWrite");
-// const textarea = wrapper.querySelector("textarea");
+// const mainTextarea = wrapper.querySelector("mainTextarea");
 // const buttons = document.querySelectorAll(".btnBx.devComtRoot button");
 
 // buttons.forEach((button) => {
@@ -221,7 +194,7 @@ textarea.addEventListener("input", function () {
 //     });
 // });
 
-// textarea.addEventListener("click", (e) => {
+// mainTextarea.addEventListener("click", (e) => {
 //     alert("로그인 후 이용해주세요.");
 // });
 
@@ -279,39 +252,125 @@ buttonLayerCloses.forEach((buttonLayerClose, idx) => {
     });
 });
 
-// 댓글 작성시 글자 수 올라가기
-const textCount = document.getElementById("count");
-textarea.addEventListener("input", (e) => {
-    const totalTextCount = textarea.value.length;
-    textCount.innerHTML = `${totalTextCount}`;
-    if (totalTextCount > 1000) {
-        alert("최대 1000자까지 입력 가능합니다.");
-        textarea.value.length = 1000;
-        textarea.focus();
-        ph2.style.display = "none";
-    }
+// 대댓글 전용
+// 댓글 통합(로그인)
+const textareas = document.querySelectorAll(".writeBoxWrap.cmtWrite.case");
+const ph1List = document.querySelectorAll(".ph_1");
+const ph2List = document.querySelectorAll(".ph_2");
+const uiPlaceholders = document.querySelectorAll(".uiPlaceholder");
+
+textareas.forEach((wrapper, idx) => {
+    const textarea = wrapper.querySelector("textarea"); // 실제 textarea 요소 찾기
+
+    wrapper.addEventListener("click", (e) => {
+        wrapper.classList.remove("case");
+        uiPlaceholders[idx].classList.add("focus");
+        ph1List[2 * idx].style.display = "none";
+        ph2List[2 * idx].style.display = "block";
+    });
 });
 
-document.addEventListener("click", (e) => {
+const textCount = document.querySelectorAll("span.byte b");
+const wrappers = document.querySelectorAll(".writeBoxWrap.cmtWrite");
+
+wrappers.forEach((wrapper, idx) => {
+    const textarea = wrapper.querySelector("textarea"); // 실제 textarea 요소 찾기
+
+    if (!textarea) return; // textarea가 없으면 스킵
+
+    // 댓글 작성시 글자 수 올라가기
+    textarea.addEventListener("input", (e) => {
+        console.log(textCount);
+        const totalTextCount = textarea.value.length;
+        textCount[idx].innerHTML = `${totalTextCount}`;
+        if (totalTextCount > 1000) {
+            alert("최대 1000자까지 입력 가능합니다.");
+            textarea.value = textarea.value.substring(0, 1001);
+            textarea.focus();
+            ph2List[idx].style.display = "none";
+        }
+    });
     // textarea 외부를 클릭했을 때
-    // 1. 클릭 대상이 textarea가 아닐 경우
+    // 1. 클릭 대상이 mainTextarea 아닐 경우
     // 2. 작성된 내용이 없을 경우
     // 3. 클릭 대상이 이모티콘 버튼이 아닐 경우
     // 4. 클릭 대상이 이모티콘이 아닐 경우
-    if (
-        e.target.tagName !== "TEXTAREA" &&
-        !textarea.value &&
-        !e.target.classList.contains("icon-emoticon") &&
-        !e.target.closest(".emotion-area")
-    ) {
-        // 이모티콘 창이 열려있지 않을 경우
+    document.addEventListener("click", (e) => {
         if (
-            !document.querySelector(".emotion-layer").classList.contains("open")
+            e.target.tagName !== "TEXTAREA" &&
+            !textarea.value &&
+            !e.target.classList.contains("icon-emoticon") &&
+            !e.target.closest(".emotion-area")
         ) {
-            wrapper.classList.add("case");
-            uiPlaceholder.classList.remove("focus");
-            ph1.style.display = "block";
-            ph2.style.display = "none";
+            if (
+                !document
+                    .querySelector(".emotion-layer")
+                    .classList.contains("open")
+            ) {
+                wrapper.classList.add("case");
+                uiPlaceholders[idx].classList.remove("focus");
+                ph1List[idx].style.display = "block";
+                ph2List[idx].style.display = "none";
+            }
         }
-    }
+    });
+    textarea.addEventListener("input", (e) => {
+        if (textarea.value) {
+            ph2List[idx].style.display = "none";
+        } else {
+            // 글자가 없으면 ph2 다시 표시
+            ph2List[idx].style.display = "block";
+        }
+    });
+});
+
+// 댓글 달기 버튼
+const replySubmitButton = document.querySelector(".btnSbm.devBtnAnswerWrite");
+// 대댓글 달기 버튼
+const replyOfReplySubmitButtons = document.querySelectorAll(
+    ".btnSbm.devBtnComtWrite",
+);
+
+// 대댓글 달기
+replyOfReplySubmitButtons.forEach((replyOfReplySubmitButton) => {
+    replyOfReplySubmitButton.addEventListener("click", (e) => {
+        location.href = "../community/QnA-detail.html";
+    });
+});
+
+// 댓글 달기
+replySubmitButton.addEventListener("click", (e) => {
+    alert("댓글이 등록되었습니다.");
+    location.href = "../community/QnA-detail.html";
+});
+
+const addFileButtons = document.querySelectorAll(".button icon-photo.qnaSpB");
+
+addFileButtons.forEach((addFileButton) => {
+    const thumbnail = document.querySelector("div.image");
+    const cancel = document.querySelector("div.cancel");
+
+    addFileButton.addEventListener("change", (e) => {
+        const [file] = e.target.files;
+        const reader = new FileReader();
+
+        reader.readAsDataURL(file);
+        reader.addEventListener("load", (e) => {
+            const path = e.target.result;
+
+            if (path.includes("image")) {
+                thumbnail.style.backgroundImage = `url(${path})`;
+            } else {
+                thumbnail.style.backgroundImage = `url(./images/attach.png)`;
+            }
+        });
+
+        cancel.style.display = "block";
+    });
+
+    cancel.addEventListener("click", (e) => {
+        input.value = "";
+        cancel.style.display = "none";
+        thumbnail.style.backgroundImage = `url(./images/add.png)`;
+    });
 });
