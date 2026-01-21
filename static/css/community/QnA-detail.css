@@ -532,6 +532,16 @@ address, caption, em {
     text-indent: -9999px;
 }
 
+.lyViewBoard i.icoCmt {
+    top: 8px;
+    width: 10px;
+    height: 10px;
+}
+
+.viewListWrap .cmtList .icoCmt {
+    float: left;
+}
+
 .lyViewBoard i.icoQ_on {
     top: 9px;
     width: 23px;
@@ -548,6 +558,12 @@ address, caption, em {
     top: 0;
     width: 20px;
     height: 20px;
+}
+
+.lyViewBoard i.icoCmt:before {
+    width: 10px;
+    height: 10px;
+    background-position: -216px -127px;
 }
 
 .lyViewBoard i.icoQ_on:before {
@@ -1114,14 +1130,7 @@ input[type=text], input[type=password], input[type=file], input[type=date], inpu
     margin-top: 15px;
 }
 
-.lyViewBoard .commonSecWrap .cellBx .cell:before {
-    content: "";
-    display: inline-block;
-    margin: 0 10px;
-    width: 1px;
-    height: 12px;
-    background: #e8e8e8;
-}
+
 
 .lyViewBoard .commonSecWrap .cellBx .cell, .lyViewBoard .commonSecWrap .cellBx .cell a, .lyViewBoard .commonSecWrap .cellBx .cell button{
     display: inline-block;
@@ -1138,6 +1147,7 @@ input[type=text], input[type=password], input[type=file], input[type=date], inpu
     color: #999;
     vertical-align: initial;
 }
+
 
 .viewListWrap .btnBx {
     overflow: hidden;
@@ -1221,8 +1231,17 @@ input[type=text], input[type=password], input[type=file], input[type=date], inpu
 }
 
 .answer-util-item > button {
-    width: 18px;
+    width: 18px; 
     height: 18px;
+    font-size: 0;
+}
+
+.button.icon-photo.qnaSpB::before{
+    width: 18px; 
+    height: 18px;
+}
+
+.button.icon-photo.qnaSpB{
     font-size: 0;
 }
 
@@ -1369,6 +1388,23 @@ input[type=text], input[type=password], input[type=file], input[type=date], inpu
     margin-left: 6px;
     font-size: 13px;
     letter-spacing: 0px;
+}
+
+.lyViewBoard .commonSecWrap .infoBx .lvIcon {
+    position: relative;
+    top: 9px;
+    padding: 0 5px;
+    height: 14px;
+    background: #b6c1c6;
+    border-radius: 2px;
+    font-size: 11px;
+    letter-spacing: 0px;
+    color: #fff;
+    line-height: 14px;
+}
+
+.lyViewBoard .commonSecWrap .infoBx .info {
+    color: #666;
 }
 
 .lyViewBoard .commonSecWrap .infoBx .info{
@@ -1955,4 +1991,84 @@ input[type=text], input[type=password], input[type=file], input[type=date], inpu
     letter-spacing: 0px;
     color: #999;
     line-height: 1.8;
+}
+
+.viewListWrap .cmtList > li {
+    position: relative;
+    padding: 20px 30px;
+}
+
+.viewListWrap .cmtList > li.myCmt {
+    background-color: #f9fcff;
+}
+
+
+.lyViewBoard .commonSecWrap .cellBx .cell:before {
+    content: "";
+    display: inline-block;
+    margin: 0 10px;
+    width: 1px;
+    height: 12px;
+    background: #e8e8e8;
+}
+
+/* 첫 번째 cell 앞의 구분선은 삭제 */
+.lyViewBoard .commonSecWrap .cellBx .cell:first-child:before {
+    content: none;
+    display: none;
+}
+
+.viewListWrap .btnBx .btnCmt.active {
+    background: #f6f6f6;
+}
+
+.answer-util-item > button {
+    width: 18px;
+    height: 18px;
+    font-size: 0;
+}
+
+.lyViewBoard .writeBoxWrap .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0;
+    padding: 15px;
+    z-index: 1;
+}
+
+.lyViewBoard .cmtWrite .btnModifyCancel:before {
+    display: block;
+    width: 15px;
+    height: 14px;
+    background-position: 0 -31px;
+    transform: translate(-50%, -50%);
+}
+
+.lyViewBoard .writeBoxWrap .close-button::before {
+    width: 15px;
+    height: 14px;
+    background-position: 0 -30px;
+}
+
+.attach-image {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.lyViewBoard .writeBoxWrap .attach-image, .lyViewBoard .answerArea .attach-image {
+    max-width: 250px;
+    margin: 0;
+    text-align: left;
+}
+
+.attach-wrap .remove-button::before {
+    width: 17px;
+    height: 17px;
+    background-position: -195px -459px;
+}
+
+.attach-image img {
+    max-width: 100%;
 }
