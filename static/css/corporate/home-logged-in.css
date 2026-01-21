@@ -597,130 +597,40 @@ fieldset, img {
     margin-left: 20px;
 }
 
-/* 1안 */
-/* .recruit-section .data-box ul{
-    padding: 0 20px;
-    border: 1px solid #e0e0e0;
-    background-color: #fff;
-    border-top: 0;
-} */
-.recruit-section .data-box ul li{
-    min-height: 97px;
-    padding: 25px 0 24px;
-}
-.recruit-section .data-box ul li .info{
-    width: 76%;
-    float: left;
-    padding-right: 35px;
-}
-.recruit-section .data-box ul li .info .tit{
-        padding: 0;
-    overflow: hidden;
-    float: left;
-    padding-bottom: 8px;
-    max-width: 100%;
-}
-.recruit-section .data-box ul li .info .tit a{
-    display: block;
-    font-size: 16px;
-    letter-spacing: 0px;
-    color: #333;
-    font-weight: bold;
-    padding-bottom: 1px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.recruit-section .data-box ul li .info .sTit {
-    margin-bottom: 21px;
-    clear: left;
-    line-height: 20px;
-}
-.recruit-section .data-box ul li .info .sTit span {
-        position: relative;
-    display: inline-block;
-    font-size: 13px;
-    letter-spacing: 0px;
-    color: #333;
-}
-.recruit-section .data-box ul li .info .sTit span + span:before {
-    content: "";
-    display: inline-block;
-    width: 1px;
-    height: 12px;
-    margin: -2px 7px 0 5px;
-    background-color: #eaeaea;
-    vertical-align: middle;
-}
-.recruit-section .data-box ul li .side {
-    width: 11%;
-    float: left;
-    text-align: center;
-    position: relative;
-}
-.recruit-section .data-box ul li .side .btn {
-    display: inline-block;
-}
-.recruit-section .data-box ul li .side .btn.app .tplBtn_1 {
-    padding: 0;
-    background: #39f;
-    font-weight: bold;
-}
-.tplBtn, .tplBtnTy {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    line-height: normal;
-    white-space: nowrap;
-    border-radius: 8px;
-}
-.recruit-section .data-box ul li .side .btn span, .recruit-section .data-box ul li .side .btn a {
-    display: inline-block;
-    width: 124px;
-    height: 45px;
-    box-sizing: border-box;
-    font-size: 12px;
-    letter-spacing: 0px;
-    font-weight: bold;
-    line-height: 30px;
-    text-align: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.tplBtn_1 span {
-    color: #fff;
-}
-.recruit-section .data-box ul > li + li {
-    border-top: 1px solid #e0e0e0;
-}
-
 /* 2안 */
-.recruit-section .data-box ul li a {
+.recruit-section .data-box {
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    scrollbar-width: thin;
+}
+.recruit-section .data-box ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 15px;
+}
+.recruit-section .data-box ul li .list-cell {
     position: relative;
     display: block;
     box-sizing: border-box;
-    width: 286px;
-    height: 316px;
+    width: 268px;
+    height: 170px;
     border: 1px solid #e8e8e8;
     border-radius: 8px;
     cursor: pointer;
     transition: .3s;
     will-change: transform;
 }
-.recruit-section .data-box ul li a .list-content {
+.recruit-section .data-box ul li .list-cell .list-content {
     position: relative;
     margin-top: -1px;
     padding: 16px 24px 24px;
     border-top: 1px solid rgba(0, 0, 0, .05);
 }
-.recruit-section .data-box ul li a .list-content .rTit{
+.recruit-section .data-box ul li .list-cell .list-content .title{
     margin: 8px 0 0;
     font-size: 18px;
-    letter-spacing: 0;
     font-weight: 600;
     line-height: 26px;
     color: #222;
@@ -728,18 +638,22 @@ fieldset, img {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.recruit-section .data-box ul li a .list-content .rTit{
-    margin: 8px 0 0;
-    font-size: 18px;
-    letter-spacing: 0;
-    font-weight: 600;
-    line-height: 26px;
+.recruit-section .data-box ul li .list-cell .list-content .description{
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    gap: 4px;
+    margin-top: 4px;
+    line-height: 22px;
     color: #222;
+    font-size: 14px;
+
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.recruit-section .data-box ul li a .list-content .rInfo {
+.recruit-section .data-box ul li .list-cell .list-content .info {
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -747,15 +661,15 @@ fieldset, img {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.recruit-section .data-box ul li a .list-content .rInfo span {
+.recruit-section .data-box ul li .list-cell .list-content .info span {
     position: relative;
-    font-size: 13px;
+    /* font-size: 13px; */
     letter-spacing: 0;
     padding: 0 8px 0 0;
     line-height: 20px;
     color: #6a6a6a;
 }
-.recruit-section .data-box ul li a .list-content .rInfo span:after {
+.recruit-section .data-box ul li .list-cell .list-content .info span:after {
     display: inline-block;
     position: absolute;
     top: 50%;
@@ -766,13 +680,13 @@ fieldset, img {
     transform: translateY(-50%);
     content: "";
 }
-.recruit-section .data-box ul li a .list-content .rInfo span+span {
+.recruit-section .data-box ul li .list-cell .list-content .info span+span {
     padding-left: 8px;
 }
-.recruit-section .data-box ul li a .list-content .rInfo span:last-child {
+.recruit-section .data-box ul li .list-cell .list-content .info span:last-child {
     padding-right: 0;
 }
-.recruit-section .data-box ul li a .list-content .rTagbox {
+.recruit-section .data-box ul li .list-cell .list-content .tagbox {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -782,25 +696,20 @@ fieldset, img {
     width: 236px;
     height: 22px;
     margin: 16px 0 0;
-    /* opacity: 0; */
-    /* pointer-events: none; */
     opacity: 1;
     pointer-events: auto;
 }
-.recruit-section .data-box ul li a .list-content .rTag {
+.recruit-section .data-box ul li .list-cell .list-content .tag {
     flex-shrink: 0;
     display: block;
     font-size: 11px;
-    letter-spacing: 0;
     line-height: 22px;
     color: #6a6a6a;
     background-color: #f7f7f7;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 0 8px;
     white-space: nowrap;
 }
-
-
 
     /* 원픽 신청 지원자 */
 .recruit-section.onepick-account .border-round-section {
@@ -1073,335 +982,4 @@ fieldset, img {
     opacity: .35;
     cursor: auto;
     pointer-events: none;
-}
-
-/* 인재추천 */
-.col-1-medium-section {
-    float: left;
-    width: 460px;
-}
-    /* 공고와 맞는 인재 */
-.common-h2, .common-h2>a {
-    font-size: 18px;
-    /* color: #1a1a1a; */
-    line-height: 24px;
-}
-.common-h2 {
-    position: relative;
-    display: inline-block;
-}
-.common-h2>a {
-    display: inline-block;
-    padding: 0 19px 0 15px;
-    background: url("https://i.jobkorea.kr/content/images/corporate/main_v2/arrow_9x24_black.png") 100% no-repeat;
-}
-.person-section .border-round-section {
-    height: 502px;
-    margin-top: 14px;
-}
-.data-none-box .contents-box {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-.data-none-box .contents-box .icon.frown {
-    background-image: url("https://i.jobkorea.kr/content/images/corporate/main_v2/icon_frown.png");
-}
-.data-none-box .contents-box .icon {
-    width: 76px;
-    height: 70px;
-    margin: 0 auto;
-    background: no-repeat 50%;
-}
-.data-none-box .contents-box .icon+.title {
-    margin-top: 20px;
-}
-.data-none-box .contents-box .title {
-    font-size: 16px;
-    line-height: 23px;
-    font-weight: 700;
-}
-.data-none-box .contents-box .text {
-    color: grey;
-    line-height: 20px;
-    margin-top: 5px;
-}
-.data-none-box .contents-box .button-list {
-    display: table;
-    /* width: auto; */
-    margin: 21px auto 0;
-}
-/* .data-none-box .contents-box .button-list li {
-    float: left;
-} */
- .data-none-box .contents-box .button-list li a {
-    display: block;
-    height: 54px;
-    line-height: 52px;
-    border: 1px solid #ccc;
-    font-size: 15px;
-    padding: 0 30px;
-    border-radius: 10px;
-}
-    /*  */
-.col-1-medium-section:nth-child(n+2) {
-    margin-left: 20px;
-}
-.person-section .top-box {
-    height: 50px;
-    padding: 19px 30px 13px;
-    border-bottom: 1px solid #ebebeb;
-    font-weight: 700;
-    color: #1a1a1a;
-    line-height: 17px;
-}
-.person-section .top-box span {
-    color: #39f;
-}
-.person-section .person-list {
-    padding-top: 19px;
-}
-.person-section .person-list>li {
-    padding: 0 30px;
-}
-.person-section .person-list>li a {
-    padding: 15px 0;
-}
-.person-section .person-list>li .image-box {
-    overflow: hidden;
-    position: relative;
-    float: left;
-    width: 68px;
-    height: 68px;
-    border: 1px solid #e6e6e6;
-    background: url("https://i.jobkorea.kr/content/images/corporate/main_v2/image_profile_default.png") no-repeat 50%;
-    border-radius: 50%;
-    background-size: 100%;
-}
-.person-section .person-list>li .image-box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-}
-.person-section .person-list>li .text-box {
-    float: left;
-    width: calc(100% - 80px);
-    margin: 0 0 0 12px;
-}
-.person-section .person-list>li .text-box .title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 18px;
-}
-.person-section .person-list>li .text-box .line-list {
-    overflow: hidden;
-    height: 20px;
-    margin-top: 6px;
-}
-.person-section .person-list>li .text-box .line-list li {
-    color: grey;
-    line-height: 17px;
-}
-.line-list>div, .line-list>li {
-    /* position: relative; */
-    padding: 0 8px;
-}
-.line-list>div:first-child, .line-list>li:first-child {
-    padding-left: 0 !important;
-}
-.line-list>div:nth-child(n+2):before, .line-list>li:nth-child(n+2):before {
-    position: absolute;
-    left: 0;
-    transform: translateY(-50%);
-    top: 50%;
-    margin-top: -1px;
-    content: "";
-    display: block;
-    width: 1px;
-    height: 12px;
-    background: #e6e6e6;
-}
-.person-section .person-list>li .text-box .keyword-list {
-    overflow: hidden;
-    height: 20px;
-    margin-top: 8px;
-}
-.person-section .person-list>li .text-box .keyword-list li {
-    float: left;
-    height: 20px;
-    padding: 0 8px;
-    background: #f5f5fa;
-    color: #999;
-    line-height: 20px;
-    border-radius: 10px;
-    font-size: 12px;
-}
-.person-section .person-list>li .text-box .keyword-list li:nth-child(n+2) {
-    margin-left: 6px;
-}
-.person-section .person-list>li:nth-child(n+2) a {
-    border-top: 1px solid #f0f0f0;
-}
-    /* 서칭상품, 헤드헌팅 홍보 */
-.col-1-small-section:nth-child(n+2) {
-    margin-left: 20px;
-}
-.col-1-small-section {
-    float: left;
-    width: 300px;
-}
-.service-promotion-section {
-    padding-top: 38px;
-}
-.service-promotion-section .searching-section {
-    background: url("https://i.jobkorea.kr/content/images/corporate/main_v2/image_person_1.png") #fff 100% 100% no-repeat;
-}
-.service-promotion-section .border-round-section {
-    position: relative;
-    height: 241px;
-    padding: 30px;
-}
-.service-promotion-section h3 {
-    font-size: 22px;
-    letter-spacing: -.5px;
-    color: #1a1a1a;
-    line-height: 32px;
-}
-.service-promotion-section .more-button {
-    display: inline-block;
-    height: 31px;
-    margin-top: 17px;
-    padding: 0 14px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 31px;
-    background-color: #39f;
-    border-radius: 15.5px;
-}
-.service-promotion-section .more-button:after {
-    display: inline-block;
-    width: 9px;
-    height: 17px;
-    margin-left: 3px;
-    background: url("http://i.jobkorea.kr/content/images/corporate/main_v2/arrow_9x17_white.png");
-    content: "";
-    vertical-align: sub;
-}
-.service-promotion-section .border-round-section:nth-child(n+2) {
-    margin-top: 20px;
-}
-.service-promotion-section .headhunting-section {
-    background: url("https://i.jobkorea.kr/content/images/corporate/main_v2/image_person_2.png") #fff 100% 100% no-repeat;
-}
-
-/* 퀵 메뉴 */
-.col-2-section {
-    float: left;
-    width: 940px;
-}
-.quick-menu-section .border-round-section {
-    height: 180px;
-    padding: 30px;
-}
-.quick-menu-section .text-box {
-    float: left;
-    font-weight: 700;
-    color: #1a1a1a;
-    line-height: 32px;
-    font-size: 22px;
-    letter-spacing: -.5px;
-}
-.quick-menu-section .quick-menu-list {
-    float: right;
-    width: 452px;
-}
-.quick-menu-section .quick-menu-list li {
-    float: left;
-}
-.quick-menu-section .quick-menu-list li:first-child a {
-    background-image: url("https://i.jobkorea.kr/content/images/corporate/main_v2/icon_megaphone.png");
-}
-.quick-menu-section .quick-menu-list li a {
-    display: block;
-    width: 220px;
-    height: 54px;
-    padding-left: 56px;
-    border: 1px solid #ccc;
-    background: no-repeat 13px;
-    line-height: 54px;
-    border-radius: 10px;
-    font-size: 15px;
-}
-.quick-menu-section .quick-menu-list li:nth-child(2n) {
-    margin-left: 12px;
-}
-.quick-menu-section .quick-menu-list li:nth-child(2) a {
-    background-image: url("https://i.jobkorea.kr/content/images/corporate/main_v2/icon_search.png");
-}
-.quick-menu-section .quick-menu-list li:nth-child(n+3) {
-    margin-top: 12px;
-}
-.quick-menu-section .quick-menu-list li:nth-child(3) a {
-    background-image: url("https://i.jobkorea.kr/content/images/corporate/main_v2/icon_coin.png");
-}
-.quick-menu-section .quick-menu-list li:nth-child(4) a {
-    background-image: url("https://i.jobkorea.kr/content/images/corporate/main_v2/icon_coupon.png");
-}
-
-.service-promotion-section.app {
-    padding: 0;
-}
-.service-promotion-section.app .border-round-section {
-    height: 180px;
-}
-.event-banner-section .border-round-section {
-    overflow: hidden;
-    height: 80px;
-    border-radius: 15px;
-}
-.row-article .inner .col-2-section .event-banner-section .ad-container {
-    width: 940px;
-    height: 80px;
-    background-color: #2BB0D4;
-}
-.ad-container, .ad-container a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.ad-container a, .ad-container a p {
-    color: #333;
-    font: 14px / 17px Pretendard;
-}
-.ad-container a img {
-    max-width: 100%;
-    object-fit: contain;
-}
-
-.sub-banner-section .border-round-section a {
-    height: 80px;
-    padding: 16px 0 0 30px;
-    background: url("https://i.jobkorea.kr/content/images/corporate/main_v2/background_sub_banner.png");
-    color: #fff;
-}
-.sub-banner-section .border-round-section a .description {
-    line-height: 18px;
-    font-size: 14px;
-}
-.sub-banner-section .border-round-section a .title {
-    display: inline-block;
-    margin-top: 4px;
-    padding-right: 17px;
-    background: url("https://i.jobkorea.kr/content/images/corporate/main_v2/arrow_9x24_white.png") 100% no-repeat;
-    line-height: 28px;
-    font-size: 18px;
 }
