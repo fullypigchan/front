@@ -311,13 +311,13 @@ emotionButtons.forEach((emotionButton) => {
         if (uiPlaceholder) uiPlaceholder.classList.add("focus");
         if (ph1) ph1.style.display = "none";
 
-        // ✅ textarea에 글이 있는지 확인
+        //  textarea에 글이 있는지 확인
         const textarea = writeBoxWrap.querySelector("textarea");
         if (ph2) {
             ph2.style.display = textarea?.value ? "none" : "block";
         }
 
-        // ✅ 기존 attach-wrap 삭제 (하나만 허용)
+        //  기존 attach-wrap 삭제 (하나만 허용)
         const existingAttach = uiPlaceholder?.querySelector(".attach-wrap");
         if (existingAttach) existingAttach.remove();
 
@@ -369,7 +369,7 @@ addFiles.forEach((addFile) => {
         if (uiPlaceholder) uiPlaceholder.classList.add("focus");
         if (ph1) ph1.style.display = "none";
 
-        // ✅ textarea에 글이 있는지 확인
+        //  textarea에 글이 있는지 확인
         const textarea = writeBoxWrap.querySelector("textarea");
         if (ph2) {
             ph2.style.display = textarea?.value ? "none" : "block";
@@ -390,7 +390,7 @@ addFiles.forEach((addFile) => {
             );
             if (imgPathInput) imgPathInput.value = path;
 
-            // ✅ 기존 attach-wrap 삭제 (하나만 허용)
+            // 기존 attach-wrap 삭제 (하나만 허용)
             const existingAttach = uiPlaceholder?.querySelector(".attach-wrap");
             if (existingAttach) existingAttach.remove();
 
@@ -424,7 +424,7 @@ const wrappers = document.querySelectorAll(".writeBoxWrap.cmtWrite");
 wrappers.forEach((wrapper) => {
     const textarea = wrapper.querySelector("textarea");
 
-    // ✅ wrapper 안에서 직접 찾기
+    //  wrapper 안에서 직접 찾기
     const ph1 = wrapper.querySelector(".ph_1");
     const ph2 = wrapper.querySelector(".ph_2");
     const uiPlaceholder = wrapper.querySelector(".uiPlaceholder");
@@ -519,25 +519,10 @@ deleteReplyOfButtons.forEach((deleteButton) => {
 
         if (isDelete) {
             // 사용자가 '확인'을 눌렀을 때만 실행
-            alert("삭제되었습니다."); // (선택사항) 삭제 완료 알림
+            alert("삭제되었습니다."); // 삭제 완료 알림
             location.href = "../skill-log/log-detail.html"; // 페이지 이동
         } else {
-            // 사용자가 '취소'를 누르면 아무 일도 일어나지 않음 (함수 종료)
-            return;
-        }
-    });
-});
-deleteReplyButtons.forEach((deleteButton) => {
-    deleteButton.addEventListener("click", (e) => {
-        // confirm은 확인(true) 또는 취소(false)를 반환합니다.
-        const isDelete = confirm("정말로 댓글을 삭제 하시겠습니까?");
-
-        if (isDelete) {
-            // 사용자가 '확인'을 눌렀을 때만 실행
-            alert("삭제되었습니다."); // (선택사항) 삭제 완료 알림
-            location.href = "../skill-log/log-detail.html"; // 페이지 이동
-        } else {
-            // 사용자가 '취소'를 누르면 아무 일도 일어나지 않음 (함수 종료)
+            // 함수 종료
             return;
         }
     });
@@ -572,7 +557,7 @@ modifyAnswerButtons.forEach((modifyAnswerButton) => {
             }
         }
 
-        // ✅ placeholder span 숨기기
+        // placeholder span 숨기기
         const ph1 = modifyContSec.querySelector(".ph_1");
         const ph2 = modifyContSec.querySelector(".ph_2");
         if (ph1) ph1.style.display = "none";
@@ -627,7 +612,7 @@ myComtUpdateButtons.forEach((myComtUpdateButton) => {
     });
 });
 
-// ✅ 취소 버튼 이벤트 (로그인)
+// 취소 버튼 이벤트 (로그인)
 const modifyCancelButtons = document.querySelectorAll(
     ".btnModifyCancel.qnaSpB",
 );
@@ -643,7 +628,7 @@ modifyCancelButtons.forEach((modifyCancelButton) => {
     });
 });
 
-// ✅ 등록 버튼 이벤트 (로그인)
+// 등록 버튼 이벤트 (로그인)
 const modifySubmitButtons = document.querySelectorAll(
     ".btnSbm.devAnswerEditSubmitButton",
 );
