@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="/static/css/community/header.css">
-        <link rel="stylesheet" href="/static/css/community/write.css">
-        <link rel="stylesheet" href="/static/css/community/footer.css">
+        <link rel="stylesheet" href="/static/css/community/header.css" />
+        <link rel="stylesheet" href="/static/css/community/write.css" />
+        <link rel="stylesheet" href="/static/css/community/footer.css" />
     </head>
     <body>
-<!-- 헤더 -->
-  <div id="headerWrap" class="gnbTheme1200 devGnbContainer">
+        <!-- //헤더 -->
+        <div id="headerWrap" class="gnbTheme1200 devGnbContainer">
             <div id="header" class="season_bg">
                 <!--신입공채 메뉴일경우 클래스 start-sub 추가 -->
                 <!-- // headInner -->
+                <!-- //비로그인/로그인 상단(로그인, 회원가입, 별충전, 기업서비스) -->
                 <div class="headInner">
                     <h1 class="jkLogo">
                         <a href="">
@@ -24,7 +25,6 @@
                             />
                         </a>
                     </h1>
-
                     <!-- // search -->
                     <div class="search" id="searchWrap">
                         <h2 class="skip">검색</h2>
@@ -43,7 +43,7 @@
                                         id="stext"
                                         title="검색어 입력"
                                         name="stext"
-                                        placeholder=""
+                                        placeholder="try me, try catch"
                                         maxlength="30"
                                         data-vvipkeyword=""
                                         data-vvipkwrdno="0"
@@ -204,7 +204,7 @@
                                     id="gnbInternship"
                                     class="navItem internship"
                                 >
-                                    <a href="/templates/skill-log/dashboard.html" class="linkItem"
+                                    <a href="" class="linkItem"
                                         ><span class="spNav"
                                             >기술 블로그</span
                                         ></a
@@ -212,7 +212,7 @@
                                 </li>
 
                                 <li id="futurelab" class="navItem futurelab">
-                                    <a href="/templates/community/QnA.html" class="linkItem">
+                                    <a href="" class="linkItem">
                                         <span class="spNav"
                                             ><span class="txIr"
                                                 >커뮤니티</span
@@ -221,8 +221,10 @@
                                     </a>
                                 </li>
                             </ul>
+                            <!-- 공통부분(상단 네비게이션) -->
+                            <!-- //비로그인 상단(로그인, 회원가입, 별충전, 기업서비스)// -->
                             <!-- my 홈일경우 클래스 myPage -->
-                            <ul id="devMyPage" class="userNav">
+                            <!-- <ul id="devMyPage" class="userNav">
                                 <ul class="userNav">
                                     <li class="userNav-item login">
                                         <a
@@ -298,7 +300,482 @@
                                                                 ></a
                                                             >
                                                         </li>
+                                                    </ul> -->
+                            <!-- 비로그인 상단(로그인,회원가입,별충전,기업서비스 드롭다운)// -->
+                            <!-- //로그인 상단(알림,개인서비스) -->
+                            <ul id="devMyPage" class="userNav">
+                                <ul class="userNav" style="">
+                                    <li
+                                        class="userNav-item notification devLiNotification"
+                                    >
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="bell notify"
+                                            id="js-bell"
+                                            onclick=""
+                                        >
+                                            알림
+                                            <span id="js-alarmCnt" class="">
+                                                0
+                                            </span>
+                                        </a>
+                                        <div
+                                            class="popup-notification"
+                                            id="js-notiLayer"
+                                        >
+                                            <div
+                                                class="AItoast-popup AItoast-acceptance"
+                                            >
+                                                <div
+                                                    class="AItoast-acceptance-wrap"
+                                                >
+                                                    <p
+                                                        class="AItoast-acceptance-message"
+                                                    >
+                                                        2025년 3월 26일 AI추천
+                                                        채용정보에 대한
+                                                        <br />메일/문자 수신을
+                                                        <b>동의</b>했습니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--// AI추천 : 푸시.알림 설정  -->
+                                            <input
+                                                type="hidden"
+                                                value="1"
+                                                id="js-AlarmLayerTotalCnt"
+                                            />
+                                            <div
+                                                class="popup-notification-body"
+                                                id="js-popupDiv"
+                                            >
+                                                <div
+                                                    class="list list-notification-container"
+                                                    id="js-LayerFrame"
+                                                >
+                                                    <div
+                                                        class="header-date alarmList"
+                                                        data-date=" 26.01.20"
+                                                    >
+                                                        <div
+                                                            class="header-date-item header-date-item-full"
+                                                        >
+                                                            26.01.20
+                                                        </div>
+                                                        <div
+                                                            class="header-date-item header-date-item-day"
+                                                        >
+                                                            (화)
+                                                        </div>
+                                                        <div
+                                                            class="header-date-item"
+                                                        >
+                                                            · 어제
+                                                        </div>
+                                                    </div>
+                                                    <ul
+                                                        class="list-notification"
+                                                    >
+                                                        <li
+                                                            class="notification-item"
+                                                        >
+                                                            <div
+                                                                class="notification-header"
+                                                            >
+                                                                <div
+                                                                    class="notification-header-item category"
+                                                                >
+                                                                    취업톡톡
+                                                                </div>
+                                                                <div
+                                                                    class="notification-header-item date"
+                                                                >
+                                                                    12:07
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="notification-body"
+                                                            >
+                                                                <div
+                                                                    class="notification-title"
+                                                                >
+                                                                    북마크한
+                                                                    <a
+                                                                        href="/User/Qstn/AnswerWrite?qstnNo=152527"
+                                                                        target="_blank"
+                                                                        onclick=""
+                                                                    >
+                                                                        "자바와
+                                                                        파이썬
+                                                                        중 ..."
+                                                                        질문에
+                                                                        답변</a
+                                                                    >이
+                                                                    등록되었습니다.
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="notificaiton-footer"
+                                                            >
+                                                                <div
+                                                                    class="buttons"
+                                                                >
+                                                                    <a
+                                                                        href="/User/Qstn/AnswerWrite?qstnNo=152527"
+                                                                        class="button"
+                                                                        onclick=""
+                                                                        >자세히보기</a
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </li>
                                                     </ul>
+                                                </div>
+                                                <div class="notice">
+                                                    <p class="notice-item">
+                                                        최근
+                                                        <u>30일 이내</u>
+                                                        알림만 확인할 수
+                                                        있습니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <a
+                                                href="/User/Alarm"
+                                                class="button button-footer button-all-view"
+                                                >모두보기</a
+                                            >
+                                            <!-- AI추천 : 푸시.알림 설정  -->
+                                            <!-- modal-acceptance 약관동의 / modal-missing 놓치는 알림 -->
+                                            <div
+                                                class="AImodal-popup AImodal-missing"
+                                                style="display: none"
+                                            >
+                                                <div
+                                                    class="AImodal-common-wrap"
+                                                >
+                                                    <p
+                                                        class="AImodal-common-title"
+                                                    ></p>
+                                                    <!--놓치는 알림-->
+                                                    <div
+                                                        class="AImodal-missing-alram"
+                                                        style="display: none"
+                                                    >
+                                                        <span
+                                                            class="AImissing-alram-image"
+                                                        ></span>
+                                                        <div
+                                                            class="AImissing-alram-group"
+                                                        >
+                                                            <ul>
+                                                                <li
+                                                                    class="AImissing-alram-item"
+                                                                    data-rcv-code="4"
+                                                                >
+                                                                    <i
+                                                                        class="line_line_check"
+                                                                    ></i
+                                                                    >AI추천
+                                                                    채용정보
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!--놓치는 알림-->
+                                                    <!-- 약관 내용 -->
+                                                    <div
+                                                        class="AImodal-common-policy"
+                                                    >
+                                                        <p
+                                                            class="AIcommon-policy-title"
+                                                        >
+                                                            <em
+                                                                class="AIcommon-type-choose"
+                                                                >[선택]</em
+                                                            >
+                                                            개인정보 수집 및
+                                                            이용 동의
+                                                        </p>
+                                                        <div
+                                                            class="AIcommon-policy-content"
+                                                        >
+                                                            <div
+                                                                class="AIcommon-policy-wrap"
+                                                            >
+                                                                <ol
+                                                                    class="AIcommon-policy-list"
+                                                                >
+                                                                    <li
+                                                                        class="AIcommon-policy-item"
+                                                                    >
+                                                                        1. 수집
+                                                                        이용
+                                                                        목적
+                                                                        <p>
+                                                                            <u
+                                                                                >맞춤공고,
+                                                                                서비스
+                                                                                안내,
+                                                                                마케팅
+                                                                                발송을
+                                                                                목적으로
+                                                                                활용</u
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+                                                                    <li
+                                                                        class="AIcommon-policy-item"
+                                                                    >
+                                                                        2.
+                                                                        수집하는
+                                                                        개인정보
+                                                                        항목
+                                                                        <p>
+                                                                            전화번호,
+                                                                            이메일,
+                                                                            푸시토큰,
+                                                                            서비스
+                                                                            이용
+                                                                            기록
+                                                                        </p>
+                                                                    </li>
+                                                                    <li
+                                                                        class="AIcommon-policy-item"
+                                                                    >
+                                                                        3.
+                                                                        개인정보
+                                                                        보유 및
+                                                                        이용기간
+                                                                        <p>
+                                                                            <u
+                                                                                >회원탈퇴
+                                                                                시
+                                                                                즉시
+                                                                                파기</u
+                                                                            >
+                                                                        </p>
+                                                                    </li>
+                                                                    <li
+                                                                        class="AIcommon-policy-item"
+                                                                    >
+                                                                        4.
+                                                                        수신동의
+                                                                        거부 및
+                                                                        철회방법
+                                                                        안내
+                                                                        <p>
+                                                                            본
+                                                                            동의는
+                                                                            거부하실
+                                                                            수
+                                                                            있습니다.
+                                                                            다만
+                                                                            거부
+                                                                            시
+                                                                            동의를
+                                                                            통해
+                                                                            제공
+                                                                            가능한
+                                                                            각종
+                                                                            혜택,
+                                                                            이벤트
+                                                                            안내를
+                                                                            받아보실
+                                                                            수
+                                                                            없습니다.
+                                                                            더
+                                                                            이상
+                                                                            맞춤공고,
+                                                                            서비스
+                                                                            안내,
+                                                                            마케팅
+                                                                            발송을
+                                                                            원하시지
+                                                                            않는
+                                                                            경우
+                                                                            회원정보수정
+                                                                            페이지에서
+                                                                            수신여부를
+                                                                            변경하실
+                                                                            수
+                                                                            있습니다.
+                                                                        </p>
+                                                                    </li>
+                                                                </ol>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button
+                                                        type="button"
+                                                        class="AIbutton-common-agreement"
+                                                        onclick="
+                                                            OpenMissingOptionalPIMAgreeSet()
+                                                        "
+                                                    >
+                                                        동의하고 알림받기
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="AIbutton-common-close"
+                                                        onclick="
+                                                            $(
+                                                                '.AImodal-popup',
+                                                            ).css(
+                                                                'display',
+                                                                'none',
+                                                            )
+                                                        "
+                                                    >
+                                                        <i
+                                                            class="system_system_close"
+                                                        ></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="AItoast-popup AItoast-common"
+                                            >
+                                                <div
+                                                    class="AItoast-common-wrap"
+                                                >
+                                                    <p
+                                                        class="AItoast-common-message"
+                                                    >
+                                                        [선택]개인정보 수집 및
+                                                        이용
+                                                        <b>동의</b>
+                                                        항목 동의되어 광고성
+                                                        메일 알림
+                                                        ‘<b>수신</b>’처리
+                                                        되었습니다.
+                                                    </p>
+                                                    <p
+                                                        class="AItoast-common-date"
+                                                    >
+                                                        (2023년 04월 21일,
+                                                        전송자: 잡코리아)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <input
+                                                type="hidden"
+                                                id="isResultPrivacyChoiceAgree"
+                                                value="0"
+                                            />
+                                            <input
+                                                type="hidden"
+                                                id="PrivacyChoiceAgreeUrl"
+                                                value="/user/Alarm"
+                                            />
+                                            <!--// AI추천 : 푸시.알림 설정  -->
+                                        </div>
+                                    </li>
+                                    <li class="userNav-item my member">
+                                        <a
+                                            href=""
+                                            class="btnMyOpen txt-button ico-cp"
+                                            onclick="
+                                                GA_Event(
+                                                    '공통_PC',
+                                                    'gnb',
+                                                    '개인회원 홈',
+                                                )
+                                            "
+                                            ><span class="spGnb"></span
+                                            ><span class="user-name"
+                                                >김윤찬</span
+                                            ><span class="skip">열기</span></a
+                                        >
+                                        <div class="lyMyArea">
+                                            <div class="myInner">
+                                                <div class="myLists">
+                                                    <ul>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/User/Mypage"
+                                                                onclick="
+                                                                    GA_Event(
+                                                                        '공통_PC',
+                                                                        'gnb',
+                                                                        '개인회원 홈',
+                                                                    )
+                                                                "
+                                                                ><span
+                                                                    class="tx"
+                                                                    >개인회원
+                                                                    홈</span
+                                                                ></a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/User/ResumeMng"
+                                                                onclick="
+                                                                    GA_Event(
+                                                                        '공통_PC',
+                                                                        'gnb',
+                                                                        '이력서 관리',
+                                                                    )
+                                                                "
+                                                                ><span
+                                                                    class="tx"
+                                                                    >자기소개서
+                                                                    관리</span
+                                                                ></a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/User/ApplyMng"
+                                                                onclick="
+                                                                    GA_Event(
+                                                                        '공통_PC',
+                                                                        'gnb',
+                                                                        '입사지원 현황',
+                                                                    )
+                                                                "
+                                                                ><span
+                                                                    class="tx"
+                                                                    >체험지원
+                                                                    현황</span
+                                                                ></a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/Text_User/User_Pwd.asp"
+                                                                onclick="
+                                                                    GA_Event(
+                                                                        '공통_PC',
+                                                                        'gnb',
+                                                                        '개인정보 수정',
+                                                                    )
+                                                                "
+                                                                ><span
+                                                                    class="tx"
+                                                                    >개인정보
+                                                                    수정</span
+                                                                ></a
+                                                            >
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="lyRow">
+                                                    <div class="btnRowWrap">
+                                                        <a
+                                                            href="/Login/Logout.asp"
+                                                            class="btnLogOut"
+                                                            onclick="
+                                                                GA_Event(
+                                                                    '공통_PC',
+                                                                    'gnb',
+                                                                    '로그아웃',
+                                                                )
+                                                            "
+                                                            >로그아웃</a
+                                                        >
+                                                    </div>
                                                 </div>
                                             </div>
                                             <span class="icnArr spGnb"></span>
@@ -306,6 +783,7 @@
                                     </li>
                                 </ul>
                             </ul>
+                            <!-- 로그인 상단(알림,개인서비스)// -->
                         </div>
                     </div>
                     <div class="lyNavArea">
@@ -337,15 +815,11 @@
                                                                 >직무별 공고</a
                                                             >
                                                         </li>
-                                                        
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="colItem">
-                                                
-                                                <div class="listBx">
-                                                    
-                                                </div>
+                                                <div class="listBx"></div>
                                             </div>
                                             <div class="colItem">
                                                 <strong class="titArea">
@@ -386,16 +860,10 @@
                                                 </div>
                                             </div>
                                             <div class="colItem">
-                                                
-                                                <div class="listBx">
-                                                   
-                                                </div>
+                                                <div class="listBx"></div>
                                             </div>
                                             <div class="colItem">
-                                                
-                                                <div class="listBx">
-                                                    
-                                                </div>
+                                                <div class="listBx"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -419,7 +887,6 @@
                                                                 >기업리뷰</a
                                                             >
                                                         </li>
-                                                       
                                                     </ul>
                                                 </div>
                                             </div>
@@ -436,27 +903,19 @@
                                                 >
                                                 <div class="listBx">
                                                     <ul class="list-col">
-                                                        
                                                         <li>
                                                             <a href=""
                                                                 >기술 블로그</a
                                                             >
                                                         </li>
-                                                       
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="colItem">
-                                                
-                                                <div class="listBx">
-                                                    
-                                                </div>
+                                                <div class="listBx"></div>
                                             </div>
                                             <div class="colItem">
-                                                
-                                                <div class="listBx">
-                                                    
-                                                </div>
+                                                <div class="listBx"></div>
                                             </div>
                                         </div>
                                         <div class="lyCol subCol">
@@ -469,9 +928,7 @@
                                                 <div class="listBx">
                                                     <ul>
                                                         <li>
-                                                            <a href=""
-                                                                >QnA</a
-                                                            >
+                                                            <a href="">QnA</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -502,7 +959,6 @@
                                                     ></i
                                                 ></a>
                                             </li>
-                                           
                                         </ul>
                                     </div>
                                 </div>
@@ -567,7 +1023,6 @@
                                             </ul>
                                         </div>
                                     </div>
-
                                     <!-- 배너영역 -->
                                     <!-- CASE: 비로그인 / 개인회원-->
                                 </div>
@@ -577,8 +1032,8 @@
                 </div>
             </div>
         </div>
-
         <div class="jkNavDimm"></div>
+        <!-- 헤더// -->
         <!-- 네비게이션 -->
         <div id="wrap">
             <div class="side-navigation">
@@ -617,7 +1072,10 @@
                             <!-- [Dev] 프로필 랜덤 이미지 파일명 : random_1 ~ random_20, 이미지 없음 : random_default -->
                             <span class="proThumb"
                                 ><img
-                                    onerror="this.src='https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_default.jpg'"
+                                    onerror="
+                                        this.src =
+                                            'https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_default.jpg'
+                                    "
                                     src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_13.jpg"
                                     alt="프로필 이미지"
                             /></span>
@@ -682,7 +1140,7 @@
                                     data-lastregdt="2025-10-15 11:28:36"
                                 >
                                     <a href="">
-                                        잡코리아
+                                        try-catch
                                         <!-- 새글 new-->
                                         <span
                                             class="qnaSpA"
@@ -973,6 +1431,7 @@
                                                             전체삭제
                                                         </button>
                                                     </div>
+                                                    <ul class="searchList inner-scroll-box">
                                                     <ul
                                                         class="searchList inner-scroll-box"
                                                     >
@@ -994,13 +1453,23 @@
                                                         <span class="subtitle"
                                                             >최근검색</span
                                                         >
+                                                        <button type="button" class="btnAllDel devQnaWriteBizJobtypeAllDeleteButton" style="display: block;">전체삭제</button>
                                                     </div>
+                                                    <!-- 최근 검색한 직무가 있을 때! -->
+                                                     <ul class="searchList inner-scroll-box">
+                                                       <li class="devBizJobtypeMyItem" data-bizjobtype-name="마케팅기획" data-bizjobtype-code="1000187"><button type="button" class="qnaSpB">마케팅기획</button></li>
+                                                    </ul>
+                                                    <!-- 최근 검색한 직무가 있을 때! -->
+                                                    <!-- 최근 검색한 직무가 없을 때! -->
+                                                <div class="layer-cont devRecentSearchBizJobtypeEmpty" style="display: none;">
+                                                     <div class="subtitle-wrap">
+                                                          <span class="subtitle">최근검색</span>
+                                                      </div>
                                                     <div class="nullWrap">
-                                                        <p class="msgBx">
-                                                            최근 검색한 직무가
-                                                            없습니다.
-                                                        </p>
+                                                    <p class="msgBx">최근 검색한 직무가 없습니다.</p>
                                                     </div>
+                                                    </div>
+                                                    <!-- 최근 검색한 직무가 없을 때! -->
                                                 </div>
                                                 <button
                                                     type="button"
@@ -8948,241 +9417,103 @@
                             </div>
                         </div>
                         <!-- 글쓰기 시작(제목, 내용) -->
+                         <!-- writeBoxWrap -->
                         <div class="writeBoxWrap">
                             <form>
                                 <fieldset>
                                     <legend>질문 등록하기</legend>
                                     <div class="jkTxInput">
                                         <p class="inpWrap">
-                                            <input
-                                                type="text"
-                                                class="jkSchInp devQnaWriteTitle"
-                                                placeholder="질문 제목을 입력해주세요."
-                                            />
+                                            <input type="text" class="jkSchInp devQnaWriteTitle" placeholder="질문 제목을 입력해주세요.">
                                         </p>
                                     </div>
                                     <!-- 체험공고, 링크, 사진 첨부 -->
                                     <div class="editor-util">
                                         <ul>
                                             <li class="editor-util-item">
-                                                <button
-                                                    type="button"
-                                                    class="icon-recruit qnaSpB btn-layer-open"
-                                                >
-                                                    체험공고
-                                                </button>
-                                                <div
-                                                    class="layer-box-wrap opening-layer"
-                                                >
-                                                    <p class="layer-header">
-                                                        공고첨부
-                                                    </p>
-                                                    <div
-                                                        class="jkSchInput keywordSearch keywordSearchRecruit"
-                                                    >
-                                                        <p class="inpWrap">
-                                                            <input
-                                                                type="text"
-                                                                class="schInp"
-                                                                id="AJAX_TS_Search"
-                                                                maxlength=""
-                                                                placeholder="기업,직무,기술 검색"
-                                                                title="학교명 입력"
-                                                            />
-                                                            <button
-                                                                type="button"
-                                                                class="btnSch qnaSpB devSearchRecruit"
-                                                            >
-                                                                <span
-                                                                    class="skip"
-                                                                    >검색</span
-                                                                >
-                                                            </button>
-                                                        </p>
-                                                        <div
-                                                            class="searchLayer thin"
-                                                        >
-                                                            <ul
-                                                                class="keyword-search-area"
-                                                            ></ul>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="layer-cont"
-                                                        id="recentRecruit"
-                                                        style="display: none"
-                                                    ></div>
-                                                    <div
-                                                        class="layer-cont"
-                                                        id="searchRecruit"
-                                                        style="display: none"
-                                                    ></div>
-                                                    <button
-                                                        type="button"
-                                                        class="btn-layer-close qnaSpB"
-                                                    >
-                                                        <span class="blind"
-                                                            >닫기</span
-                                                        >
-                                                    </button>
-                                                </div>
-                                            </li>
-                                            <li class="editor-util-item">
-                                                <button
-                                                    type="button"
-                                                    class="icon-link qnaSpB btn-layer-open"
-                                                >
+                                                <button type="button" class="icon-link qnaSpB btn-layer-open">
                                                     링크
                                                 </button>
-                                                <div
-                                                    class="layer-box-wrap link-layer"
-                                                >
+                                                <div class="layer-box-wrap link-layer">
                                                     <p class="layer-header">
                                                         링크첨부
                                                     </p>
-                                                    <div
-                                                        class="jkSchInput keywordSearch keywordSearchLink"
-                                                    >
+                                                    <div class="jkSchInput keywordSearch keywordSearchLink">
                                                         <p class="inpWrap">
-                                                            <input
-                                                                type="text"
-                                                                class="schInp"
-                                                                maxlength=""
-                                                                placeholder="URL을 입력하세요"
-                                                                title="학교명 입력"
-                                                            />
-                                                            <button
-                                                                type="button"
-                                                                class="btnSch qnaSpB devSearchLink"
-                                                            >
-                                                                <span
-                                                                    class="skip"
-                                                                    >검색</span
-                                                                >
+                                                            <input type="text" class="schInp" maxlength="" placeholder="URL을 입력하세요" title="학교명 입력">
+                                                            <button type="button" class="btnSch qnaSpB devSearchLink">
+                                                                <span class="skip">검색</span>
                                                             </button>
                                                         </p>
                                                     </div>
-                                                    <div
-                                                        class="loading"
-                                                        style="display: none"
-                                                    >
+                                                    <div class="loading" style="display: none">
                                                         로딩중
                                                     </div>
-                                                    <div
-                                                        class="ApiOpenGraphResult"
-                                                    ></div>
+                                                    <div class="ApiOpenGraphResult"></div>
                                                     <div class="layer-button">
-                                                        <button
-                                                            type="button"
-                                                            class="apply attachLinkBtn"
-                                                        >
+                                                        <button type="button" class="apply attachLinkBtn">
                                                             첨부하기
                                                         </button>
                                                     </div>
 
-                                                    <button
-                                                        type="button"
-                                                        class="btn-layer-close qnaSpB"
-                                                    >
-                                                        <span class="blind"
-                                                            >닫기</span
-                                                        >
+                                                    <button type="button" class="btn-layer-close qnaSpB">
+                                                        <span class="blind">닫기</span>
                                                     </button>
                                                 </div>
                                             </li>
                                             <li class="editor-util-item">
-                                                <button
-                                                    type="button"
-                                                    class="icon-photo qnaSpB btn-layer-open"
-                                                >
+                                                <button type="button" class="icon-photo qnaSpB btn-layer-open">
                                                     사진
                                                 </button>
+                                                <input type="file" id="photoInput" accept="image/*" style="display: none;">
                                             </li>
-                                        </ul>
+                                            <li class="editor-util-item">
+                                <button type="button" class="icon-emotion qnaSpB btn-layer-open">이모티콘</button>
+                            <div class="layer-box-wrap emotion-layer">
+                                <p class="layer-header">이모티콘</p>
+                                <ul class="emotion-area">
+                                    <!-- [dev] 이모티콘 총 6개 -->
+                                    <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_1.png" data-idx="1" alt=""></button></li>
+                                    <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_2.png" data-idx="2" alt=""></button></li>
+                                    <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_3.png" data-idx="3" alt=""></button></li>
+                                    <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_4.png" data-idx="4" alt=""></button></li>
+                                    <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_5.png" data-idx="5" alt=""></button></li>
+                                    <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_6.png" data-idx="6" alt=""></button></li>
+                                </ul>
+                                <button type="button" class="btn-layer-close qnaSpB"><span class="blind">닫기</span></button>
+                            </div>
+                                </li>
+                                    </ul>
                                     </div>
-                                    <input
-                                        type="hidden"
-                                        id="dev_ApiOpenGraph_default_img"
-                                        data-value="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/talktalk_none_img.jpg"
-                                    />
+                                    <input type="hidden" id="dev_ApiOpenGraph_default_img" data-value="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/talktalk_none_img.jpg">
                                     <div class="uiPlaceholder">
-                                        <span class="ph" style="display: none"
-                                            >구체적인 내용을 입력해주세요.<br />*휴대폰
+                                        <span class="ph" style="display: none">구체적인 내용을 입력해주세요.<br>*휴대폰
                                             번호, 메일 주소, 카카오톡 ID 등
                                             개인정보가 포함된 내용은 비노출
-                                            처리될 수 있습니다</span
-                                        >
+                                            처리될 수 있습니다</span>
                                         <div class="type-error-alert qnaSpB">
                                             허용되지 않는 이미지 형식이 있어
                                             제외됩니다.
                                         </div>
-                                        <textarea
-                                            id="editorQnaText"
-                                            style="width: 100%; display: none"
-                                            class="devQnaWriteCntnt"
-                                            title="내용 입력"
-                                        >
-                                        &lt;p&gt;&lt;/p&gt;
-                                    </textarea
-                                        >
+                                        <textarea id="editorQnaText" style="width: 100%; display: none" class="devQnaWriteCntnt" title="내용 입력">                                        &lt;p&gt;&lt;/p&gt;
+                                    </textarea>
                                         <!-- 실질적인 내용 작성하는 곳 -->
-                                        <textarea
-                                            id="editorQnaText"
-                                            class="devQnaWriteCntnt custom-editor"
-                                            placeholder="구체적인 내용을 입력해주세요.
-*휴대폰 번호, 메일 주소, 카카오톡 ID 등 개인정보가 포함된 내용은 비노출 처리될 수 있습니다"
-                                        ></textarea>
+                                        <div>
+                                            <div class="addFileAndLink"></div>
+                                            <textarea id="editorQnaText" class="devQnaWriteCntnt custom-editor" placeholder="구체적인 내용을 입력해주세요.
+    *휴대폰 번호, 메일 주소, 카카오톡 ID 등 개인정보가 포함된 내용은 비노출 처리될 수 있습니다"></textarea>
+                                        </div>
                                     </div>
                                     <!-- 태그 입력란 -->
-                                    <div class="tag-input">
-                                        <input
-                                            type="text"
-                                            id="devTags"
-                                            placeholder="태그입력 (#으로 구분해주세요.)"
-                                            value=""
-                                        />
-                                    </div>
-                                    <div class="agreecheckbox checkboxCommWrap">
-                                        <input
-                                            type="checkbox"
-                                            id="lb_agreePoint"
-                                            class="skip"
-                                        />
-                                        <label
-                                            for="lb_agreePoint"
-                                            class="lb_agreePoint qnaSpB"
-                                            >답변 채택 포인트 추가
-                                            (1,100원)<span class="info"
-                                                >잡코리아의 기본 포인트와 합해져
-                                                총 1,500P가 채택된 답변자에게
-                                                지급됩니다</span
-                                            ></label
-                                        >
-                                        <p
-                                            class="txtLayer qnaSpA"
-                                            style="display: block"
-                                        >
-                                            답변 채택 포인트를 추가하면,
-                                            답변율과 정확도가 높아져요!<button
-                                                type="button"
-                                                class="btn-txtLyer-close qnaSpB"
-                                            >
-                                                <span class="blind">닫기</span>
-                                            </button>
-                                        </p>
+                                    <div class="tag-input focus">
+                                        <input type="text" id="devTags" placeholder="태그입력 (#으로 구분해주세요.)" value="">
                                     </div>
                                     <!-- 질문하기, 취소 버튼 -->
                                     <div class="btnCommWrap">
-                                        <button
-                                            type="button"
-                                            class="btnQuestion devQnaWriteButton"
-                                        >
+                                        <button type="button" class="btnQuestion devQnaWriteButton">
                                             질문하기
                                         </button>
-                                        <button
-                                            type="button"
-                                            class="btnCancel bg_white devQnaWriteCancelButton"
-                                        >
+                                        <button type="button" class="btnCancel bg_white devQnaWriteCancelButton">
                                             취소
                                         </button>
                                     </div>
@@ -9219,7 +9550,7 @@
             </div>
         </div>
         <!-- footer -->
-         <div id="footer" class="footer footer--medium">
+        <div id="footer" class="footer footer--medium">
             <div class="footer__wrap">
                 <h2 class="skip">잡코리아 기타 정보</h2>
 
@@ -9328,8 +9659,7 @@
                             <a
                                 href="https://www.jobkorea.co.kr/help/notice/view?no=15019"
                                 ><div class="ellipsis">
-                                    [무료] try-catchㅣAI로
-                                    채용을 새롭게
+                                    [무료] try-catchㅣAI로 채용을 새롭게
                                 </div>
                                 <em class="tahoma">26.01.15</em></a
                             >
@@ -9347,7 +9677,7 @@
                                 >회사소개</a
                             >
                         </li>
-                     
+
                         <li>
                             <a
                                 href="https://www.jobkorea.co.kr/service_jk/provision/provision_gg.asp"
@@ -9362,9 +9692,7 @@
                                 ><strong>개인정보처리방침</strong></a
                             >
                         </li>
-                     
-                     
-                     
+
                         <li>
                             <a
                                 href="https://www.jobkorea.co.kr/help/faq/user"
@@ -9481,4 +9809,5 @@
         </div>
     </body>
     <script src="/static/js/community/header-event.js"></script>
+    <script src="/static/js/community/write-event.js"></script>
 </html>
