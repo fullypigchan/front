@@ -1860,6 +1860,10 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
 }
 
+.attach-box.type-image img{
+    max-width: 100%;
+}
+
 .keyword-search-item .companyName .text_on {
     color: hsl(154.36deg 100% 21.57%)
 }

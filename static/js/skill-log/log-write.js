@@ -221,12 +221,11 @@ textarea.addEventListener("click", (e) => {
 // 태그 입력
 const addTag = document.querySelector("#devTags");
 const inputTag = document.querySelector(".tag-input");
-const regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/g;
+const regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/;
 
 addTag.addEventListener("keyup", (e) => {
-    const tag = addTag.value.trim();
-
-    if (e.key === "Enter" && tag !== "") {
+    const tag = addTag.value;
+    if (e.key === "Enter" && tag) {
         // span 태그 생성
         if (regExp.test(tag)) {
             alert("특수문자는 입력 못해요");
@@ -273,10 +272,22 @@ inputTag.addEventListener("click", (e) => {
 
 // 등록하기 버튼
 const admitButton = document.querySelector(".btnQuestion.devQnaWriteButton");
+// 제목 가져오기
+const writeTitle = document.querySelector(".jkSchInp.devQnaWriteTitle");
+// 내용 가져오기
+const writeContent = document.querySelector(".devQnaWriteCntnt.custom-editor");
 
 admitButton.addEventListener("click", (e) => {
-    confirm("등록하시겠습니까?");
-    if (confirm) {
+    if (!confirm("등록하시겠습니까?")) {
+        e.preventDefault();
+    }
+    if (!writeTitle.value) {
+        alert("제목을 입력해주세요");
+        e.preventDefault();
+    } else if (!writeContent.value) {
+        alert("내용을 입력해주세요");
+        e.preventDefault();
+    } else {
         alert("등록되었습니다.");
         location.href = "";
     }
@@ -288,52 +299,11 @@ const cancelButton = document.querySelector(
 );
 
 cancelButton.addEventListener("click", (e) => {
-    confirm("다른 페이지로 이동 시, 작성 중인 글이 저장되지 않습니다.");
-
-    if (confirm) {
-        location.href = "";
+    if (!confirm("다른 페이지로 이동 시, 작성 중인 글이 저장되지 않습니다.")) {
+        e.preventDefault();
+        return false;
     }
-});
-
-document.addEventListener("DOMContentLoaded", (e) => {
-    let qnaCheckPageEscape = false;
-
-    // 1. 페이지 이탈 방지 - 링크 클릭 시
-    document.body.addEventListener("click", (e) => {
-        const link = e.target.closest("a");
-        if (!link) return;
-
-        // 알림 버튼 클릭 시 제외
-        const parentLi = link.closest("li");
-        if (parentLi && parentLi.classList.contains("devLiNotification")) {
-            qnaCheckPageEscape = false;
-            return;
-        }
-
-        if (qnaCheckPageEscape) {
-            const href = link.getAttribute("href");
-
-            if (href && href !== "") {
-                if (
-                    !confirm(
-                        "다른 페이지로 이동 시, 작성 중인 글이 저장되지 않습니다.",
-                    )
-                ) {
-                    e.preventDefault();
-                    qnaCheckPageEscape = true;
-                } else {
-                    qnaCheckPageEscape = false;
-                }
-            }
-        }
-    });
-
-    // 2. 페이지 이탈 방지 - 브라우저 닫기/새로고침 시
-    window.onbeforeunload = (e) => {
-        if (qnaCheckPageEscape) {
-            return "다른 페이지로 이동 시, 작성 중인 글이 저장되지 않습니다.";
-        }
-    };
+    location.href = "";
 });
 
 const keywordSearch = document.querySelector(
@@ -343,9 +313,6 @@ const keywordTextBox = document.getElementById("AJAX_TS_Search");
 
 keywordTextBox.addEventListener("input", (e) => {
     keywordSearch.classList.add("focus");
-});
-
-keywordTextBox.addEventListener("blur", (e) => {
     if (!keywordTextBox.value) {
         keywordSearch.classList.remove("focus");
     }
