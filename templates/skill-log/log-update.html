@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>log-write</title>
+        <title>log-update</title>
         <link rel="stylesheet" href="/static/css/community/header.css" />
         <link rel="stylesheet" href="/static/css/community/footer.css" />
-        <link rel="stylesheet" href="/static/css/skill-log/log-write.css" />
+        <link rel="stylesheet" href="/static/css/skill-log/log-update.css" />
     </head>
     <body>
         <!-- 헤더 -->
@@ -1088,7 +1088,7 @@
                                 </dt>
                                 <dd>
                                     <span>글 <b>0</b></span>
-                                    <span>질문 <b>0</b></span>
+                                    <span>질문 <b>0</b></span>                                    
                                 </dd>
                             </dl>
                         </a>
@@ -1153,7 +1153,7 @@
                         value="1"
                     />
                     <div class="top-title-wrap">
-                        <h2 class="title">블로그 작성</h2>
+                        <h2 class="title">블로그 수정하기</h2>
                     </div>
                     <div class="lyWriteBoard">
                         <!-- 글쓰기 시작(제목, 내용) -->
@@ -1166,7 +1166,7 @@
                                             <input
                                                 type="text"
                                                 class="jkSchInp devQnaWriteTitle"
-                                                placeholder="블로그 제목을 입력해주세요."
+                                                value="test"
                                             />
                                         </p>
                                     </div>
@@ -1438,12 +1438,6 @@
                                         data-value="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/talktalk_none_img.jpg"
                                     />
                                     <div class="uiPlaceholder">
-                                        <span class="ph" style="display: none"
-                                            >내용을 입력해주세요.<br />*휴대폰
-                                            번호, 메일 주소, 카카오톡 ID 등
-                                            개인정보가 포함된 내용은 비노출
-                                            처리될 수 있습니다</span
-                                        >
                                         <div class="type-error-alert qnaSpB">
                                             허용되지 않는 이미지 형식이 있어
                                             제외됩니다.
@@ -1463,9 +1457,7 @@
                                             <textarea
                                                 id="editorQnaText"
                                                 class="devQnaWriteCntnt custom-editor"
-                                                placeholder="내용을 입력해주세요.
-    *휴대폰 번호, 메일 주소, 카카오톡 ID 등 개인정보가 포함된 내용은 비노출 처리될 수 있습니다"
-                                            ></textarea>
+                                            >test</textarea>
                                         </div>
                                     </div>
                                     <!-- 태그 입력란 -->
@@ -1778,5 +1770,5 @@
         </div>
     </body>
     <script src="/static/js/community/header-event.js"></script>
-    <script src="../../static/js/skill-log/log-write.js"></script>
+    <script src="../../static/js/skill-log/log-update.js"></script>
 </html>

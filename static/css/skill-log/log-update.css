@@ -1361,6 +1361,11 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
 }
 
+.attach-box .thumb-img-area img {
+    max-width: 80px;
+    max-height: 50px;
+}
+
 .attach-box.type-link .thumb-img-area {
     position: relative;
     width: 120px;
@@ -1476,7 +1481,7 @@ h1, h2, h3, h4, h5, h6 {
 .attach-wrap {
     position: relative;
     text-align: center;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .editor-util .layer-button .apply.on {
