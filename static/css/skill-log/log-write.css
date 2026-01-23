@@ -1144,6 +1144,24 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #555b76;
 }
 
+.keywordSearch.focus .searchLayer {
+    display: block;
+}
+
+.keywordSearch .searchLayer.thin .keyword-search-item {
+    padding: 8px 15px;
+}
+
+.keyword-search-item .companyName {
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 0px;
+    max-width: 230px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .selectListArea .layer-box-wrap.corporation .keywordSearch .searchLayer {
     z-index: 3;
     display: none;
@@ -1558,6 +1576,10 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 190px;
 }
 
+.keyword-search-area li {
+    position: relative;
+}
+
 .layer-box-wrap .btn-layer-close {
     position: absolute;
     right: 28px;
@@ -1788,11 +1810,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .tagDiv {
     display: inline-block;  
-    font-size: 17px;
+    font-size: 15px;
     border: 1px solid #a8abb1;
     color: #666;
     border-radius: 45px;
-    padding: 4px 8px;
+    padding: 2px 8px;
     white-space: nowrap;
 }
 
@@ -1836,6 +1858,10 @@ h1, h2, h3, h4, h5, h6 {
 .opening-layer .companyName {
     display: inline-block;
     vertical-align: middle;
+}
+
+.keyword-search-item .companyName .text_on {
+    color: hsl(154.36deg 100% 21.57%)
 }
 
 .opening-layer .layer-cont .companyName {

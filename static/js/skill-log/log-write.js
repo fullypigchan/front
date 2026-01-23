@@ -281,3 +281,72 @@ admitButton.addEventListener("click", (e) => {
         location.href = "";
     }
 });
+
+// 취소하기 버튼
+const cancelButton = document.querySelector(
+    ".btnCancel.bg_white.devQnaWriteCancelButton",
+);
+
+cancelButton.addEventListener("click", (e) => {
+    confirm("다른 페이지로 이동 시, 작성 중인 글이 저장되지 않습니다.");
+
+    if (confirm) {
+        location.href = "";
+    }
+});
+
+document.addEventListener("DOMContentLoaded", (e) => {
+    let qnaCheckPageEscape = false;
+
+    // 1. 페이지 이탈 방지 - 링크 클릭 시
+    document.body.addEventListener("click", (e) => {
+        const link = e.target.closest("a");
+        if (!link) return;
+
+        // 알림 버튼 클릭 시 제외
+        const parentLi = link.closest("li");
+        if (parentLi && parentLi.classList.contains("devLiNotification")) {
+            qnaCheckPageEscape = false;
+            return;
+        }
+
+        if (qnaCheckPageEscape) {
+            const href = link.getAttribute("href");
+
+            if (href && href !== "") {
+                if (
+                    !confirm(
+                        "다른 페이지로 이동 시, 작성 중인 글이 저장되지 않습니다.",
+                    )
+                ) {
+                    e.preventDefault();
+                    qnaCheckPageEscape = true;
+                } else {
+                    qnaCheckPageEscape = false;
+                }
+            }
+        }
+    });
+
+    // 2. 페이지 이탈 방지 - 브라우저 닫기/새로고침 시
+    window.onbeforeunload = (e) => {
+        if (qnaCheckPageEscape) {
+            return "다른 페이지로 이동 시, 작성 중인 글이 저장되지 않습니다.";
+        }
+    };
+});
+
+const keywordSearch = document.querySelector(
+    ".jkSchInput.keywordSearch.keywordSearchRecruit",
+);
+const keywordTextBox = document.getElementById("AJAX_TS_Search");
+
+keywordTextBox.addEventListener("input", (e) => {
+    keywordSearch.classList.add("focus");
+});
+
+keywordTextBox.addEventListener("blur", (e) => {
+    if (!keywordTextBox.value) {
+        keywordSearch.classList.remove("focus");
+    }
+});
