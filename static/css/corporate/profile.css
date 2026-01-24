@@ -17,6 +17,7 @@
     src: url("/static/font/Pretendard-Bold.subset.woff2") format(woff2);
 }
 
+
 /* 기본 */
 * {
     /* padding: 0;
@@ -75,6 +76,7 @@ input, option, select, textarea {
     vertical-align: middle;
     font-size: 12px;
     color: #666;
+    letter-spacing: 0px;
 }
 address, caption, em {
     font-weight: 400;
@@ -88,9 +90,8 @@ textarea {
 form, fieldset, button {
     border: 0 none;
 }
-select, input, option, textarea {
-    vertical-align: middle;
-    font-size: 12px;
+em {
+    font-size: 15px;
     color: #666;
 }
 address, caption, em {
@@ -282,6 +283,156 @@ address, caption, em {
     font-size: 18px;
     color: #333;
     margin-bottom: 20px;
+}
+        /* 로고 업로드 후 */
+
+
+        /* 로고 업로드 레이어 */
+.artCoSummary .tbLogo.on .logoUploadWrap {
+    display: block;
+}
+.artCoSummary .logoUploadWrap {
+    display: none;
+    position: absolute;
+    top: 101px;
+    right: -1px;
+    left: auto;
+    width: 510px;
+    height: 298px;
+    z-index: 99;
+}
+#frmLogo {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #666;
+};
+.popRecWrap {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #565d79;
+    background: #fff;
+    box-sizing: border-box;
+    z-index: 99;
+}
+#frmLogo .popLogoUpload, #frmLogo .popLogoDel, #frmLogo .popIdRevise {
+    display: block;
+    position: static;
+    width: 510px;
+}
+#frmLogo .popRecWrap .popHd {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    color: #333;
+    padding: 20px 20px 20px 25px;
+    border-bottom: 1px solid #e0e3ea;
+    box-sizing: border-box;
+}
+#frmLogo .popLogoUpload .popCont {
+    padding: 23px 43px 43px 43px;
+}
+#frmLogo .popLogoUpload .ntcList {
+    font-size: 13px;
+    letter-spacing: 0px;
+    line-height: 1.8;
+}
+#frmLogo .popLogoUpload .ntcList li em {
+    color: #39f;
+    font-weight: bold;
+}
+#frmLogo .popLogoUpload .infoFileBx {
+    overflow: hidden;
+    width: 422px;
+    height: 62px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+#frmLogo .fileBx {
+    float: left;
+    display: inline-block;
+    color: #000;
+    width: 373px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0px;
+    border: 1px solid #ddd;
+    background: #fafbfd;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+#frmLogo .popLogoUpload .fileBx {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 0px;
+    padding: 0 48px 0 18px;
+    height: 62px;
+    line-height: 62px;
+    width: 295px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+#frmLogo .popLogoUpload .fileBx, #frmLogo .popLogoUpload .infoFileBx .btnUploadm {
+    float: left;
+}
+
+#frmLogo .popLogoUpload .fileBx label {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #999;
+    padding: 0 18px;
+    box-sizing: border-box;
+    z-index: 1;
+} 
+#frmLogo .popLogoUpload .fileBx:after {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    width: 18px;
+    height: 17px;
+    background-position: -30px 0;
+}
+#frmLogo .infoIcnB:before, #frmLogo .infoIcnA:after, #frmLogo .infoIcnM:before, #frmLogo .infoIcnM:after {
+    content: "";
+}
+#frmLogo .infoIcn, #frmLogo .infoIcnB:before, #frmLogo .infoIcnA:after, #frmLogo .infoIcnM:before, #frmLogo .infoIcnM:after {
+    display: inline-block;
+    background: url("https://i.jobkorea.kr/content/images/ver_1/mtc/info/info_sp_icn.png") no-repeat;
+    line-height: normal;
+    vertical-align: middle;
+}
+#frmLogo .popLogoUpload .infoFileBx .btnUpload {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #000;
+    width: 128px;
+    height: 62px;
+    margin-left: -1px;
+    border-left: 1px solid #ddd;
+}
+
+#frmLogo .popLogoUpload .infoFileBx .btnUpload span {
+    position: relative;
+}
+#frmLogo .popRecWrap .mtcBtnPopClose {
+    position: absolute;
+    top: 19px;
+    right: 18px;
+    width: 30px;
+    height: 30px;
+    background-position: -265px -45px;
 }
         /* 기본 정보 */
 .artCoBasic .tbCell {
@@ -549,6 +700,7 @@ address, caption, em {
     color: #666;
     height: 30px;
     line-height: 28px;
+    letter-spacing: 0px;
     padding: 0 16px;
     border: 1px solid #ccc;
     background: #fff;
@@ -730,6 +882,462 @@ address, caption, em {
     height: 125px;
     padding: 15px 17px 0 17px;
 }
+    /* 복리후생 */
+.artCoWelfare.artCoWelfare {
+    position: relative;
+}
+.artCoWelfare .btnSetFn {
+    font-size: 12px;
+    color: #3399ff;
+    position: absolute;
+    right: 31px;
+    top: 42px;
+    text-decoration: underline;
+}
+.artCoWelfare .WelfareType {
+    position: relative;
+    overflow: auto;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 15px 71px 18px 17px;
+}
+.artCoWelfare .WelfareType .ph {
+    display: block;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #afb0b2;
+}
+.artCoWelfare .WelfareType .welfare-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.artCoWelfare .WelfareType .welfare-list > li:first-of-type {
+    margin-left: 0;
+}
+.artCoWelfare .WelfareType .welfare-list > li {
+    margin-right: 20px;
+    line-height: 30px;
+}
+.artCoWelfare .WelfareType .welfare-list > li > button {
+    font-size: 15px;
+    letter-spacing: 0px;
+}
+.artCoWelfare .WelfareType .welfare-list > li > button::after {
+    content: "";
+    display: inline-block;
+    background: url("https://i.jobkorea.kr/content/images/ver_1/common/icon_close.png") no-repeat;
+    width: 17px;
+    height: 17px;
+    margin-left: 10px;
+    margin-top: -4px;
+    vertical-align: middle;
+}
+.artCoWelfare .WelfareType .btnSetFn {
+    position: absolute;
+    right: 17px;
+    top: 23px;
+}
+.artCoWelfare .btnSetFn {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #3399ff;
+    position: absolute;
+    right: 31px;
+    top: 42px;
+    text-decoration: underline;
+}
+.regModalWrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -17px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 11111;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.regModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1040px;
+    margin-left: -530px;
+    border: 1px solid #565d79;
+    box-sizing: border-box;
+    z-index: 11;
+    background-color: #fff;
+}
+/* .regModalWrap .regModal.reset {
+    top: 0 !important;
+    margin-top: 0 !important;
+} */
+.regModal .madalTopArea {
+    padding: 48px 49px 8px 46px;
+}
+.regModal .madalTopArea .titModal {
+    font-size: 32px;
+    letter-spacing: -1px;
+    color: #000;
+}
+.regModal .madalTopArea .topSubArea:after, .regModal .madalTopArea:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.regModal .modalContent {
+    padding: 16px 49px 34px;
+}
+.regPrefWrap .innerBx {
+    overflow: hidden;
+    height: 329px;
+    border: 1px solid #c1c3c7;
+    overflow-y: scroll;
+}
+.regPrefWrap .scrlBx {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+}
+.regPrefWrap .scrlBx .fieldList:first-child {
+    border-left: none;
+}
+.regPrefWrap .scrlBx .fieldList {
+    display: table-cell;
+    border-left: 1px solid #e0e0e0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.regPrefWrap .scrlBx .hdItem:first-child {
+    margin-top: 0;
+    border-top: none;
+}
+.regPrefWrap .scrlBx .hdItem {
+    display: block;
+    height: 24px;
+    margin-top: 10px;
+    padding: 9px 0 0 19px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 700;
+    font-size: 13px;
+    /* letter-spacing: 0; */
+    color: #333;
+    background-color: #f8f9fb;
+    box-sizing: content-box;
+}
+.regPrefWrap .scrlBx .fieldList>ul {
+    padding: 4px 0 15px 20px;
+}
+.regPrefWrap .scrlBx .fieldList>ul>li {
+    margin-top: 12px;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #333;
+}
+.inpChk_ui {
+    vertical-align: middle;
+}
+.inpChk_ui, .inpChk_ui label {
+    display: inline-block;
+    position: relative;
+}
+.inpChk_ui.size_small {
+    padding-right: 4px;
+}
+.inpChk_ui input[type=checkbox] {
+    position: absolute;
+    left: -9999px;
+}
+.inpChk_ui label {
+    padding-left: 30px;
+    font-size: 15px;
+    color: #333;
+}
+.inpChk_ui.size_small label {
+    padding-left: 24px;
+    font-size: 13px;
+    color: #333;
+    line-height: 20px;
+}
+.inpChk_ui button:before, .inpChk_ui label:before, .spRegA:after, .spRegB:before {
+    background-image: url("https://i.jobkorea.kr/content/images/ver_1/mtc/register/spr.png?2024070200");
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+}
+.inpChk_ui label:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    content: "";
+    background-position: 0 0;
+    transform: translateY(-50%);
+}
+.inpChk_ui.size_small label:before {
+    width: 18px;
+    height: 18px;
+    background-position: 0 -30px;
+}
+.inpChk_ui.size_small.chk label:before {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.59 6.077a.833.833 0 010 1.179l-6.667 6.666a.833.833 0 01-1.212-.035l-3.334-3.75A.833.833 0 015.623 9.03l2.746 3.09 6.042-6.043a.833.833 0 011.179 0z' fill='%23fff'/%3E%3C/svg%3E");
+    background-size: 18px;
+    border-radius: 3px;
+    background-color: #003cff;
+    background-position: 50%;
+}
+.regModal .choiceArea {
+    position: relative;
+    border: 1px solid #c1c3c7;
+    border-top: none;
+}
+.regModal .choiceArea .choiceListArea{
+    min-height: 61px;
+    box-sizing: border-box;
+    background-color: #f3f5f8;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.giWelfareModal .regModal .regPrefWrap .choiceArea .choiceListArea {
+    padding: 17px 25px 16px 18px;
+}
+
+.regModal .choiceArea .choiceListArea .keywordListBx {
+    display: inline-flex;
+    align-items: center;
+    position: static;
+    min-height: auto;
+    padding: 0 100px 0 0 !important;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    vertical-align: middle;
+    margin-top: 0;
+}
+.regModal .choiceArea .choiceListArea .keywordListBx .subList .subItem {
+    display: inline;
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #000;
+}
+.regModal .choiceArea .choiceListArea .keywordListBx .subItem .inr {
+    display: inline-block;
+    margin: 7px 14px 0 0;
+}
+.regModal .choiceArea .choiceListArea .keywordListBx .subList .subItem .inr {
+    margin-top: 0;
+    font-size: 13px;
+    letter-spacing: 0;
+}
+.regModal .choiceArea .choiceListArea .keywordListBx .subList .subItem .inr .btnItemDel {
+    margin-left: 0;
+    vertical-align: -4px;
+    padding: 1px;
+}
+.spRegA:after, .spRegB:before {
+    display: inline-block;
+    content: "";
+}
+.btnItemDel:after {
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-position: -150px -60px;
+}
+.inpTxItem.seflAddItem, .seflAddInpWrap {
+    vertical-align: top;
+}
+.seflAddInpWrap {
+    display: inline-block;
+    width: 134px;
+}
+.inpTxItem.seflAddItem input {
+    width: 91px;
+    height: 30px;
+    padding: 2px 26px 2px 10px;
+    border: 1px dashed #e1e2e6;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #b0b0b0;
+    background-color: rgba(0, 0, 0, 0);
+    line-height: 30px;
+}
+.inpTxItem.seflAddItem .icnWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 28px;
+    padding-top: 7px;
+    padding-left: 3px;
+    box-sizing: border-box;
+}
+/* .inpTxItem.seflAddItem .icnWrap .icn {
+    margin: 0 auto;
+} */
+.inpTxItem.seflAddItem .icn {
+    display: inline-block;
+    position: relative;
+    width: 9px;
+    height: 9px;
+    vertical-align: middle;
+}
+.inpTxItem.seflAddItem .icn:before {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 1px;
+    height: 100%;
+    content: "";
+    background-color: #b0b0b0;
+}
+.inpTxItem.seflAddItem .icn:after {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: "";
+    background-color: #b0b0b0;
+}
+.inpTxItem.seflAddItem button.addBtn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 28px;
+    padding-left: 3px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.inpTxItem.seflAddItem .icn {
+    display: inline-block;
+    position: relative;
+    width: 9px;
+    height: 9px;
+    vertical-align: middle;
+}
+.inpTxItem.seflAddItem.ok input {
+    width: 134px;
+    color: #000;
+    border-color: #565d79;
+    background-color: #fcfdff;
+}
+.inpTxItem.seflAddItem.ok .icnWrap {
+    display: none;
+}
+.inpTxItem.seflAddItem.ok button.addBtn {
+    display: block;
+    padding-top: 1px;
+}
+.inpTxItem.seflAddItem.ok input {
+    width: 134px;
+    color: #000;
+    border-color: #565d79;
+    background-color: #fcfdff;
+}
+.inpTxItem.seflAddItem.ok button.addBtn .icn {
+    display: block;
+}
+.btnReset {
+    padding: 6px;
+    font-size: 12px;
+    font-size: 13px;
+    color: #000;
+    color: #666;
+    border-radius: 1px;
+}
+.regModal .choiceArea .choiceListArea .btnReset {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    padding: 0;
+}
+.btnReset:before {
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    background-position: -90px -180px;
+    vertical-align: -1px;
+}
+.regModal .buttons {
+    padding-top: 23px;
+    text-align: center;
+}
+.regModal .buttons button {
+    margin: 0 1px;
+}
+.btnCancel {
+    min-width: 132px;
+    height: 50px;
+    padding-top: 1px;
+    border: 1px solid #dbdbdb;
+    font-size: 15px;
+    color: #666;
+    background-color: #fff;
+    border-radius: 1px;
+}
+.btnOk {
+    min-width: 132px;
+    height: 50px;
+    padding-top: 1px;
+    border: 1px solid #003cff;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    background-color: #003cff;
+    border-radius: 1px;
+}
+.regModal .btnModalClose {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 4px;
+}
+.regModal .btnModalClose:after {
+    display: block;
+    width: 27px;
+    height: 27px;
+    background-position: 0 -180px;
+}
+.regModalWrap .modalBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+.regModal .choiceArea .choiceListArea:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+
+
+
+
 
 
 
@@ -935,6 +1543,11 @@ address, caption, em {
 .artCoPhotoVideo .fileMngWrap.on {
     display: block;
 }
+#frmPhoto {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #666;
+}
 .popRecWrap {
     display: none;
     position: absolute;
@@ -945,13 +1558,13 @@ address, caption, em {
     box-sizing: border-box;
     z-index: 99;
 }
-.popPhotoVideo {
+#frmPhoto .popPhotoVideo {
     display: block;
     position: relative;
     width: 512px;
     text-align: left;
 }
-.popRecWrap .popHd {
+#frmPhoto .popRecWrap .popHd {
     height: 66px;
     font-size: 20px;
     letter-spacing: -0.5px;
@@ -960,28 +1573,27 @@ address, caption, em {
     border-bottom: 1px solid #e0e3ea;
     box-sizing: border-box;
 }
-.popRecWrap .popHd h1 {
+#frmPhoto .popRecWrap .popHd h1 {
     font-weight: normal;
     font-size: 100%;
-    font-family: Noto Sans KR;
 }
-.popPhotoVideo .popCont {
+#frmPhoto .popPhotoVideo .popCont {
     padding: 20px 20px;
 }
-.popPhotoVideo .mtcTplTab {
+#frmPhoto .popPhotoVideo .mtcTplTab {
     margin: 0;
     padding-left: 1px;
 }
-.popPhotoVideo .mtcTplTab .tabItems {
+#frmPhoto .popPhotoVideo .mtcTplTab .tabItems {
     position: relative;
     display: table;
     width: 100%;
     table-layout: fixed;
 }
-.popPhotoVideo .mtcTplTab .tabItems li {
+#frmPhoto .popPhotoVideo .mtcTplTab .tabItems li {
     display: block;
 }
-.mtcTplTab .tabItems li a {
+#frmPhoto .mtcTplTab .tabItems li a {
     display: block;
     height: 43px;
     line-height: 43px;
@@ -995,7 +1607,7 @@ address, caption, em {
     color: #999;
     text-align: center;
 }
-.mtcTplTab .tabItems li.on a {
+#frmPhoto .mtcTplTab .tabItems li.on a {
     border: 1px solid #858c99;
     border-bottom: 1px solid #fff;
     z-index: 2;
@@ -1003,7 +1615,7 @@ address, caption, em {
     font-weight: bold;
     color: #333;
 }
-.popPhotoVideo .mtcTplTab .tabItems > li a {
+#frmPhoto .popPhotoVideo .mtcTplTab .tabItems > li a {
     position: absolute;
     left: 0;
     top: 0;
@@ -1016,19 +1628,19 @@ address, caption, em {
     border-bottom: 0;
     box-sizing: border-box;
 }
-.popPhotoVideo .mtcTplTab .tabItems > li.on a {
+#frmPhoto .popPhotoVideo .mtcTplTab .tabItems > li.on a {
     height: 37px;
 }
-.popPhotoVideo .fileContWrap li .fileUploadWrap {
+#frmPhoto .popPhotoVideo .fileContWrap li .fileUploadWrap {
     /* display: block; */
     padding-top: 24px;
     margin-top: 36px;
     border-top: 1px solid #858c99;
 }
-.popPhotoVideo .infoFileBx {
+#frmPhoto .popPhotoVideo .infoFileBx {
     position: relative;
 }
-.popPhotoVideo .infoFileBx .ph {
+#frmPhoto .popPhotoVideo .infoFileBx .ph {
     position: absolute;
     left: 10px;
     top: 11px;
@@ -1039,7 +1651,7 @@ address, caption, em {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.fileBx {
+#frmPhoto .fileBx {
     float: left;
     display: inline-block;
     color: #000;
@@ -1054,34 +1666,35 @@ address, caption, em {
     margin: 0;
     box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
 }
-.btnMtcTpl {
+#frmPhoto .btnMtcTpl {
     display: inline-block;
     height: 36px;
     padding: 0 15px;
     line-height: 34px;
     border: 1px solid #ddd;
     font-size: 13px;
+    letter-spacing: 0px;
     color: #000;
     text-align: center;
     box-sizing: border-box;
 }
-.btnMtcTpl:hover {
+#frmPhoto .btnMtcTpl:hover {
     border-color: #777777;
 }
-.popPhotoVideo .infoFileBx .btnMtcTpl {
+#frmPhoto .popPhotoVideo .infoFileBx .btnMtcTpl {
     color: #666;
     font-weight: bold;
     width: 96px;
     margin-left: -1px;
     line-height: 35px;
 }
-.popPhotoVideo .infoFileBx .mtcIpt, .popPhotoVideo .infoFileBx .btnMtcTpl {
+#frmPhoto .popPhotoVideo .infoFileBx .mtcIpt, #frmPhoto .popPhotoVideo .infoFileBx .btnMtcTpl {
     float: left;
 }
-/* .popPhotoVideo .infoFileBx .btnMtcTpl span {
+#frmPhoto .popPhotoVideo .infoFileBx .btnMtcTpl span {
     position: relative;
-} */
- .btnMtcTpl span {
+}
+#frmPhoto .btnMtcTpl span {
     color: #000;
 }
 .clear:after {
@@ -1090,20 +1703,20 @@ address, caption, em {
     height: 0;
     clear: both;
 }
-.popPhotoVideo .descWrap {
+#frmPhoto .popPhotoVideo .descWrap {
     margin-top: 33px;
 }
-.popPhotoVideo .popCont h2 {
+#frmPhoto .popPhotoVideo .popCont h2 {
     font-size: 15px;
     color: #333;
     font-weight: bold;
     margin-bottom: 9px;
 }
-.popPhotoVideo .descWrap .txaBx {
+#frmPhoto .popPhotoVideo .descWrap .txaBx {
     position: relative;
     margin-top: 10px;
 }
-.popPhotoVideo .descWrap .txArea {
+#frmPhoto .popPhotoVideo .descWrap .txArea {
     overflow: auto;
     font-size: 13px;
     color: #000;
@@ -1115,26 +1728,25 @@ address, caption, em {
     box-sizing: border-box;
     resize: none;
 }
-.popPhotoVideo .descWrap .byte {
+#frmPhoto .popPhotoVideo .descWrap .byte {
     position: absolute;
     right: 15px;
     bottom: 12px;
     font-size: 12px;
     color: #999;
 }
-.popPhotoVideo .descWrap .byte em {
+#frmPhoto .popPhotoVideo .descWrap .byte em {
     color: #39f;
-    font-size: 15px;
 }
-.popPhotoVideo .ntcList {
+#frmPhoto .popPhotoVideo .ntcList {
     margin: 15px 0;
 }
-.popPhotoVideo .ntcList li {
+#frmPhoto .popPhotoVideo .ntcList li {
     position: relative;
     padding-left: 8px;
     line-height: 1.3;
 }
-.popPhotoVideo .ntcList li:before {
+#frmPhoto .popPhotoVideo .ntcList li:before {
     content: "";
     position: absolute;
     left: 0;
@@ -1143,36 +1755,36 @@ address, caption, em {
     height: 2px;
     background: #747474;
 }
-.popPhotoVideo .ntcList li +li {
+#frmPhoto .popPhotoVideo .ntcList li +li {
     margin-top: 6px;
 }
-.popPhotoVideo .ntcList li em {
+#frmPhoto .popPhotoVideo .ntcList li em {
     color: #ff5b5b;
     font-size: 12px;
     letter-spacing: 0px;
 }
-.popPhotoVideo .popFunc {
+#frmPhoto .popPhotoVideo .popFunc {
     padding: 10px 5px 10px 0;
     border-top: 1px solid #e5e5e5;
     text-align: right;
 }
-.popPhotoVideo .popFunc button {
+#frmPhoto .popPhotoVideo .popFunc button {
     width: 70px;
     padding: 0;
 }
-.popRecWrap .popFunc button, .popRecWrap .popFunc a {
+#frmPhoto .popRecWrap .popFunc button, #frmPhoto .popRecWrap .popFunc a {
     display: inline-block;
     margin: 0 5px;
 }
-/* .mtcBtnBd span {
+#frmPhoto .mtcBtnBd span {
     position: relative;
-} */
-.mtcBtnPopClose {
+}
+#frmPhoto .mtcBtnPopClose {
     width: 30px;
     height: 30px;
     background-position: -265px -45px;
 }
-.popRecWrap .mtcBtnPopClose {
+#frmPhoto .popRecWrap .mtcBtnPopClose {
     position: absolute;
     top: 19px;
     right: 18px;
@@ -1225,8 +1837,50 @@ address, caption, em {
     line-height: 52px;
     border-radius: 3px;
 }
-
 .infoBtnBg span {
     position: relative;
     color: #fff;
+}
+.artCoBtn .infoBtnApply:hover {
+    background: #007afd;
+}
+
+/* placeholder */
+.artCoPhotoVideo .thumbList .sortable li .text-box textarea::placeholder {
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #999 !important;
+}
+.popPhotoVideo .descWrap .txArea::placeholder {
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #999 !important;
+}
+
+/* 주소 레이어 */
+.lyAddrMng .addrMngWrap.on {
+    display: block;
+}
+.lyAddrMng .addrMngWrap {
+    /* display: none; */
+    position: absolute;
+    top: 101px;
+    right: -1px;
+    left: auto;
+    width: 510px;
+    height: auto;
+    z-index: 99;
+}
+#frmAddr {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #666;
+};
+.lyAddrMng,
+.lyAddrMng .addrMngWrap.on,
+#frmAddr,
+#frmAddr .popRecWrap {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
