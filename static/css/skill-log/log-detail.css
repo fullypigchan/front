@@ -2382,6 +2382,7 @@ input[type="number"] {
 .button.icon-photo.qnaSpB:before {
     width: 18px;
     height: 18px;
+    background-position: -50px -434px;
 }
 
 .button.icon-photo.qnaSpB {
