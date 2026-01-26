@@ -650,6 +650,7 @@ em {
     text-align: center;
 }
 
+
 .viewContWrap .contBox .cont {
     position: relative;
     margin-top: 20px;
@@ -1843,17 +1844,6 @@ input[type="number"] {
     display: block;
 }
 
-.viewContWrap .post-util .view-more-item {
-    display: block;
-    width: 80px;
-    height: 30px;
-    color: #333;
-    font-size: 13px;
-    letter-spacing: 0px;
-    line-height: 30px;
-    text-align: center;
-}
-
 .viewContWrap .post-util .icon-more-button {
     margin-right: -10px;
 }
@@ -2382,6 +2372,7 @@ input[type="number"] {
 .button.icon-photo.qnaSpB:before {
     width: 18px;
     height: 18px;
+    background-position: -50px -434px;
 }
 
 .button.icon-photo.qnaSpB {
