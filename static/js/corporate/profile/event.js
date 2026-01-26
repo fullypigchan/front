@@ -187,8 +187,8 @@ const welfareModalBasicInputValueList = welfareModalInputList
 
 const body = document.querySelector("body");
 
-let tempWelfareInputList = [];
-let tempWelfareModalInputList = [];
+let tempWelfareInputValues = {};
+let tempWelfareModalCodes = {};
 
 // 함수
 // input formatting
@@ -300,7 +300,6 @@ const executeDaumPostcode = () => {
 companyBasicinputs.forEach((input) => {
     // value 가 있을 때
     if (input.value) {
-        console.log(input, input.closest(".elWrap"));
         input.closest(".elWrap").classList.add("ok");
     }
 
@@ -366,7 +365,6 @@ companyBasicinputs.forEach((input) => {
                 case 13:
                 case 14:
                 case 15:
-                    console.log("들어옴");
                     pattern = [4, 4, 4];
                     break;
                 default:
@@ -484,7 +482,6 @@ selectLogoInput.addEventListener("change", (e) => {
         );
 
         if (!check) {
-            console.log("안녕");
             logoImage = "";
             selectLogoLabel.textContent = "";
             selectLogoInput.value = "";
@@ -895,7 +892,7 @@ recommendWelfareButtons.addEventListener("click", (e) => {
 
             targetInput.closest("span").classList.add("chk");
             targetInput.checked = true;
-            tempWelfareInputList.push(targetInput);
+            tempWelfareInputValues[targetInput.value] = e.target.textContent;
         }
     }
 });
@@ -919,20 +916,20 @@ welfareList.addEventListener("click", (e) => {
             (input) => input.value === e.target.dataset.itemCode,
         );
 
-        targetInput.closest("span").classList.remove("chk");
-        targetInput.checked = false;
-        tempWelfareInputList = tempWelfareInputList.filter(
-            (input) => input.value !== targetInput.value,
-        );
+        // 클래스 제거, check 비활성화
+        if (e.target.dataset.itemCode.length !== 6) {
+            targetInput.closest("span").classList.remove("chk");
+            targetInput.checked = false;
+        }
+        delete tempWelfareInputValues[e.target.dataset.itemCode];
 
         // 리스트에 아무것도 없다면 설명글 보여주기
-        if (!tempWelfareInputList.length) {
+        if (!Object.keys(tempWelfareInputValues).length) {
             welfareList.previousElementSibling.style.display = "block";
         }
     }
 });
 //      전체보기
-
 moreWelfareInfoButton.addEventListener("click", (e) => {
     // check인 input을 previewWelfareList에 추가하기
 
@@ -943,7 +940,7 @@ moreWelfareInfoButton.addEventListener("click", (e) => {
             welfareModalBasicInputValueList.includes(input.value),
         )
         .forEach((input) => {
-            if (!tempWelfareInputList.length) {
+            if (!Object.keys(tempWelfareInputValues).length) {
                 input.checked = true;
                 input.closest("span").classList.add("chk");
             } else {
@@ -952,8 +949,21 @@ moreWelfareInfoButton.addEventListener("click", (e) => {
             }
         });
 
+    // 추가해야 할 항목 처리
+    if (!Object.keys(tempWelfareModalCodes).length) {
+        welfareModalInputList
+            .filter((input) =>
+                Object.keys(tempWelfareModalCodes).includes(input.value),
+            )
+            .forEach((input) => {
+                input.checked = true;
+                input.closest("span").classList.add("chk");
+            });
+    }
+
     // 모달 리스트 비우기
     previewWelfareList.innerHTML = "";
+    welfareList.innerHTML = "";
     // 비우지 않으면 이전 값들 누적됨
 
     // 모달 리스트에 값 넣기
@@ -970,6 +980,8 @@ moreWelfareInfoButton.addEventListener("click", (e) => {
                     `;
 
             previewWelfareList.appendChild(previewWelfareItem);
+            tempWelfareModalCodes[input.value] =
+                input.nextElementSibling.textContent;
         });
     // 모달 리스트 열기
     previewWelfareList.style.display = "block";
@@ -983,10 +995,23 @@ moreWelfareInfoButton.addEventListener("click", (e) => {
     moreWelfareInfoButton.classList.add("isCheckButton");
     welfareModalLayer.style.display = "block";
     welfareModalLayer.style.opacity = 1;
+
+    console.log(tempWelfareInputValues);
+    console.log(tempWelfareModalCodes);
 });
 
 welfareModalCloseButton.addEventListener("click", (e) => {
     // 모달창 닫기
+    tempWelfareModalCodes = { ...tempWelfareInputValues };
+    Object.entries(tempWelfareInputValues).forEach(([key, value]) => {
+        // 복리후생 리스트에 추가
+        const welfareItem = document.createElement("li");
+        welfareItem.innerHTML = `
+            <button type="button" class="devItemDel" data-item-code="${key}">${value}</button>
+            `;
+        welfareList.appendChild(welfareItem);
+    });
+
     body.style.height = "";
     body.style.position = "";
     body.style.top = "";
@@ -994,77 +1019,140 @@ welfareModalCloseButton.addEventListener("click", (e) => {
     moreWelfareInfoButton.classList.remove("isCheckButton");
     welfareModalLayer.style.display = "none";
     welfareModalLayer.style.opacity = 0;
+
+    console.log(tempWelfareInputValues);
+    console.log(tempWelfareModalCodes);
 });
 welfareModalResultButtons.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
-        if (e.target.classList.contains("btnCancel")) {
-            // 모달 - 취소
-            body.style.height = "";
-            body.style.position = "";
-            body.style.top = "";
-
-            moreWelfareInfoButton.classList.remove("isCheckButton");
-            welfareModalLayer.style.display = "none";
-            welfareModalLayer.style.opacity = 0;
-        } else {
+        if (e.target.classList.contains("btnOk")) {
             // 모달 - 확인
+            tempWelfareInputValues = { ...tempWelfareModalCodes };
+        } else {
+            tempWelfareModalCodes = { ...tempWelfareInputValues };
         }
+        Object.entries(tempWelfareInputValues).forEach(([key, value]) => {
+            // 복리후생 리스트에 추가
+            const welfareItem = document.createElement("li");
+            welfareItem.innerHTML = `
+            <button type="button" class="devItemDel" data-item-code="${key}">${value}</button>
+            `;
+            welfareList.appendChild(welfareItem);
+        });
+        body.style.height = "";
+        body.style.position = "";
+        body.style.top = "";
+
+        moreWelfareInfoButton.classList.remove("isCheckButton");
+        welfareModalLayer.style.display = "none";
+        welfareModalLayer.style.opacity = 0;
+
+        console.log(tempWelfareInputValues);
+        console.log(tempWelfareModalCodes);
     }
 });
-// welfareLists.forEach((welfareList) => {
-//     welfareList.addEventListener("change", (e) => {
-//         if (e.target.tagName === "INPUT") {
-//             if (e.target.checked) {
-//                 const previewWelfareItem = document.createElement("li");
-//                 previewWelfareItem.classList.add("subItem");
-//                 previewWelfareItem.innerHTML = `
-//                     <span class="inr">
-//                         <span class="devItemText">${e.target.nextElementSibling.textContent}</span><button type="button" class="spRegA btnItemDel" data-item-code="${e.target.value}"></button>
-//                     </span>
-//                 `;
-
-//                 previewWelfareList.appendChild(previewWelfareItem);
-//                 previewWelfareList.style.display = "block";
-
-//                 e.target.closest("span").classList.add("chk");
-//             } else {
-//                 const [target] = previewWelfareList
-//                     .querySelectorAll("button")
-//                     .filter((item) => item.dataset.itemCode === e.target.value);
-
-//                 target.closest(".subItem").remove();
-//                 e.target.closest("span").classList.remove("chk");
-
-//                 previewWelfareList.children.length ||
-//                     (previewWelfareList.style.display = "none");
-//             }
-//         }
-//     });
-// });
 welfareModalList.forEach((li) => {
     li.addEventListener("change", (e) => {
         if (e.target.tagName === "INPUT") {
             if (e.target.checked) {
+                // check 했을 때
+                // 모달 리스트 열기
+                previewWelfareList.style.display = "block";
+
+                // 모달 리스트에 값 넣기
                 const previewWelfareItem = document.createElement("li");
                 previewWelfareItem.classList.add("subItem");
                 previewWelfareItem.innerHTML = `
-                    <span class="inr">
-                        <span class="devItemText">${e.target.nextElementSibling.textContent}</span><button type="button" class="spRegA btnItemDel" data-item-code="${e.target.value}"></button>
-                    </span>
+                <span class="inr">
+                <span class="devItemText">${e.target.nextElementSibling.textContent}</span><button type="button" class="spRegA btnItemDel" data-item-code="${e.target.value}"></button>
+                </span>
                 `;
-
                 previewWelfareList.appendChild(previewWelfareItem);
+
                 e.target.closest("span").classList.add("chk");
+                tempWelfareModalCodes[e.target.value] =
+                    e.target.nextElementSibling.textContent;
             } else {
+                // check 해제 했을 때
+
+                // 제거 대상 찾기
                 const [targetButton] = previewWelfareList
                     .querySelectorAll("button")
                     .filter(
                         (button) => button.dataset.itemCode === e.target.value,
                     );
 
+                // 요소 제거, 클래스 제거
                 e.target.closest("span").classList.remove("chk");
                 targetButton.closest(".subItem").remove();
+                delete tempWelfareModalCodes[e.target.value];
             }
         }
     });
+});
+
+welfareDirectInputSection.addEventListener("focusin", (e) => {
+    // 직접 추가
+    if (e.target.tagName === "INPUT") {
+        e.target.closest(".inpTxItem").classList.add("ok");
+    }
+});
+welfareDirectInputSection.addEventListener("focusout", (e) => {
+    if (e.target.tagName === "INPUT") {
+        e.target.value || e.target.closest(".inpTxItem").classList.remove("ok");
+    }
+});
+welfareDirectInputSection.addEventListener("click", (e) => {
+    if (e.target.closest(".devDirectInputBtn")) {
+        // server: db에서 중복확인 필요
+        const itemCode = Math.floor(Math.random() * 900000) + 100000;
+
+        const previewWelfareItem = document.createElement("li");
+        previewWelfareItem.classList.add("subItem");
+        previewWelfareItem.innerHTML = `
+                    <span class="inr">
+                        <span class="devItemText">${e.target.closest(".inpTxItem").firstElementChild.value}</span><button type="button" class="spRegA btnItemDel" data-item-code="${itemCode}"></button>
+                    </span>
+                `;
+
+        previewWelfareList.appendChild(previewWelfareItem);
+
+        // 등록한 새로운 코드 추가
+        tempWelfareModalCodes[itemCode] =
+            e.target.closest(".inpTxItem").firstElementChild.value;
+
+        // 등록 후 input value 제거
+        e.target.closest(".inpTxItem").firstElementChild.value = "";
+    }
+});
+previewWelfareList.addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON") {
+        // 요소 제거, 클래스 제거, input check 비활성화
+        if (e.target.dataset.itemCode.length !== 6) {
+            // 직접 추가한 요소는 제거할 클래스가 없으니 if로 예방
+            // 글자 수가 6 이상이면 사용자 정의 복리후생
+            const [targetInput] = welfareModalInputList.filter(
+                (input) => input.value === e.target.dataset.itemCode,
+            );
+            targetInput.checked = false;
+            targetInput.closest("span").classList.remove("chk");
+        }
+        e.target.closest(".subItem").remove();
+        delete tempWelfareModalCodes[e.target.dataset.itemCode];
+    }
+});
+previewWelfareListResetButton.addEventListener("click", (e) => {
+    // 초기화 버튼
+    // 모달 input 전부 false로, 클래스도 제거
+    welfareModalInputList.forEach((input) => {
+        input.checked = false;
+        input.closest("span").classList.remove("chk");
+    });
+
+    previewWelfareList.innerHTML = "";
+    tempWelfareModalCodes = {};
+    tempWelfareInputValues = {};
+
+    // 모달 리스트 닫기
+    previewWelfareList.style.display = "none";
 });
