@@ -54,7 +54,7 @@ const fields = [
     {
         input: "M_Email",
         selector: ".mbr_email",
-        notice: "notice_msg_mail", // HTML에서 id가 notice_msg_mail임
+        notice: "notice_msg_mail",
         regexp: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
         errorMsg: "올바른 이메일 형식을 입력해주세요.",
     },
@@ -71,10 +71,12 @@ const fields = [
         notice: "notice_msg_certify",
         regexp: /^\d{6}$/,
         errorMsg: "인증번호 6자리를 입력해주세요.",
+        skip: true,
     },
 ];
 
-fields.forEach(({ input, selector, notice, regexp, errorMsg }) => {
+// 포커스 / 블러 이벤트
+fields.forEach(({ input, selector, notice, regexp, errorMsg, skip }) => {
     const inputEl = document.getElementById(input);
     const col1 = document.querySelector(`${selector} .col_1`);
     const col2 = document.querySelector(`${selector} .col_2`);
@@ -96,37 +98,91 @@ fields.forEach(({ input, selector, notice, regexp, errorMsg }) => {
             col2.classList.remove("focus");
         }
 
+        // 인증번호는 blur 검증 제외
+        if (skip) return;
+
         // 정규식 검증
         if (regexp && noticeEl) {
             if (!inputEl.value) {
-                // 빈 값
-                // 마지막 인증번호는 확인 제외
-                if (noticeEl.classList.contains("notice_msg_certify")) {
-                    noticeEl.innerHTML = "필수 입력 항목입니다.";
-                    noticeEl.classList.add("failure");
-                    noticeEl.style.display = "block";
-                }
+                noticeEl.innerHTML = "필수 입력 항목입니다.";
+                noticeEl.classList.add("failure");
+                noticeEl.style.display = "block";
             } else if (!regexp.test(inputEl.value)) {
-                // 정규식 불일치
                 noticeEl.innerHTML = errorMsg;
                 noticeEl.classList.add("failure");
                 noticeEl.style.display = "block";
             } else {
-                // 마지막 인증번호는 확인 제외
-                if (noticeEl.classList.contains("notice_msg_certify")) {
-                    // 성공
-                    noticeEl.innerHTML = "확인되었습니다.";
-                    noticeEl.classList.remove("failure");
-                    noticeEl.classList.add("success");
-                    noticeEl.style.display = "block";
-                    setTimeout(() => {
-                        noticeEl.classList.remove("success");
-                        noticeEl.style.display = "none";
-                    }, 1000);
-                }
+                noticeEl.innerHTML = "";
+                noticeEl.classList.remove("failure");
+                noticeEl.style.display = "none";
             }
         }
     });
+});
+
+// 가입하기 버튼
+const mbrBtnRegist = document.querySelector(".mbrBtnRegist");
+
+mbrBtnRegist.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let isValid = true;
+
+    // 입력 필드 검증 (인증번호 제외)
+    fields.forEach(({ input, notice, regexp, errorMsg, skip }) => {
+        if (skip) return;
+
+        const inputEl = document.getElementById(input);
+        const noticeEl = document.getElementById(notice);
+
+        if (!inputEl || !noticeEl) return;
+
+        if (!inputEl.value) {
+            noticeEl.innerHTML = "필수 입력 항목입니다.";
+            noticeEl.classList.add("failure");
+            noticeEl.style.display = "block";
+            isValid = false;
+        } else if (!regexp.test(inputEl.value)) {
+            noticeEl.innerHTML = errorMsg;
+            noticeEl.classList.add("failure");
+            noticeEl.style.display = "block";
+            isValid = false;
+        } else {
+            noticeEl.innerHTML = "";
+            noticeEl.classList.remove("failure");
+            noticeEl.style.display = "none";
+        }
+    });
+
+    // 성별 검증
+    const genderChecked = document.querySelector(
+        'input[name="M_Gender"]:checked',
+    );
+    const genderNotice = document.getElementById("notice_msg_gender");
+    if (!genderChecked) {
+        genderNotice.innerHTML = "성별을 선택해주세요.";
+        genderNotice.classList.add("failure");
+        genderNotice.style.display = "block";
+        isValid = false;
+    } else {
+        genderNotice.innerHTML = "";
+        genderNotice.classList.remove("failure");
+        genderNotice.style.display = "none";
+    }
+
+    // 필수 약관 검증
+    const ageAgree = document.getElementById("lb_chk_age");
+    if (!ageAgree.checked) {
+        isValid = false;
+    }
+
+    // 검증 결과
+    if (!isValid) {
+        alert("필수 항목을 확인해주세요.");
+    } else {
+        alert("환영합니다!");
+        document.getElementById("frm").submit();
+    }
 });
 
 // 인증번호 전송
@@ -223,10 +279,20 @@ checkBoxInputs.forEach((input, idx) => {
 });
 
 // 내용보기 클릭
-const mbrBtnPolicy = document.querySelectorAll(".mbrBtnPolicy");
+const mbrBtnPolicies = document.querySelectorAll(".mbrBtnPolicy");
 
-mbrBtnPolicy.forEach((btn) => {
+mbrBtnPolicies.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-        e.target.classList.toggle("on");
+        e.preventDefault(); // 링크 기본 동작 방지
+
+        btn.classList.toggle("on");
+
+        // 버튼의 부모 요소에서 해당하는 policyTplBox 찾기
+        const policyTplBox = btn.closest(".row").querySelector(".policyTplBox");
+
+        if (policyTplBox) {
+            policyTplBox.style.display =
+                policyTplBox.style.display === "block" ? "none" : "block";
+        }
     });
 });

@@ -452,6 +452,7 @@
                                 <div
                                     id="DevPolicyPrivacyOptional"
                                     class="policyTplBox"
+                                    style="display: none;"
                                 >
                                     <div class="pvsSec pvsTpList">
                                         <h2 class="pvsHeading2">
@@ -542,7 +543,8 @@
                             style="position: relative"
                         >
                             <div class="row">
-                                <button type="submit" class="mbrBtnRegist">
+                                <!-- 서버땐 type submit으로 바꾸기 -->
+                                <button type="button" class="mbrBtnRegist">
                                     <span>가입하기</span>
                                 </button>
                             </div>
@@ -560,4 +562,20 @@
             </div>
     </body>
     <script src="../../static/js/main/individual-join.js"></script>
+    <script
+        src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.9/kakao.min.js"
+        integrity="sha384-JpLApTkB8lPskhVMhT+m5Ln8aHlnS0bsIexhaak0jOhAkMYedQoVghPfSpjNi9K1"
+        crossorigin="anonymous"
+    ></script>
+    <script>
+        // 카카오 SDK 초기화 (JavaScript 키 사용)
+        Kakao.init("4fbe7db4268bd8e66a1f8645394e6280");
+
+        document.querySelector(".kakao").addEventListener("click", () => {
+            Kakao.Auth.authorize({
+                redirectUri: "http://127.0.0.1:3000/templates/main/individual-join.html",
+                scope: "profile_nickname, profile_image", // 필요한 동의항목
+            });
+        });
+    </script>
 </html>
