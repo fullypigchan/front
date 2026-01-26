@@ -100,35 +100,86 @@ fields.forEach(({ input, selector, notice, regexp, errorMsg }) => {
         if (regexp && noticeEl) {
             if (!inputEl.value) {
                 // 빈 값
-                noticeEl.innerHTML = "필수 입력 항목입니다.";
-                noticeEl.classList.add("failure");
-                noticeEl.style.display = "block";
+                // 마지막 인증번호는 확인 제외
+                if (noticeEl.classList.contains("notice_msg_certify")) {
+                    noticeEl.innerHTML = "필수 입력 항목입니다.";
+                    noticeEl.classList.add("failure");
+                    noticeEl.style.display = "block";
+                }
             } else if (!regexp.test(inputEl.value)) {
                 // 정규식 불일치
                 noticeEl.innerHTML = errorMsg;
                 noticeEl.classList.add("failure");
                 noticeEl.style.display = "block";
             } else {
-                // 성공
-                noticeEl.innerHTML = "확인되었습니다.";
-                noticeEl.classList.remove("failure");
-                noticeEl.classList.add("success");
-                noticeEl.style.display = "block";
-                setTimeout(() => {
-                    noticeEl.classList.remove("success");
-                    noticeEl.style.display = "none";
-                }, 1000);
+                // 마지막 인증번호는 확인 제외
+                if (noticeEl.classList.contains("notice_msg_certify")) {
+                    // 성공
+                    noticeEl.innerHTML = "확인되었습니다.";
+                    noticeEl.classList.remove("failure");
+                    noticeEl.classList.add("success");
+                    noticeEl.style.display = "block";
+                    setTimeout(() => {
+                        noticeEl.classList.remove("success");
+                        noticeEl.style.display = "none";
+                    }, 1000);
+                }
             }
         }
     });
 });
 
 // 인증번호 전송
-const verificationCode = document.querySelector(
+const verificationCodeSend = document.querySelector(
     ".button.buttonSendCertification",
 );
-verificationCode.addEventListener("click", (e) => {
-    if (fields[5].regexp && fields[5].value) {
-        console.log("들어옴");
+const phoneRegexp = /^01[016789]-?\d{3,4}-?\d{4}$/;
+const PhoneNumber = document.getElementById("M_Phone");
+const phoneNotice = document.getElementById("notice_msg_phone");
+
+verificationCodeSend.addEventListener("click", (e) => {
+    if (phoneRegexp.test(PhoneNumber.value)) {
+        phoneNotice.innerHTML = "인증번호가 전송되었습니다.";
+        phoneNotice.classList.add("success");
+        phoneNotice.style.display = "block";
+        setTimeout(() => {
+            phoneNotice.classList.remove("success");
+            phoneNotice.style.display = "none";
+        }, 1500);
+    }
+});
+
+// 인증번호 재전송
+const btnReSendCert = document.getElementById("btnReSendCert");
+btnReSendCert.addEventListener("click", (e) => {
+    if (phoneRegexp.test(PhoneNumber.value)) {
+        phoneNotice.innerHTML = "인증번호가 재전송되었습니다.";
+        phoneNotice.classList.add("success");
+        phoneNotice.style.display = "block";
+        setTimeout(() => {
+            phoneNotice.classList.remove("success");
+            phoneNotice.style.display = "none";
+        }, 1500);
+    } else {
+        phoneNotice.innerHTML = "휴대폰 번호를 입력해주세요";
+        phoneNotice.classList.add("failure");
+        phoneNotice.style.display = "block";
+    }
+});
+
+// 인증번호 확인
+const verificationCode = document.getElementById("Certify_Num");
+const verificationCodeCheck = document.getElementById("btnCheckCert");
+const verificationCodeNotice = document.getElementById("notice_msg_certify");
+
+verificationCodeCheck.addEventListener("click", (e) => {
+    if (verificationCode.value === "000000") {
+        verificationCodeNotice.innerHTML = "인증이 완료되었습니다.";
+        verificationCodeNotice.classList.add("success");
+        verificationCodeNotice.style.display = "block";
+        setTimeout(() => {
+            verificationCodeNotice.classList.remove("success");
+            verificationCodeNotice.style.display = "none";
+        }, 1500);
     }
 });
