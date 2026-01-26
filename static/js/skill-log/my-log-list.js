@@ -15,7 +15,7 @@ ListLike.addEventListener("click", (e) => {
 });
 
 // 북마크 on 추가/제거
-const bookMark = document.querySelector(
+const bookark = document.querySelector(
     ".devQnaDetailBookmark.btnBookmark.qnaSpB",
 );
 // 레이어
