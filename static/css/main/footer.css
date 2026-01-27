@@ -1060,3 +1060,44 @@ i.system_system_arrow_right {
 .footer--main .copyright strong a {
     color: #6a6a6a;
 }
+
+/* 스크린 리더용 숨김 텍스트 */
+.skip,
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* 공지사항 세로 슬라이더 */
+.noti-slide {
+    height: 24px;
+    overflow: hidden;
+}
+
+.noti-slide .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.noti-slide a {
+    text-decoration: none !important;
+}
+
+.noti-slide a:hover {
+    text-decoration: underline !important;
+}
+
+/* footer 전체 링크 스타일 */
+#footer a {
+    text-decoration: none !important;
+}
+
+#footer a:hover {
+    text-decoration: underline !important;
+}

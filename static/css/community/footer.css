@@ -898,24 +898,3 @@ i.footer_blog {
     height: 40px;
     background-image: url(/content/images/main/footer_logo_cleanspam.png);
 }
-
-/* 공지사항 세로 슬라이더 */
-.noti-slide {
-    height: 24px;
-    overflow: hidden;
-}
-
-.noti-slide .swiper-container {
-    height: 24px;
-    overflow: hidden;
-}
-
-.noti-slide .swiper-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.noti-slide .swiper-slide {
-    height: 24px !important;
-    flex-shrink: 0;
-}
