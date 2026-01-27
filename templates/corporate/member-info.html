@@ -184,7 +184,8 @@
                                                         <input type="password" id="devNewPwd_2" class="inpDefault devPwdField devAnimPh" name="Password_Confirm" maxlength="16">
                                                     </div>
                                                     <div class="errorBx">
-                                                        <p id="Password_Confirm_errorBx">새 비밀번호 확인을 입력해 주세요.</p>
+                                                        <!-- <p id="Password_Confirm_errorBx">새 비밀번호 확인을 입력해 주세요.</p> -->
+                                                        <p id="Password_Confirm_errorBx">새 비밀번호와 새 비밀번호 확인이 일치하지 않습니다.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -194,8 +195,8 @@
                                         <div class="tbRow tbPw">
                                             <div class="tbCell">
                                                 <div class="tbBx">
+                                                    <!-- javascript: input 선택시 on 추가, 입력 완료시 .ok 추가 -->
                                                     <div class="elWrap devElWrap">  
-                                                        <!-- javascript: input 선택시 on 추가, 입력 완료시 .ok 추가 -->
                                                         <div class="schInpType">
                                                             <label class="ph" for="devPhone">
                                                                 가입자 전화번호
@@ -203,17 +204,17 @@
                                                             </label>
                                                             <input type="text" id="devPhone" class="inpDefault devAnimPh" name="Phone" maxlength="15">
                                                         </div>
-                                                    </div>
-                                                    <div class="errorBx">
-                                                        <p id="Phone_errorBx">올바른 전화번호를 입력해 주세요.</p>
+                                                        <div class="errorBx">
+                                                            <p id="Phone_errorBx">올바른 전화번호를 입력해 주세요.</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="tbCell">
                                                 <div class="tbBx">
+                                                    <!-- javascript: input 선택시 on 추가, 입력 완료시 .ok 추가 -->
                                                     <div class="elWrap devElWrap">
-                                                        <!-- javascript: input 선택시 on 추가, 입력 완료시 .ok 추가 -->
                                                         <div class="schInpType">
                                                             <label class="ph" for="devEmail">
                                                                 가입자 이메일
@@ -221,13 +222,13 @@
                                                             </label>
                                                             <input type="text" id="devEmail" class="inpDefault devAnimPh" name="Email" maxlength="50">
                                                         </div>
-                                                    </div>
-                                                    <div class="errorBx">
-                                                        <p id="Email_errorBx">
-                                                            이메일은
-                                                            <strong class="en">abc@jobkorea.co.kr / abc@jobkorea.com</strong>
-                                                            의 형식으로 입력 해 주세요.
-                                                        </p>
+                                                        <div class="errorBx">
+                                                            <p id="Email_errorBx">
+                                                                이메일은
+                                                                <strong class="en">abc@jobkorea.co.kr / abc@jobkorea.com</strong>
+                                                                의 형식으로 입력 해 주세요.
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -242,13 +243,13 @@
                                                     <label for="devPrivacyChoice">
                                                         [선택] 개인정보 수집 및 이용 동의
                                                         <!-- javascript: 클릭 시 on 추가 -->
-                                                        <a href="#" class="show button-more on">
-                                                            내용닫기
+                                                        <a href="#" class="show button-more">
+                                                            내용보기
                                                             <!-- javascript: 내용보기/닫기 동적으로 변경 -->
                                                         </a>
                                                     </label>
-                                                    <!-- javascript: 내용보기 버튼 클릭 시 display: none -->
-                                                    <div class="terms-box" style="display: block;">
+                                                    <!-- javascript: 내용보기 버튼 클릭 시 display: block -->
+                                                    <div class="terms-box" style="display: none;">
                                                         <ul class="depth-1">
                                                             <li>
                                                                 1. 수집 이용 목적

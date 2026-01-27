@@ -464,6 +464,17 @@ address, caption, em {
     color: #ff4e4e;
     font-weight: normal;
 }
+
+.error.elWrap {
+    border: 1px solid #eb8f8a !important;
+    z-index: auto;
+}
+.artMemberMng .infoTbBx .elWrap.error .ph {
+    font-size: 11px;
+    letter-spacing: 0px;
+    color: #afb0b2;
+}
+
 .artMemberMng .infoTbBx .tbPw .tbBx {
     position: relative;
     display: inline-block;
@@ -647,6 +658,9 @@ address, caption, em {
 .corp-terms .terms-box .depth-1 li:last-child {
     padding-bottom: 0;
 }
+.corp-terms .terms input:checked + label:before {
+    background-position: 0 -253px;
+}
 
 /* 저장하기 */
 .artBtmFunc {
@@ -681,4 +695,9 @@ address, caption, em {
     position: absolute;
     top: -1px;
     right: 0;
+}
+
+/* errorbox */
+.error .errorBx {
+    display: block;
 }
