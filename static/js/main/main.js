@@ -1,8 +1,9 @@
 // 광고 배너
 
-// 체험공고 버튼
+// ============================================
+// 탭 메뉴 (MY, 체험공고, 기술블로그, QnA)
+// ============================================
 const secondBannerSections = document.querySelectorAll(".personal-tab-item a");
-// 체험공고 배너
 const secondBannerDiv = document.querySelectorAll(
     ".tab-cont.personal-contents-item",
 );
@@ -29,24 +30,39 @@ secondBannerSections.forEach((secondBannerSection, i) => {
         // 4. 같은 인덱스의 콘텐츠에 active 추가
         secondBannerDiv[i].classList.add("active");
 
+        // 5. 슬라이더가 있으면 업데이트
         setTimeout(() => {
             const activeSwiper =
                 secondBannerDiv[i].querySelector(".swiper-container");
             if (activeSwiper && activeSwiper.swiper) {
-                activeSwiper.swiper.update(); // 슬라이더 재계산
+                activeSwiper.swiper.update();
             }
         }, 100);
     });
 });
 
+// MY 슬라이더 (my-list-wrap)
+
+const mySwiper = new Swiper(".my-list-wrap", {
+    slidesPerView: 2,
+    slidesPerGroup: 1,
+    spaceBetween: 16,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});
+
 // 체험공고 슬라이더 (instance-swipwe-6)
+
 const smartfitSwiper = new Swiper(".instance-swipwe-6", {
     slidesPerView: 3,
     spaceBetween: 16,
     loop: true,
     autoplay: {
-        delay: 3000, // 3초마다 자동 슬라이드
-        disableOnInteraction: false, // 사용자 조작 후에도 자동재생 유지
+        delay: 3000,
+        disableOnInteraction: false,
     },
     navigation: {
         nextEl: ".instance-next6",
@@ -55,6 +71,7 @@ const smartfitSwiper = new Swiper(".instance-swipwe-6", {
 });
 
 // 기술블로그 슬라이더 (instance-swipwe-3)
+
 const blogSwiper = new Swiper(".instance-swipwe-3", {
     slidesPerView: 3,
     spaceBetween: 16,
@@ -82,4 +99,34 @@ const qnaSwiper = new Swiper(".instance-swipwe-5", {
         nextEl: ".instance-next5",
         prevEl: ".instance-prev5",
     },
+});
+
+// 기업 체험 공채 슬라이더 (1000대 기업)
+
+const top1000Swiper = new Swiper(".top1000-swiper", {
+    slidesPerView: 8,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    loop: true,
+    loopAdditionalSlides: 8,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    speed: 500,
+    navigation: {
+        nextEl: ".top1000-next",
+        prevEl: ".top1000-prev",
+    },
+});
+
+// 채용 바로가기 버튼
+
+const expGoButtons = document.querySelectorAll(".button-recruit");
+
+expGoButtons.forEach((expGoButton) => {
+    expGoButton.addEventListener("click", (e) => {
+        location.href = "";
+    });
 });
