@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/corporate/team-member.css">
+</head>
+<body class="mtcSubInfo">
+    <div id="wrap">
+        <div class="sideTrue" id="container">
+            <!-- 어사이드 -->
+            <div id="sideNav" class="devCorpLogin">
+                <!-- 기업 정보 관리 메뉴 -->
+                <div class="nav">
+                    <ul>
+                        <!-- server, javascript: 해당 페이지일 때, on 클래스 추가 -->
+                        <li class="devCorpInfoDetail">
+                            <a href="">기업정보관리</a>
+                        </li>
+                        <li class="devCorpInfoDetail on">
+                            <a href="">회원정보관리</a>
+                        </li>
+                        <li class="devCorpInfoDetail">
+                            <a href="">로그인관리 </a>
+                        </li>
+                        <li class="devCorpInfoDetail">
+                            <a href="">정보 수신 설정</a>
+                        </li>
+                        <li class="devCorpInfoDetail">
+                            <a href="">2단계 인증 관리</a>
+                        </li>
+                        <li class="devCorpInfoDetail">
+                            <a href="">2단계 인증 내역</a>
+                        </li>
+                        <li class="devCorpInfoDetail">
+                            <a href="">기업인증</a>
+                        </li>
+                        <li>
+                            <a href="">전문채용관 신청</a>
+                        </li>
+                        <li>
+                            <a href="">슈퍼기업관 신청</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 광고 -->
+                <div class="adLeftBx">
+                    <div class="ad-container">
+                        <a href="javascript:;" class="imgAdBnnr">
+                            <img src="https://ads.jobkorea.co.kr/ads/pc/images/202512/54af1f5a-b9e0-45bb-8f00-cb06f2d01441.png">
+                            <!-- onerror -->
+                        </a>
+                    </div>
+                </div>
+                <div class="adLeftBx">
+                    <a href="">
+                        <img src="https://i.jobkorea.kr/content/images/banner/lnb_certify_banner.png">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- 팀원관리 -->
+            <div id="content">
+                <div class="infoContent teamContent">
+                    <!-- title -->
+                    <div class="topHdWrap">
+                        <h2 class="info_hd_2">팀원 관리</h2>
+                        <ul class="ask_txtBox">
+                            <li>
+                                <p>팀원을 초대하여 기업 계정을 공동으로 관리할 수 있습니다.</p>
+                            </li>
+                            <li>
+                                <p>초대된 팀원에 한해 관리 권한이 부여됩니다.</p>
+                            </li>
+                        </ul>
+                        <div>
+                            <div class="desc_hd">
+                                
+                            </div>
+                            <button type="button" class="invitation_button" id="invitation_button"><span>팀원 초대</span></button>
+                        </div>
+                    </div>
+
+                    <!-- content -->
+                    <div class="teamWrap management">
+                        <div class="schListsWrap blockLists">
+                            <div class="mtcSchListTb">
+                                <table>
+                                    <colgroup>
+                                        <col width="70">
+                                        <col width="240">
+                                        <col width="100">
+                                        <col width="200">
+                                        <col width="300">
+                                        <col width="50">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                <div></div>
+                                            </th>
+                                            <th scope="col">
+                                                <div>초대 일시</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div>이름</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div>휴대전화번호</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div>이메일</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div></div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- server: 팀원이 있을 경우 -->
+                                        <!-- server: 초대된 팀원이 있을 때 동적으로 생성 -->
+                                        <!-- server: 최대 5명정도씩 불러오도록 -->
+                                        <tr>
+                                            <td>
+                                                <!-- <span class="status waiting">대기중</span> -->
+                                                <span class="status participating">참여중</span>
+                                            </td>
+                                            <td>
+                                                <span class="date">2026/01/27 (화) 11:03</span>
+                                            </td>
+                                            <td>
+                                                <span class="name">바○보</span>
+                                            </td>
+                                            <td>
+                                                <span class="phone">
+                                                    010-1234-****
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="email">
+                                                    test@gmail.com
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span>
+                                                    <button type="button" class="moreOptionButton">
+                                                        <span>
+                                                            <svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                                                        </span>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+
+                                        <!-- server: 팀원이 없을 경우 -->
+                                        <!-- <tr class="no-team-member">
+                                            <td>
+                                                <div class="no-team-member-wrap">
+                                                    <p class="tx">
+                                                        <strong>초대된 팀원이 없습니다.</strong>
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+
+                                <!-- javascript: moreOptionButton 을 클릭 시 active 추가 -->
+                                <div class="more-option">
+                                    <ul>
+                                        <li>
+                                            <button type="button" class="memberDelBtn">내보내기</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom_area">
+                            <div class="tplPagination">
+                                <ul>
+                                    <!-- server: 페이지 개수에 따라 동적으로 생성 -->
+                                    <li>
+                                        <a class="now">1</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team_info">
+                            <strong>팀원 초대란?</strong>
+                            <ul class="infoList">
+                                <li>
+                                    <p>팀원을 초대하여 기업 계정을 공동으로 관리할 수 있습니다.</p>
+                                </li>
+                                <li>
+                                    <p>초대할 팀원의 이메일 주소로 초대 링크가 발송됩니다.</p>
+                                </li>
+                                <li>
+                                    <p>
+                                        초대 대기 중인 팀원은 붉은색 아이콘으로, 수락하여 참여 중인 팀원은 녹색 아이콘으로 표시됩니다
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- javascript: 초대 버튼 클릭 시 active 추가 -->
+            <div class="common-modal company-invitation-modal">
+                <div class="modal-dimmed"></div>
+                <div class="modal-contents">
+                    <button class="close-button"></button>
+                    <div class="modal-head">
+                        <h2>팀원 초대하기</h2>
+                        <p class="head-desc">
+                            팀원을 초대하여 기업 정보를 함께 관리하세요!
+                        </p>
+                    </div>
+                    <fieldset>
+                        <!-- server: 초대 이메일 보내기 -->
+                        <form method="post" id="form" name="form">
+                            <div class="modal-data">
+                                <p class="data-info">
+                                    초대할 팀원의 이메일 주소를 입력해 주세요.<br>
+                                    입력한 이메일로 초대 링크가 발송됩니다.<br>
+                                </p>
+                                <div class="data-info">
+                                    <!-- container -->
+                                    <div class="row_group">
+                                        <div class="form_email form_invitation flex-start">
+                                                <!-- <div class="col_1">
+                                                <div class="selWrap" style="width: 100px;">
+                                                    <p>이메일</p>
+                                                </div>
+                                            </div> -->
+                                            <div class="col_2 ">
+                                                <input type="text" id="invitation_mail" name="invitation_mail" size="4" maxlength="50" class="dev-mail" placeholder="이메일 주소 입력" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-bts">
+                                <!-- server: 회원탈퇴 페이지로 이동 -->
+                                <button type="button" class="modal-btn blue xl">초대하기</a>
+                            </div>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/js/corporate/team-member/event.js"></script>
+</html>
