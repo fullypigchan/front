@@ -161,7 +161,6 @@ plusButton.forEach((plusButton) => {
         const chatDeleteButton = document.querySelector(
             ".Flex_display_flex__i0l0hl2.TooltipBox_tooltipBoxContentCloseIcon__117pni6",
         );
-        console.log(chatDeleteButton);
 
         chatDeleteButton.addEventListener("click", (e) => {
             chatBox.remove();
@@ -214,3 +213,134 @@ arrowButton.addEventListener("click", () => {
 });
 
 // 채험정보 화살표
+const experienceInfo = document.querySelector(".Icon_size_14__1516qwbj");
+const experienceInfoPlus = document.querySelector(
+    ".styles_overflow_hidden__dk46ts9s.styles_mt_space8__dk46ts1n",
+);
+const grayBox = document.querySelector(
+    ".Box_bgColor_white__1wwr54u0.Box_borderColor_gray100__1wwr54ua.Box_borderSize_1__1wwr54ud.styles_py_space16__dk46ts9.styles_px_space20__dk46ts2k.styles_radius_radius8__dk46ts9g",
+);
+
+experienceInfo.addEventListener("click", (e) => {
+    experienceInfo.classList.toggle("jds-icon--system_arrow_down");
+    experienceInfo.classList.toggle("jds-icon--system_arrow_up");
+    if (experienceInfo.classList.contains("jds-icon--system_arrow_up")) {
+        experienceInfoPlus.style =
+            "opacity: 1; visibility: visible; flex-wrap: wrap;";
+        grayBox.style =
+            "height: auto; width: 100%; background-color: var(--jds-color-bluegray-bluegray100);";
+    } else {
+        experienceInfoPlus.style =
+            "opacity: 0; visibility: hidden; flex-wrap: nowrap;";
+        grayBox.style =
+            "height: 60px; width: 100%; background-color: var(--jds-color-bluegray-bluegray100);";
+    }
+});
+
+// 공유하기
+const share = document.querySelector(
+    "div.Flex_display_flex__i0l0hl2 div div div button",
+);
+const div = document.createElement("div");
+div.style =
+    "position: fixed; left: 0px; top: 0px; transform: translate(1524px, 78px); min-width: max-content; --popper-transform-origin: 44.5px -8px; z-index: 10; --popper-available-width: 1905px; --popper-available-height: 833px; --popper-anchor-width: 48px; --popper-anchor-height: 48px;";
+
+share.addEventListener("mouseenter", (e) => {
+    share.dataset.state = "delayed-open";
+
+    div.className = "share-tooltip";
+
+    div.innerHTML = `
+        <div data-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(1524px, 78px); min-width: max-content; --popper-transform-origin: 44.5px -8px; z-index: 10; --popper-available-width: 1905px; --popper-available-height: 833px; --popper-anchor-width: 48px; --popper-anchor-height: 48px;">
+            <div
+                data-align="center"
+                data-side="bottom"
+                data-state="delayed-open"
+                data-sentry-element="TooltipJds.Content"
+                data-sentry-source-file="index.tsx"
+                style="
+                    z-index: 10;
+                    --tooltip-content-transform-origin: var(
+                        --popper-transform-origin
+                    );
+                    --tooltip-content-available-width: var(
+                        --popper-available-width
+                    );
+                    --tooltip-content-available-height: var(
+                        --popper-available-height
+                    );
+                    --tooltip-trigger-width: var(--popper-anchor-width);
+                    --tooltip-trigger-height: var(--popper-anchor-height);
+                "
+            >
+                <div
+                    class="Box_bgColor_white__1wwr54u0 Box_borderColor_default__1wwr54u5 Box_borderSize_1__1wwr54ud styles_m_space0__dk46ts5u styles_pl_space16__dk46tsd styles_pb_space8__dk46ts1w styles_pr_space16__dk46tsb styles_pt_space8__dk46ts1u styles_radius_radius4__dk46ts9h g1vplf0"
+                    data-sentry-element="Box"
+                    data-sentry-source-file="index.tsx"
+                >
+                    <span
+                        data-accent-color="white"
+                        class="Typography_variant_size16__344nw26 Typography_weight_regular__344nw2e Typography_color_white__344nw2q"
+                        >공유하기</span
+                    >
+                </div>
+                <span
+                    style="
+                        position: fixed;
+                        transform: rotate(180deg);
+                        left: 38.5px;
+                        top: 1px;
+                        transform-origin: center 0px;
+                    "
+                    ><svg
+                        data-sentry-element="TooltipJds.Arrow"
+                        data-sentry-source-file="index.tsx"
+                        height="8"
+                        preserveAspectRatio="none"
+                        viewBox="0 0 30 10"
+                        width="12"
+                        style="display: block"
+                    >
+                        <polygon points="0,0 30,0 15,10"></polygon></svg></span
+                ><span
+                    id="jk-_R_2sbkltiv5ubr9db_"
+                    role="tooltip"
+                    style="
+                        position: absolute;
+                        border: 0px;
+                        width: 1px;
+                        height: 1px;
+                        padding: 0px;
+                        margin: -1px;
+                        overflow: hidden;
+                        clip: rect(0px, 0px, 0px, 0px);
+                        white-space: nowrap;
+                        overflow-wrap: normal;
+                    "
+                    ><div
+                        class="Box_bgColor_white__1wwr54u0 Box_borderColor_default__1wwr54u5 Box_borderSize_1__1wwr54ud styles_m_space0__dk46ts5u styles_pl_space16__dk46tsd styles_pb_space8__dk46ts1w styles_pr_space16__dk46tsb styles_pt_space8__dk46ts1u styles_radius_radius4__dk46ts9h g1vplf0"
+                        data-sentry-element="Box"
+                        data-sentry-source-file="index.tsx"
+                    >
+                        <span
+                            data-accent-color="white"
+                            class="Typography_variant_size16__344nw26 Typography_weight_regular__344nw2e Typography_color_white__344nw2q"
+                            >공유하기</span
+                        >
+                    </div></span
+                >
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(div);
+});
+
+share.addEventListener("mouseleave", (e) => {
+    share.dataset.state = "closed";
+    const tooltip = document.querySelector(".share-tooltip");
+    if (tooltip) {
+        tooltip.remove();
+    }
+});
+share.addEventListener("click", (e) => {});

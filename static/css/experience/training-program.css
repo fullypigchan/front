@@ -21,8 +21,8 @@
 
 @font-face {
     font-family: 'jds-icon';
-    src: url("/static/css/step-by-step/icons.c8c8e4ab.woff2") format('woff2'),
-         url("/static/css/step-by-step/icons.fc26c557.woff") format('woff');
+    src: url("/static/css/experience/icons.c8c8e4ab.woff2") format('woff2'),
+         url("/static/css/experience/icons.fc26c557.woff2") format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -15233,3 +15233,7 @@ i.jds-icon, i.jds-icon:before {
     pointer-events: auto;
 }
 
+.g1vplf0 {
+    background-color: black;
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, .08);
+}
