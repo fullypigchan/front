@@ -10,9 +10,9 @@ const invitationTeamMemberButton = document.querySelector(
 const invitationInput = form.invitation_mail;
 
 // 팀원 메뉴 버튼
-const moreOptionButton = document.querySelectorAll(".moreOptionButton");
-const moreOptionLayer = document.querySelector(".more-option");
-const memberDeleteButton = document.querySelector(".memberDelBtn");
+const teamMemberRows = document.querySelectorAll(
+    ".teamWrap .mtcSchListTb table tbody tr",
+);
 
 // 팀원 초대
 invitationButton.addEventListener("click", (e) => {
@@ -35,15 +35,25 @@ invitationTeamMemberButton.addEventListener("click", (e) => {
     }
 });
 
-// 팀원 삭제
-moreOptionButton.forEach((button) => {
-    button.addEventListener("click", (e) => {
+// 팀원 내보내기
+teamMemberRows.forEach((row) => {
+    const moreOptionLayer = row.querySelector(".more-option");
+
+    row.addEventListener("click", (e) => {
         if (e.target.closest(".moreOptionButton")) {
             moreOptionLayer.classList.toggle("active");
         }
-        // confirm("정말로 팀원을 삭제하시겠습니까?") &&
-        //     alert("팀원이 삭제되었습니다.");
+
+        if (e.target.closest(".memberDelBtn")) {
+            confirm("정말로 팀원을 내보내시겠습니까?") &&
+                alert("팀원이 내보내기가 완료되었습니다.");
+        }
     });
 });
-
-// memberDeleteButton.
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".moreOptionButton")) {
+        teamMemberRows.forEach((row) => {
+            row.querySelector(".more-option").classList.remove("active");
+        });
+    }
+});
