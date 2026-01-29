@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션 제안 인재 | 잡코리아</title>
+    <link rel="stylesheet" href="/static/css/corporate/participant-list.css">
+</head>
+<body class="mtcPersonScrap">
+    <div id="wrap" class="wrapper">
+        <div class="sideTrue devUseTopBtn section-wrap" id="container">
+
+            <!-- 참여자 관리 -->
+            <div class="applicant-list-section">
+                <div class="inner">
+                    <div class="border-round-section">
+                        <div class="status-box">
+                            <div class="topArea">
+                                <h2 class="subTits">참여자 관리</h2>
+                            </div>
+                            <ul class="status-list">
+                                <!-- server, javascript: 서버에서 rPageCode를 쿼리스트링으로 보내 어떤 버튼인지 확인 후, 동적으로 active 추가  -->
+                                <li>
+                                    <!-- onclick -->
+                                    <a href="" class="active">
+                                        전체
+                                        <em>0</em>
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- onclick -->
+                                    <a href="" class="" >
+                                        참여중 
+                                        <em>0</em>
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- onclick -->
+                                    <a href="" class="" >
+                                        승인대기
+                                        <em>0</em>
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- onclick -->
+                                    <a href="" class="" >
+                                        승인거부/중도탈락 
+                                        <em>0</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sort-select-box">
+                            <!-- 필터 -->
+                            <form method="get" name="sForm" id="sForm" accept="" autocomplete="off">
+                                <!-- server, javascript: 메뉴/필터를 선택/입력하면 server에 input 값을 보냄 -->
+                                <!-- server에서 input 값을 확인 후, 화면에 다시 쿼리스트링으로 해당 값과 화면에 뿌릴 정보를 전달 -->
+                                <!-- 화면(js)에서 쿼리스트링 확인 후, 화면에 동적으로 적용 -->
+                                <input id="Page" name="Page" type="hidden" value="1"><!-- 페이지 버튼 -->
+                                <input id="rPageCode" name="rPageCode" type="hidden" value="PN"><!-- 메뉴(전체/수락/거절/미응답) -->
+                                <input id="rSearchStat" name="rSearchStat" type="hidden" value="1">
+                                <input class="Period" id="Period" name="Period" type="hidden" value="1"><!-- 기간별 -->
+                                <div class="drop-down-box">
+                                    <div class="button-box">
+                                        <!-- javascript: 클릭한 메뉴의 textContent를 버튼 textContent에 적용 -->
+                                        <button type="button" class="sort-button">1개월씩 조회</button>
+                                        <!-- javascript: 버튼 클릭 시 active 추가 -->
+                                        <div class="sort-select-modal select-modal_common">
+                                            <ul>
+                                                <li>
+                                                    <button type="button" class="devPeriod" data-value="1" data-ga-label="1개월씩 조회">1개월씩 조회</button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="devPeriod" data-value="3" data-ga-label="3개월씩 조회">3개월씩 조회</button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="devPeriod" data-value="6" data-ga-label="6개월씩 조회">6개월씩 조회</button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="devPeriod" data-value="12" data-ga-label="12개월씩 조회">12개월씩 조회</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="filter-button"></button>
+                                <div class="search-box input-box_common">
+                                    <!-- 검색어 -->
+                                    <input class="devSearchKeyword" data-filter-group="srchKeyword" id="rKeyword" name="rKeyword" placeholder="이력서 이름, 학교, 전공, 회사, 담당자이름" type="text" value="">
+                                    <button type="button" class="search-button devSearchBtn"></button>
+                                </div>
+                                <!-- 필터 모달 -->
+                                <!-- javascript: 필터 버튼 클릭 시 active 추가 -->
+                                <div class="filter-modal">
+                                    <div class="content-box">
+                                        <div class="filter-box">
+                                            <div class="title">학력</div>
+                                            <ul>
+                                                <li>
+                                                    <!-- javascript: filter 버튼 클랙 시 active 추가 -->
+                                                    <button type="button" class="devFilterItem devSeqType" data-filter-group="1_1" data-value="26_33" data-filter-text="고등학교 졸업">고등학교 졸업</button>
+                                                </li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="1_2" data-value="36_40" data-filter-text="대학(2,3년) 졸업">대학(2,3년) 졸업</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="1_3" data-value="46_53" data-filter-text="대학교(4년) 졸업">대학교(4년) 졸업</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="1_4" data-value="56_60" data-filter-text="대학원 졸업">대학원 졸업</button></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="filter-box">
+                                            <div class="title">경력</div>
+                                            <ul>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="2_1" data-value="0_0" data-filter-text="신입">신입</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="2_2" data-value="1_3" data-filter-text="1~3년">1~3년</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="2_3" data-value="4_6" data-filter-text="4~6년">4~6년</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="2_4" data-value="7_9" data-filter-text="7~9년">7~9년</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="2_5" data-value="10_15" data-filter-text="10~15년">10~15년</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="2_6" data-value="16_20" data-filter-text="16~20년">16~20년</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="2_7" data-value="21_" data-filter-text="21년 이상">21년 이상</button></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="filter-box">
+                                            <div class="title">나이/성별</div>
+                                            <ul data-filter-group-msg-prefix="나이를">
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="3_1" data-value="_25" data-filter-text="25세 이하">25세 이하</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="3_2" data-value="26_30" data-filter-text="26~30세">26~30세</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="3_3" data-value="31_35" data-filter-text="31~35세">31~35세</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="3_4" data-value="36_40" data-filter-text="36~40세">36~40세</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="3_5" data-value="41_50" data-filter-text="41~50세">41~50세</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="3_6" data-value="51_" data-filter-text="51세 이상">51세 이상</button></li>
+                                            </ul>
+                                            <div class="gender-box">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="filter-gender-male" class="devFilterItem" data-value="0" data-filter-group="4_1" data-filter-text="남성">
+                                                    <label for="filter-gender-male" class="checkbox-label_common text-case" data-value="0">남성</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <!-- javascript: input 클릭 시 active 추가 -->
+                                                    <input type="checkbox" id="filter-gender-female" class="devFilterItem" data-value="1" data-filter-group="4_2" data-filter-text="여성">
+                                                    <label for="filter-gender-female" class="checkbox-label_common text-case" data-value="1">여성</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filter-box">
+                                            <div class="title">희망연봉</div>
+                                            <ul data-filter-group-msg-prefix="연봉을">
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="7_1" data-value="1" data-filter-text="면접 후 결정">면접 후 결정</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="5_2" data-value="1_5" data-filter-text="2,500만원 이하">2,500만원 이하</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="5_3" data-value="7_10" data-filter-text="2,500~3,000만원">2,500~3,000만원</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="5_4" data-value="10_12" data-filter-text="3,000~3,500만원">3,000~3,500만원</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="5_5" data-value="12_15" data-filter-text="3,500~4,000만원">3,500~4,000만원</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="5_6" data-value="15_17" data-filter-text="4,000~5,000만원">4,000~5,000만원</button></li>
+                                                <li><button type="button" class="devFilterItem devSeqType" data-filter-group="5_7" data-value="17_19" data-filter-text="5,000만원 이상">5,000만원 이상</button></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="filter-box etc">
+                                            <div class="title">기타조건</div>
+                                            <div class="list-container">
+                                                <ul>
+                                                    <li><button type="button" class="devFilterItem" data-filter-group="6_2" data-value="2" data-filter-text="메모한 지원자">메모한 지원자</button></li>
+                                                    <li><button type="button" class="devFilterItem" data-filter-group="6_8" data-value="8" data-filter-text="상품 적용 인재">상품 적용 인재</button></li>
+                                                    <li><button type="button" class="devFilterItem" data-filter-group="6_3" data-value="3" data-filter-text="사진 등록">사진 등록</button></li>
+                                                    <li><button type="button" class="devFilterItem" data-filter-group="6_9" data-value="9" data-filter-text="상품 미적용 인재">상품 미적용 인재</button></li>
+                                                    <li><button type="button" class="devFilterItem" data-filter-group="6_4" data-value="4" data-filter-text="첨부파일">첨부파일</button></li>
+                                                    <li><button type="button" class="devFilterItem" data-filter-group="6_6" data-value="6" data-filter-text="전화연락 가능">전화연락 가능</button></li>
+                                                    
+                                                    <li><button type="button" class="devFilterItem" data-filter-group="6_7" data-value="7" data-filter-text="보훈대상자">보훈대상자</button></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><button type="button" class="devFilterItem" data-filter-group="6_12" data-value="12" data-filter-text="면접제의 인재">면접제의 인재</button></li>
+                                                    <li><button type="button" class="devFilterItem" data-filter-group="6_13" data-value="13" data-filter-text="결과통보 인재">결과통보 인재</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="button-box">
+                                        <div class="filterSelItem">
+                                            <div class="selItems">
+                                                <!-- javascript: 클릭 시 동적으로 생성 -->
+                                                <!-- <span class="item">
+                                                    16~20년
+                                                    <button type="button" class="btnSelDel mtcBtnB devFilterItemDelBtn" data-filter-group="2_6"></button>
+                                                </span> -->
+                                            </div>
+                                        </div>
+                                        <button type="button" class="search-button devSearchBtn">검색하기</button>
+                                        <button type="button" class="search-reset devResetBtn">초기화</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- javascript: 동적으로 display = none 해제 -->
+                        <div id="devSearchFilterView" class="search-keyword-box" style="display: none;">
+                            <ul class="line-list">
+                                <li>
+                                    <div class="title">검색조건</div>
+                                    <div class="keyword">
+                                        <div class="text">졸업</div>
+                                        <button class="button-delete devSearchFilterDelBtn" data-filter-group="1_1"></button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button class="reset-button devSearchFilterResetBtn">초기화</button>
+                        </div>
+
+                        <!-- 참여자 리스트 -->
+                        <table class="applicant-list-table">
+                            <tbody>
+                                <tr>
+                                    <th></th>
+                                    <th>
+                                        <!-- javascript: 클래스 active + up 추가 시 ↑, down 추가 시 ↓ -->
+                                        <button class="order-button ">이름/나이</button>
+                                        <!-- javascript: 버튼 클릭 시 active 추가 -->
+                                        <div class="order-select-modal name-age select-modal_common">
+                                            <ul>
+                                                <li>
+                                                    <!-- javascript: 버튼 선택 시 acitve 추가 -->
+                                                    <button type="button" class="devOrderItem " data-value="4">나이 많은순</button>
+                                                </li>
+                                                <li>
+                                                    <!-- javascript: 버튼 선택 시 acitve 추가 -->
+                                                    <button type="button" class="devOrderItem" data-value="5">나이 적은순</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </th>
+
+                                    <th>
+                                        <div class="order-select-box">
+                                            <button class="order-button  ">전화번호/이메일</button>
+                                        </div>
+                                    </th>
+
+                                    <th>
+                                        <div class="order-select-box">
+                                            <button class="order-button  ">자기소개서</button>
+                                        </div>
+                                    </th>
+
+                                    <th>
+                                        <div class="order-select-box">
+                                            <button class="order-button  ">승인</button>
+                                        </div>
+                                    </th>
+
+                                    <th></th>
+                                </tr>
+
+                                <!-- server: data가 없을 경우 -->
+                                <!-- <tr class="data-none-case">
+                                    <td colspan="5">
+                                        <div class="icon-frown"></div>
+                                        <div class="large-text">포지션제안을 보낸 인재가 없습니다.</div>
+                                        <div class="text">좋은 인재에게 이직 제안 해보세요.</div>
+                                        <div class="btn-box"> -->
+                                            <!-- onclick -->
+                                            <!-- <button type="button" >인재검색하기</button>
+                                        </div>
+                                    </td>
+                                </tr> -->
+
+                                <!-- servere: data 있을 경우 -->
+                                <tr>
+                                    <td class="alLeft">
+                                        <div class="tdInner">
+                                            <a class="photoItem linkResume devLinkResume"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- <form name="sPrint" id="sPrint" action="/corp/person/resume_scrap_print" method="post">
+                            <input type="hidden" name="arrPKey">
+                            <input type="hidden" name="rPageCode" value="PC">
+                            <input type="hidden" name="arrR_No">
+                            <input type="hidden" name="arrM_ID">
+                        </form> -->
+
+                        <div class="notice-box">
+                            <ul class="point-bullet-list">
+                                <li>
+                                    잡코리아의 인재정보를 통해 수집된 개인정보 및 이력서/프로필은
+                                    <strong>개인정보보호정책에 의거 인재채용의 목적</strong>으로만 이용하셔야 합니다.
+                                </li>
+                                <li>
+                                    제안을 보낸 이력서/프로필은 발송일로부터 1년간 보관되며, 연락처 및 이력서/프로필은 열람 후, 90일간 확인 할 수 있습니다.
+                                </li>
+                                <li>
+                                    <strong>연락처 비공개 인재가 포지션 제안을 수락하면 연락처가 포함된 이력서/프로필을 확인</strong> 할 수 있습니다.
+                                </li>
+                                <li>
+                                    <strong>포지션제안 발송 후, 수락 전까지 인재에게 무료 1회 재발송 가능합니다.</strong>
+                                    (이후 추가 제안 또는 다른포지션으로 제안 시 상품 1건이 차감됩니다.)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -20,15 +20,29 @@
             <div id="content">
                 <!-- onsubmit() -->
                 <form action="" id="form" method="get" name="form">
-                    <!-- <input id="PubType" name="PubType" type="hidden" value="1">
-                    <input id="SrchStat" name="SrchStat" type="hidden" value="1">
+                    <!-- server: 메뉴/필터 클릭 시, 페이지 -> 서버 -> (동일한)페이지로 이동 -->
+                    <!-- server에 어떤 버튼을 선택했는지 보내는 input -->
+                    <!-- value를 변경해서 서버에 요청 -->
+                     
+                    <!-- 프로그램 상태별(진행중, 모집중) -->
+                    <input id="PubType" name="PubType" type="hidden" value="1">
+
+                    <!-- <input id="SrchStat" name="SrchStat" type="hidden" value="1"> -->
+
+                    <!-- 정렬 -->
                     <input id="Orderby" name="Orderby" type="hidden" value="0">
-                    <input id="Save_Stat" name="Save_Stat" type="hidden" value="0">
-                    <input id="FilteringDiv" name="FilteringDiv" type="hidden" value="">
+
+                    <!-- <input id="FilteringDiv" name="FilteringDiv" type="hidden" value="">
                     <input id="FilteringText" name="FilteringText" type="hidden" value="">
-                    <input id="ItvIngStatCode" name="ItvIngStatCode" type="hidden" value="0">
+                    <input id="ItvIngStatCode" name="ItvIngStatCode" type="hidden" value="0"> -->
+
+                    <!-- 담당자 -->
                     <input id="OfcName" name="OfcName" type="hidden" value="">
-                    <input id="TopCount" name="TopCount" type="hidden" value="10"> -->
+
+                    <!-- 개수별 -->
+                    <input id="TopCount" name="TopCount" type="hidden" value="10">
+
+
 
                     <!-- 전체 공고 -->
                     <div class="noticeContent">
@@ -37,10 +51,10 @@
                             <h2 class="subTits">전체 채용공고</h2>
                         </div>
 
-                        <!-- menu -->
+                        <!-- 메뉴(탭) -->
                         <div class="mtcTplTab">
                             <ul class="tabItems">
-                                <!-- server, javascript: 해당 페이지로 이동 시 on 추가 -->
+                                <!-- server, javascript: 메뉴/필터 클릭 시, 페이지 -> 서버 -> (동일한)페이지로 이동(페이지 자체는 하나) -->
                                 <li class="on">
                                     <!-- onclick() -->
                                     <!-- server: verdana에 동적으로 값 넣기 -->
@@ -70,12 +84,12 @@
                         </div>
 
                         <fieldset>
-                            <!-- search area -->
+                            <!-- 검색 필터 -->
                             <!-- server, javascript: 공고가 없으면 notFound 추가, 있으면 삭제 -->
                             <!-- server, javascript:  -->
                             <div class="sort-select-box notFound">
                                 <div class="drop-down-box">
-                                    <!--  -->
+                                    <!-- 날짜별 -->
                                     <div class="button-box">
                                         <button type="button" class="sort-button sort1">최근 등록일순</button>
                                         <!-- javascript: 드롭다운 버튼 클릭 시 active 추가 -->
@@ -103,6 +117,7 @@
                                         </div>
                                     </div>
 
+                                    <!-- 개수별 -->
                                     <div class="button-box">
                                         <!-- server, javascript: 드롭다운 메뉴 버튼 클릭 시 동적으로 button의 textContent 변경 -->
                                         <button type="button" class="sort-button sort2">10개씩 보기</button>
@@ -119,6 +134,7 @@
                                     </div>
                                 </div>
 
+                                <!-- 담당자별 -->
                                 <div class="search-box input-box_common">
                                     <div class="drop-down-box">
                                         <div class="button-box">

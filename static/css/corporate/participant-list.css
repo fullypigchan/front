@@ -1,0 +1,718 @@
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/font/Pretendard-Regular.subset.woff2") format(woff2);
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: swap;
+    src: url("/static/font/Pretendard-SemiBold.subset.woff2") format(woff2);
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-display: swap;
+    src: url("/static/font/Pretendard-Bold.subset.woff2") format(woff2);
+}
+
+/* 기본 */
+* {
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, Helvetica Neue, Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif !important;
+}
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+body {
+    background: #f3f5f7;
+    color: #333;
+    font-size: 12px;
+}
+a, body, button, input, select, td, textarea, th {
+    color: #333;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 1;
+}
+body, button, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, table, td, textarea, th, ul {
+    padding: 0;
+    margin: 0;
+}
+li, ul {
+    list-style: none;
+}
+a, a:active, a:focus, a:hover, a:link, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+address, caption, em {
+    font-weight: 400;
+    font-style: normal;
+}
+button, fieldset, form, iframe {
+    border: 0;
+}
+button, label {
+    vertical-align: middle;
+}
+button {
+    background: none;
+    cursor: pointer;
+}
+button {
+    overflow: visible;
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+input, textarea {
+    vertical-align: middle;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+
+#wrap {
+    position: relative;
+    min-width: 1270px;
+    margin: 0 auto;
+    background: #f2f4f7;
+}
+#wrap #container.section-wrap, .section-wrap {
+    margin: 40px auto 0;
+    display: flex;
+    width: 1260px;
+    position: relative;
+}
+a, img {
+    display: block;
+}
+
+/* 참여자 관리 */
+
+.applicant-list-section {
+    position: relative;
+    width: 1020px;
+    margin: 0 0 0 10px;
+}
+.applicant-list-section .inner {
+    position: relative;
+    width: 1260px;
+    margin: 0 auto;
+}
+.border-round-section * {
+    box-sizing: border-box;
+}
+.border-round-section {
+    border-radius: 15px;
+    background: #fff;
+}
+.applicant-list-section .border-round-section {
+    padding: 30px;
+}
+.applicant-list-section .status-box {
+    border-bottom: 1px solid #ebebeb;
+}
+.applicant-list-section .status-box:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.applicant-list-section .topArea {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 23px;
+}
+
+.applicant-list-section .status-box .status-list {
+    float: left;
+}
+
+.applicant-list-section .status-box .status-list li {
+    float: left;
+    padding: 0 18px;
+}
+.applicant-list-section .status-box .status-list li:first-child {
+    padding-left: 12px;
+}
+
+.applicant-list-section .status-box .status-list li a {
+    position: relative;
+    padding-bottom: 9px;
+    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+.applicant-list-section .status-box .status-list li a.active {
+    color: #39f;
+    font-weight: 700;
+}
+
+.applicant-list-section .status-box .status-list li a.active:before {
+    position: absolute;
+    left: -12px;
+    bottom: -1px;
+    content: "";
+    display: block;
+    width: calc(100% + 24px);
+    height: 4px;
+    background: #39f;
+}
+
+.applicant-list-section .status-box .status-list li a.active em {
+    font-weight: 700;
+}
+.applicant-list-section .status-box .status-list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.applicant-list-section .sort-select-box {
+    position: relative;
+    z-index: 4;
+    margin-top: 20px;
+}
+.applicant-list-section .sort-select-box:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.applicant-list-section .sort-select-box .drop-down-box {
+    float: left;
+    margin-top: 6px;
+}
+.applicant-list-section .sort-select-box .drop-down-box .button-box {
+    position: relative;
+    float: left;
+}
+.applicant-list-section .sort-select-box .drop-down-box:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.applicant-list-section .sort-select-box .drop-down-box .button-box .sort-button {
+    display: block;
+    padding-right: 20px;
+    line-height: 20px;
+    background: url("http://i.jobkorea.kr/content/images/corporate/position/icon_position_arrow_14x20.svg") no-repeat 100%;
+    background-size: 14px 20px;
+}
+
+.select-modal_common {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: 3;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1490196078);
+}
+.select-modal_common.active {
+    display: block;
+}
+.applicant-list-section .sort-select-box .drop-down-box .button-box .sort-select-modal {
+    left: 0;
+    width: calc(100% + 13px);
+    margin-top: 8px;
+}
+.select-modal_common ul li {
+    padding: 0 10px;
+}
+.select-modal_common ul li button {
+    display: block;
+    width: 100%;
+    line-height: 34px;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+.select-modal_common ul li:nth-child(n+2) button {
+    border-top: 1px solid #eee;
+}
+.subTits {
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    color: #000;
+}
+
+.applicant-list-section .sort-select-box .filter-button {
+    float: right;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    background: url("https://i.jobkorea.kr/content/images/corporate/position/icon_filter.png") no-repeat 50%;
+}
+.input-box_common {
+    position: relative;
+    width: 100%;
+    height: 32px;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+}
+.applicant-list-section .sort-select-box .search-box {
+    float: right;
+    width: 285px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.input-box_common input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 34px;
+}
+.input-box_common .search-button {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    display: block;
+    width: 28px;
+    height: 30px;
+    background: url("https://i.jobkorea.kr/content/images/corporate/position/icon_search.png") no-repeat 50%;
+}
+
+.filter-modal {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: auto;
+    min-height: 380px;
+    border: 1px solid #323743;
+    background: #fff;
+    z-index: 5;
+    border-radius: 10px;
+}
+.filter-modal.active {
+    display: block;
+}
+
+.filter-modal>.content-box {
+    position: relative;
+    min-height: 320px;
+    padding: 20px 30px 15px;
+}
+.filter-modal>.content-box .filter-box {
+    float: left;
+    width: 140px;
+}
+.filter-modal>.content-box .filter-box .title {
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.filter-modal>.content-box .filter-box ul li {
+    margin-top: 15px;
+}
+.filter-modal>.content-box .filter-box ul li button {
+    line-height: 17px;
+}
+.filter-modal>.content-box .filter-box ul li button.active {
+    font-weight: 700;
+    color: #39f;
+}
+.filter-modal>.content-box .filter-box:nth-child(n+2) {
+    margin-left: 20px;
+}
+
+.filter-modal>.content-box .filter-box .gender-box {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+.filter-modal>.content-box .filter-box .gender-box .checkbox {
+    float: left;
+}
+input[type=checkbox] {
+    display: none;
+}
+.checkbox-label_common {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("https://i.jobkorea.kr/content/images/corporate/position/label_checkbox_common_off.png") no-repeat 50%;
+}
+.checkbox-label_common.text-case {
+    width: auto;
+    padding-left: 26px;
+    background-position: 0;
+    line-height: 18px;
+}
+
+input[type=checkbox]:checked+.checkbox-label_common {
+    background-image: url("https://i.jobkorea.kr/content/images/corporate/position/label_checkbox_common_on.png");
+}
+.filter-modal>.content-box .filter-box .gender-box .checkbox:nth-child(n+2) {
+    margin-left: 22px;
+}
+.filter-modal>.content-box .filter-box.etc {
+    width: 258px;
+}
+.filter-modal>.content-box .filter-box.etc ul:first-child {
+    float: left;
+}
+.filter-modal>.content-box .filter-box.etc ul {
+    display: table;
+    width: auto;
+}
+.filter-modal>.content-box .filter-box.etc ul:nth-child(2) {
+    float: right;
+}
+.filter-modal>.content-box:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.filter-modal>.button-box {
+    display: flex;
+    position: relative;
+    min-height: 58px;
+    padding: 9px 29px 19px;
+    background: #f5f7fa;
+    border-radius: 0 0 10px 10px;
+}
+.filter-modal>.button-box .filterSelItem {
+    width: 690px;
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 0;
+}
+.filter-modal>.button-box .filterSelItem .selItems .item {
+    display: flex;
+    position: relative;
+    float: left;
+    margin-top: 10.5px;
+    padding-right: 15px;
+    color: #333;
+    align-items: center;
+    font-size: 13px;
+    letter-spacing: 0;
+}
+.mtcBtn, .mtcBtnB:before, .mtcBtnA:after, .mtcBtnM:before, .mtcBtnM:After {
+    display: inline-block;
+    background: url("https://i.jobkorea.kr/content/images/ver_1/mtc/common/mtc_sp_btn.png?202007220000") no-repeat;
+    box-sizing: border-box;
+}
+.filter-modal>.button-box .filterSelItem .selItems .item .btnSelDel:before {
+    width: 9px;
+    height: 9px;
+    margin-left: 8px;
+    content: "";
+    background-position: -123px 0;
+    vertical-align: initial;
+}
+.filter-modal>.button-box .filterSelItem .selItems .item .btnSelDel:before {
+    width: 9px;
+    height: 9px;
+    margin-left: 8px;
+    content: "";
+    background-position: -123px 0;
+    vertical-align: initial;
+}
+.filter-modal>.button-box .search-button {
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 29px;
+    width: 108px;
+    height: 34px;
+    margin-left: 20px;
+    background: #39f;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+.filter-modal>.button-box .search-reset {
+    position: absolute;
+    top: 22.2px;
+    right: 157px;
+    padding-left: 20px;
+    background: url("https://i.jobkorea.kr/content/images/corporate/position/icon_reset.png") no-repeat 1px -3px;
+}
+.applicant-list-section .search-keyword-box {
+    padding: 10px 12px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.applicant-list-section .search-keyword-box .line-list {
+    float: left;
+}
+.line-list>div, .line-list>li {
+    position: relative;
+    padding: 0 8px;
+}
+.line-list>li {
+    float: left;
+}
+.line-list>div:first-child, .line-list>li:first-child {
+    padding-left: 0 !important;
+}
+.applicant-list-section .search-keyword-box .line-list li {
+    line-height: 20px;
+}
+
+.applicant-list-section .search-keyword-box .line-list li .title {
+    color: #666;
+    font-weight: 700;
+}
+.applicant-list-section .search-keyword-box .line-list li:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.applicant-list-section .search-keyword-box .line-list li {
+    line-height: 20px;
+}
+.line-list>div:nth-child(n+2):before, .line-list>li:nth-child(n+2):before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -5px;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: #e6e6e6;
+}
+.applicant-list-section .search-keyword-box .line-list li .keyword {
+    position: relative;
+    float: left;
+    padding-right: 20px;
+    line-height: 20px;
+}
+.applicant-list-section .search-keyword-box .line-list li .keyword .button-delete {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background: url("https://i.jobkorea.kr/content/images/corporate/position/xmark_12x12.png")
+}
+.line-list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.applicant-list-section .search-keyword-box .reset-button {
+    float: right;
+    padding-left: 20px;
+    line-height: 20px;
+    background: url("https://i.jobkorea.kr/content/images/corporate/position/icon_reset.png") no-repeat 0;
+}
+
+.applicant-list-section .applicant-list-table {
+    table-layout: fixed;
+    margin-top: 20px;
+}
+
+
+.applicant-list-section .applicant-list-table th {
+    height: 40px;
+    background: #f5f7fa;
+    font-weight: 400;
+}
+.applicant-list-section .applicant-list-table th:first-child {
+    width: 38px;
+    padding-left: 12px;
+}
+
+.applicant-list-section .applicant-list-table th .order-select-box {
+    position: relative;
+    display: table;
+    width: auto;
+    margin: 0 auto;
+}
+
+.applicant-list-section .applicant-list-table th .order-select-box .order-button {
+    display: block;
+    line-height: 40px;
+    margin: 0 auto;
+}
+.applicant-list-section .applicant-list-table th .order-select-box .order-button.active:after {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -1px;
+}
+.applicant-list-section .applicant-list-table th .order-select-box .order-button.down:after {
+    content: "↓";
+}
+.applicant-list-section .applicant-list-table th .order-select-box .order-button.up:after {
+    content: "↑";
+}
+.applicant-list-section .applicant-list-table th .order-select-box .order-button.active {
+    font-weight: 700;
+}
+
+
+.select-modal_common {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: 3;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1490196078);
+}
+.select-modal_common.active {
+    display: block;
+}
+.applicant-list-section .applicant-list-table th .order-select-box .order-select-modal {
+    margin-top: -2px;
+}
+.applicant-list-section .applicant-list-table th .order-select-box .order-select-modal.career, .applicant-list-section .applicant-list-table th .order-select-box .order-select-modal.education, .applicant-list-section .applicant-list-table th .order-select-box .order-select-modal.name-age {
+    width: 81px;
+}
+
+.select-modal_common ul li {
+    padding: 0 10px;
+}
+.applicant-list-section .applicant-list-table th .order-select-modal ul li button.active {
+    color: #39f;
+}
+
+
+.applicant-list-section .applicant-list-table th:nth-child(1) {
+    width: 125px;
+    padding-left: 8px;
+}
+.applicant-list-section .applicant-list-table th:nth-child(2) {
+    width: 165px;
+    padding-left: 8px;
+    text-align: left;
+}
+.applicant-list-section .applicant-list-table th:nth-child(3) {
+    width: 165px;
+}
+.applicant-list-section .applicant-list-table th:nth-child(4) {
+    width: 165px;
+}
+.applicant-list-section .applicant-list-table th:nth-child(5) {
+    width: 165px;
+}
+.applicant-list-section .applicant-list-table th:nth-child(6) {
+    width: 17px;
+}
+/* .applicant-list-section .applicant-list-table th:nth-child(7) {
+    width: 17px;
+} */
+
+.applicant-list-section .applicant-list-table td {
+    position: relative;
+    padding: 33px 0 64px;
+    vertical-align: top;
+    border-bottom: 1px solid #ebebeb;
+}
+.applicant-list-section .applicant-list-table tr.data-none-case td {
+    padding: 125px 0;
+    text-align: center;
+}
+.applicant-list-section .applicant-list-table tr.data-none-case td .icon-frown {
+    width: 76px;
+    height: 70px;
+    background: url("https://i.jobkorea.kr/content/images/corporate/position/icon_frown.png") no-repeat 50%;
+    margin: 0 auto;
+}
+.applicant-list-section .applicant-list-table tr.data-none-case td .large-text {
+    line-height: 23px;
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.applicant-list-section .applicant-list-table tr.data-none-case td .text {
+    line-height: 18px;
+    color: grey;
+    margin-top: 6px;
+}
+.applicant-list-section .applicant-list-table tr.data-none-case td .btn-box {
+    margin: 20px 0 0;
+}
+.applicant-list-section .applicant-list-table tr.data-none-case td .btn-box button {
+    padding: 16px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+.applicant-list-section .notice-box {
+    padding: 20px;
+    background: #fafbfc;
+    margin-top: 30px;
+}
+.point-bullet-list li {
+    position: relative;
+    padding-left: 10px;
+    line-height: 18px;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: grey;
+}
+.point-bullet-list li:before {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    content: "·";
+}
+.point-bullet-list li:nth-child(n+2) {
+    margin-top: 4px;
+}

@@ -1,19 +1,24 @@
 NodeList.prototype.filter = Array.prototype.filter;
 
 // header
+// server: 메뉴/필터 클릭 시, 페이지 -> 서버 -> (동일한)페이지로 이동
+// server에서 쿼리스트링으로 어느 버튼을 클릭했는지 전달
+// 화면에서 해당 값을 보고 확인
 const tabItems = document.querySelector(".tabItems");
-
 tabItems.addEventListener("click", (e) => {
     e.preventDefault();
-
     if (e.target.tagName === "A") {
         const [previousItem] = tabItems
             .querySelectorAll("li")
             .filter((li) => li.classList.contains("on"));
-
         previousItem.classList.remove("on");
         e.target.closest("li").classList.add("on");
     }
+
+    // 예)
+    // url/쿼리스트링 &&
+    // (target = tabItems.tabItems.querySelectorAll("li").filter((li) => li.textContent === url/쿼리스트링))
+    // target.classList.add("on")
 });
 
 // 최근 등록일순

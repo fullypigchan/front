@@ -579,7 +579,7 @@ div.noticeBx ul li:before {
     width: calc(49% - 10px);
 }
 .scSelectWrap .selectInner .scSelectAppList .scSelectAppItem:hover {
-    margin-top: -6px;
+    /* margin-top: -6px; */
     /* border: 1px solid rgba(0, 0, 0, 1); */
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .1);
     /* border : 1px solid rgba(0, 0, 0, .0); */
