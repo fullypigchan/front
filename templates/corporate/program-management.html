@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 채용공고 | 잡코리아</title>
+    <link rel="stylesheet" href="/static/css/corporate/program-management.css">
+</head>
+<body class="mtcSubNotice">
+    <div id="wrap">
+        <div class="devUseTopBtn" id="container">
+            <!-- 배너 -->
+            <div class="banner-smartfit-notice">
+                <a href="" class="smartfit-banner-link" target="_blank">
+                    <img src="https://i.jobkorea.kr/content/images/corporate/smartfit/banner-smartfit-manage.png?20260113">
+                </a>
+            </div>
+
+            <!-- 본문영역 시작-->
+            <div id="content">
+                <!-- onsubmit() -->
+                <form action="" id="form" method="get" name="form">
+                    <!-- <input id="PubType" name="PubType" type="hidden" value="1">
+                    <input id="SrchStat" name="SrchStat" type="hidden" value="1">
+                    <input id="Orderby" name="Orderby" type="hidden" value="0">
+                    <input id="Save_Stat" name="Save_Stat" type="hidden" value="0">
+                    <input id="FilteringDiv" name="FilteringDiv" type="hidden" value="">
+                    <input id="FilteringText" name="FilteringText" type="hidden" value="">
+                    <input id="ItvIngStatCode" name="ItvIngStatCode" type="hidden" value="0">
+                    <input id="OfcName" name="OfcName" type="hidden" value="">
+                    <input id="TopCount" name="TopCount" type="hidden" value="10"> -->
+
+                    <!-- 전체 공고 -->
+                    <div class="noticeContent">
+                        <!-- header -->
+                        <div class="topArea">
+                            <h2 class="subTits">전체 채용공고</h2>
+                        </div>
+
+                        <!-- menu -->
+                        <div class="mtcTplTab">
+                            <ul class="tabItems">
+                                <!-- server, javascript: 해당 페이지로 이동 시 on 추가 -->
+                                <li class="on">
+                                    <!-- onclick() -->
+                                    <!-- server: verdana에 동적으로 값 넣기 -->
+                                    <a href="">모집중<span class="verdana">0</span></a>
+                                </li>
+                                <li>
+                                    <!-- onclick() -->
+                                    <a href="">모집마감<span class="verdana">0</span></a>
+                                </li>
+                                <li>
+                                    <!-- onclick() -->
+                                    <a href="">진행중<span class="verdana">0</span></a>
+                                </li>
+                                <li>
+                                    <!-- onclick() -->
+                                    <a href="">진행종료<span class="verdana">0</span></a>
+                                </li>
+                                <!-- <li> -->
+                                    <!-- onclick() -->
+                                    <!-- <a href="">임시저장<span class="verdana">0</span></a>
+                                </li> -->
+                                <li>
+                                    <!-- onclick() -->
+                                    <a href="">전체<span class="verdana">0 </span></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <fieldset>
+                            <!-- search area -->
+                            <!-- server, javascript: 공고가 없으면 notFound 추가, 있으면 삭제 -->
+                            <!-- server, javascript:  -->
+                            <div class="sort-select-box notFound">
+                                <div class="drop-down-box">
+                                    <!--  -->
+                                    <div class="button-box">
+                                        <button type="button" class="sort-button sort1">최근 등록일순</button>
+                                        <!-- javascript: 드롭다운 버튼 클릭 시 active 추가 -->
+                                        <div class="sort-select-modal select-modal_common check-version ">
+                                            <ul>
+                                                <!-- javascript: 버튼 active 일 경우 배경색 #f7f8fa; -->
+                                                <li>
+                                                    <!-- javascript: list 안에 버튼 클릭 시 active 추가 -->
+                                                    <!-- onclick() -->
+                                                    <button type="button" class="active">최근 등록일</button>
+                                                </li>
+                                                <li>
+                                                    <!-- onclick() -->
+                                                    <button type="button" class="">과거 등록일</button>
+                                                </li>
+                                                <li>
+                                                    <!-- onclick() -->
+                                                    <button type="button" class="">수정일</button>
+                                                </li>
+                                                <li>
+                                                    <!-- onclick() -->
+                                                    <button type="button" class="">마감일</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="button-box">
+                                        <!-- server, javascript: 드롭다운 메뉴 버튼 클릭 시 동적으로 button의 textContent 변경 -->
+                                        <button type="button" class="sort-button sort2">10개씩 보기</button>
+                                        <!-- javascript: 드롭다운 버튼 클릭 시 active 추가 -->
+                                        <div class="sort-select-modal select-modal_common">
+                                            <ul id="TopCount">
+                                                <li><button type="button" data-count="10" data-pub-type="1">10개</button></li>
+                                                <li><button type="button" data-count="20" data-pub-type="1">20개</button></li>
+                                                <li><button type="button" data-count="30" data-pub-type="1">30개</button></li>
+                                                <li><button type="button" data-count="40" data-pub-type="1">40개</button></li>
+                                                <li><button type="button" data-count="50" data-pub-type="1">50개</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="search-box input-box_common">
+                                    <div class="drop-down-box">
+                                        <div class="button-box">
+                                            <!-- server, javascript: 드롭다운 메뉴 버튼 클릭 시 동적으로 button의 textContent 변경 -->
+                                            <button type="button" class="sort-button sort3">담당자 전체</button>
+                                            <!-- javascript: 드롭다운 버튼 클릭 시 active 추가 -->
+                                            <div class="sort-select-modal select-modal_common">
+                                                <ul id="lb_OfcName">
+                                                    <li><button type="button" data-value="">담당자 전체</button></li>
+                                                    <!-- server: 공고 담당자에 따라 동적으로 li 생성 -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" id="SrchKeyword" maxlength="50" name="SrchKeyword" placeholder="공고제목, 담당자">
+                                    <button type="button" class="search-button"></button>
+                                </div>
+                            </div>
+
+                            <div class="rowWrap">
+                                <!-- server: 공고가 없을 경우 -->
+                                <!-- <div class="scNoSelectWrap">
+                                    <div class="noSelectInner">
+                                        <div class="scNoSelectAppList mngSpBefore">
+                                            <p class="tx"><strong>진행중인 공고가 없습니다.</strong></p>
+                                            <div class="noSelLink">
+                                                <a class="link" href="">공고등록하기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                
+                                <!-- server: 공고가 있을 경우 -->
+                                <div class="scSelectWrap">
+                                    <div class="selectInner">
+                                        <ul class="scSelectAppList mngSpBefore">
+                                            <li class="scSelectAppItem">
+                                                <div class="manager">
+                                                    <h2 class="manager-name">담당자명</h2>
+                                                    <div class="department">
+                                                        <p>
+                                                            Phone: 010-1234-1234 &nbsp; | &nbsp; Email: test@gmail.com
+                                                        </p>
+                                                    </div>
+                                                    <button type="button" class="moreOptionButton">
+                                                        <span>
+                                                            <svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                                                        </span>
+                                                    </button>
+                                                    <!-- javascript: moreOptionButton 클릭 시 active 추가 -->
+                                                    <div class="more-option">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="applicantBtn">지원자 관리</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="participantBtn">참여자 관리</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- server: 프로그램 상세로 이동 -->
+                                                <a href="" class="program-detail-link" target="_blank">
+                                                    <div class="program-title">
+                                                        <h3 class="title">백엔드 개발 체험 프로그램</h3>
+                                                    </div>
+                                                    <!-- 프로그램 키워드 작성(예: 모집중, 진행중, D-day 등) -->
+                                                    <ul class="keywords">
+                                                        <li class="item status">진행중</li>
+                                                        <li class="item">체험형</li>
+                                                        <li class="item">개발부</li>
+                                                        <li class="item">4주</li>
+                                                        <li class="item">D-7</li>
+                                                        <li class="item">15명</li>
+                                                    </ul>
+                                                    <div class="program-description">
+                                                        <p>프로그램 간단 설명글</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="scSelectAppItem">
+                                                <div class="manager">
+                                                    <h2 class="manager-name">담당자명</h2>
+                                                    <div class="department">
+                                                        <p>
+                                                            Phone: 010-1234-1234 &nbsp; | &nbsp; Email: test@gmail.com
+                                                        </p>
+                                                    </div>
+                                                    <button type="button" class="moreOptionButton">
+                                                        <span>
+                                                            <svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                                                        </span>
+                                                    </button>
+                                                    <!-- javascript: moreOptionButton 클릭 시 active 추가 -->
+                                                    <div class="more-option">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="applicantBtn">지원자 관리</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="participantBtn">참여자 관리</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- server: 프로그램 상세로 이동 -->
+                                                <a href="" class="program-detail-link" target="_blank">
+                                                    <div class="program-title">
+                                                        <h3 class="title">백엔드 개발 체험 프로그램</h3>
+                                                    </div>
+                                                    <!-- 프로그램 키워드 작성(예: 모집중, 진행중, D-day 등) -->
+                                                    <ul class="keywords">
+                                                        <li class="item status">모집중</li>
+                                                        <li class="item">체험형</li>
+                                                        <li class="item">개발부</li>
+                                                        <li class="item">4주</li>
+                                                        <li class="item">D-7</li>
+                                                        <li class="item">15명</li>
+                                                    </ul>
+                                                    <div class="program-description">
+                                                        <p>프로그램 간단 설명글</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="scSelectAppItem">
+                                                <div class="manager">
+                                                    <h2 class="manager-name">담당자명</h2>
+                                                    <div class="department">
+                                                        <p>
+                                                            Phone: 010-1234-1234 &nbsp; | &nbsp; Email: test@gmail.com
+                                                        </p>
+                                                    </div>
+                                                    <button type="button" class="moreOptionButton">
+                                                        <span>
+                                                            <svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                                                        </span>
+                                                    </button>
+                                                    <!-- javascript: moreOptionButton 클릭 시 active 추가 -->
+                                                    <div class="more-option">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="applicantBtn">지원자 관리</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="participantBtn">참여자 관리</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- server: 프로그램 상세로 이동 -->
+                                                <a href="" class="program-detail-link" target="_blank">
+                                                    <div class="program-title">
+                                                        <h3 class="title">백엔드 개발 체험 프로그램</h3>
+                                                    </div>
+                                                    <!-- 프로그램 키워드 작성(예: 모집중, 진행중, D-day 등) -->
+                                                    <ul class="keywords">
+                                                        <li class="item status">모집중</li>
+                                                        <li class="item">체험형</li>
+                                                        <li class="item">개발부</li>
+                                                        <li class="item">4주</li>
+                                                        <li class="item">D-7</li>
+                                                        <li class="item">15명</li>
+                                                    </ul>
+                                                    <div class="program-description">
+                                                        <p>프로그램 간단 설명글</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="noticeBx">
+                                <ul>
+                                    <li>채용공고 게재기간은 최초 게재일로부터 <em>최대 60일</em>까지 입니다.</li>
+                                    <li>진행중인 공고는 <em>최대 5개</em>까지 가능. 초과 등록된 공고는 ‘대기중’ 상태가 되며, <em>유료서비스 신청 시</em>에는 <em>무제한 진행</em> 가능합니다. </li>
+                                    <li>1개 공고에 <em>2개 이상 포지션을 등록</em>할 경우 공고는 대기중으로 전환되며 <em>유료서비스 사용 후 게재</em>됩니다.</li>
+                                    <li>
+                                        대기중 채용공고는
+                                        <em>접수마감일</em>까지 대기중 리스트에서 확인 가능하며,
+                                        <em>마감일 이후 1년간</em> 마감리스트에서 확인 가능합니다
+                                    </li>
+                                    <li>접수마감, 채용종료 공고는 <em>접수종료 후 1년간</em> 마감 리스트에서 확인 가능합니다. </li>
+                                    <li>
+                                        지원자는 채용공고
+                                        <em>접수마감일로부터 90일간</em>, 스크랩한 인재는
+                                        <em>스크랩일로부터 90일간</em> 확인 가능합니다.
+                                    </li>
+                                    <li>도급∙대행∙파견, 연수생/교육직, 위촉직/개인사업자 공고는 등록 시 ‘대기중’ 상태가 됩니다. (유료서비스 신청 시 즉시 게재 가능)</li>
+                                    <li>잡코리아 아이디 연동 후 나인하이어 공고 등록 시 자동 노출됩니다. (2024년 6월 13일 이후부터)</li>
+                                    <li>채용공고 수정 및 마감은 나인하이어 사이트에서 가능하며 수정 시 잡코리아에 반영됩니다.</li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 맨위로 -->
+            <div class="mtcTopBx">
+                <a id="btnMtcTop" href="#skipNavigation" class="mtcBtn btnMtcTop"></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/js/corporate/program-management/event.js"></script>
+</html>

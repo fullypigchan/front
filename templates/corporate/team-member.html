@@ -125,7 +125,10 @@
                                         <!-- server: 최대 5명정도씩 불러오도록 -->
                                         <tr>
                                             <td>
+                                                <!-- server: 초대를 수락을 기다리는 경우 -->
                                                 <!-- <span class="status waiting">대기중</span> -->
+
+                                                <!-- server: 팀원이 초대를 수락하고, 참여 중일 경우 -->
                                                 <span class="status participating">참여중</span>
                                             </td>
                                             <td>
@@ -151,10 +154,60 @@
                                                             <svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
                                                         </span>
                                                     </button>
+                                                    <!-- javascript: moreOptionButton 을 클릭 시 active 추가 -->
+                                                    <div class="more-option">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="memberDelBtn">내보내기</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </span>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td>
+                                                <!-- server: 초대를 수락을 기다리는 경우 -->
+                                                <span class="status waiting">대기중</span>
 
+                                                <!-- server: 팀원이 초대를 수락하고, 참여 중일 경우 -->
+                                                <!-- <span class="status participating">참여중</span> -->
+                                            </td>
+                                            <td>
+                                                <span class="date">2026/01/27 (화) 11:03</span>
+                                            </td>
+                                            <td>
+                                                <span class="name">바○보</span>
+                                            </td>
+                                            <td>
+                                                <span class="phone">
+                                                    010-1234-****
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="email">
+                                                    test@gmail.com
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span>
+                                                    <button type="button" class="moreOptionButton">
+                                                        <span>
+                                                            <svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                                                        </span>
+                                                    </button>
+                                                    <!-- javascript: moreOptionButton 을 클릭 시 active 추가 -->
+                                                    <div class="more-option">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="memberDelBtn">내보내기</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        
                                         <!-- server: 팀원이 없을 경우 -->
                                         <!-- <tr class="no-team-member">
                                             <td>
@@ -167,15 +220,6 @@
                                         </tr> -->
                                     </tbody>
                                 </table>
-
-                                <!-- javascript: moreOptionButton 을 클릭 시 active 추가 -->
-                                <div class="more-option">
-                                    <ul>
-                                        <li>
-                                            <button type="button" class="memberDelBtn">내보내기</button>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                         <div class="bottom_area">
