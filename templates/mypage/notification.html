@@ -12,817 +12,290 @@
                 <h1 class="skip">개인회원 서비스</h1>
 
                 <section class="content">
-                    <div class="contWrap applyCont">
+                    <div class="contWrap alarmCont">
+                        <input type="hidden" value="5" id="js-AlarmTotalCnt" />
                         <div class="hdWrap">
-                            <h2 class="hd_1">입사지원 현황</h2>
-                            <a class="hd_side" href="/User/ApplyMng/ApplyCert"
-                                >취업활동 증명서</a
-                            >
-                        </div>
-
-                        <h2 class="skip">입사지원 현황</h2>
-                        <div
-                            id="devInterview"
-                            name="devInterview"
-                            style="
-                                position: absolute;
-                                left: 17%;
-                                z-index: 15000;
-                                display: none;
-                            "
-                        >
-                            <iframe
-                                id="IfrmInterview"
-                                name="IfrmInterview"
-                                width="485"
-                                height="640"
-                                marginwidth="0"
-                                marginheight="0"
-                                frameborder="no"
-                                scrolling="no"
-                                title="인터뷰"
-                            ></iframe>
-                        </div>
-                        <div class="applyStatus">
-                            <ul class="clear">
-                                <li>
-                                    <p class="num">1</p>
-                                    <p class="txt">지원완료</p>
-                                </li>
-                                <li>
-                                    <p class="num">0</p>
-                                    <p class="txt">열람</p>
-                                </li>
-                                <li>
-                                    <p class="num">1</p>
-                                    <p class="txt">미열람</p>
-                                </li>
-                                <li>
-                                    <p class="num">0</p>
-                                    <p class="txt">지원취소</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <h3 class="skip">지원완료</h3>
-                        <!-- [개발] 타이틀 추가 : 지원완료/지원취소/인재풀등록 -->
-
-                        <form
-                            name="frmForm"
-                            method="post"
-                            action="/User/ApplyMng"
-                        >
-                            <input
-                                data-val="true"
-                                data-val-number="Page 필드는 숫자여야 합니다."
-                                data-val-required="Page 필드가 필요합니다."
-                                id="Page"
-                                name="Page"
-                                type="hidden"
-                                value="1"
-                            />
-                            <input
-                                class="dev-order"
-                                data-val="true"
-                                data-val-number="Order_Apply 필드는 숫자여야 합니다."
-                                data-val-required="Order_Apply 필드가 필요합니다."
-                                id="hdnOrderApply"
-                                name="Order_Apply"
-                                type="hidden"
-                                value="2"
-                            />
-                            <input
-                                type="hidden"
-                                id="IngStat"
-                                name="IngStat"
-                                value="0"
-                            />
-                            <input
-                                type="hidden"
-                                id="ReadStat"
-                                name="ReadStat"
-                                value="0"
-                            />
-                            <input
-                                type="hidden"
-                                id="StatusStat"
-                                name="StatusStat"
-                                value="0"
-                            />
-
-                            <div class="mtuSortArea schFillter">
-                                <div class="left">
-                                    <div class="up">
-                                        <label>조회기간</label>
-                                        <div class="formBx clear">
-                                            <button
-                                                type="button"
-                                                class="btn dev-btn-period month"
-                                                data-period="99"
-                                            >
-                                                <span>1주일</span>
-                                            </button>
-                                            <button
-                                                type="button"
-                                                class="btn dev-btn-period month"
-                                                data-period="1"
-                                            >
-                                                <span>1개월</span>
-                                            </button>
-                                            <button
-                                                type="button"
-                                                class="btn dev-btn-period month"
-                                                data-period="2"
-                                            >
-                                                <span>2개월</span>
-                                            </button>
-                                            <button
-                                                type="button"
-                                                class="btn dev-btn-period month on"
-                                                data-period="3"
-                                            >
-                                                <span>3개월</span>
-                                            </button>
-                                        </div>
-                                        <label class="selDateLabel"
-                                            >날짜선택</label
-                                        >
-                                        <div class="formBx">
-                                            <input
-                                                class="ipTxt ipDate"
-                                                type="text"
-                                                title="시작날짜선택"
-                                                name="From_Dt"
-                                                id="txtFromDt"
-                                                readonly=""
-                                                value="2025-10-31"
-                                            /><button
-                                                type="button"
-                                                class="btn btnCalc mtuSpImgBefore"
-                                                data-id="txtFromDt"
-                                                data-flag="1"
-                                            >
-                                                <span class="skip"
-                                                    >달력보기</span
-                                                >
-                                            </button>
-                                            ~
-                                            <input
-                                                class="ipTxt ipDate"
-                                                type="text"
-                                                title="마감날짜선택"
-                                                name="To_Dt"
-                                                id="txtToDt"
-                                                readonly=""
-                                                value="2026-01-29"
-                                            /><button
-                                                type="button"
-                                                class="btn btnCalc mtuSpImgBefore"
-                                                data-id="txtToDt"
-                                                data-flag="2"
-                                            >
-                                                <span class="skip"
-                                                    >달력보기</span
-                                                >
-                                            </button>
-                                        </div>
-                                        <!-- 달력 시작 -->
-
-                                        <div
-                                            id="devPop"
-                                            style="
-                                                position: absolute;
-                                                z-index: 450;
-                                                left: 0;
-                                                top: 0;
-                                            "
-                                        ></div>
-                                        <!-- 달력 종료 -->
-                                    </div>
-                                    <div class="down">
-                                        <label class="skip">키워드</label>
-                                        <span class="formBx">
-                                            <!-- [개발] .ipGp/.placeholder 추가 -->
-                                            <span class="ipGp">
-                                                <input
-                                                    class="ipTxt ipSearch"
-                                                    type="text"
-                                                    name="SearchText"
-                                                    id="txtSearchText"
-                                                    title="검색어 입력"
-                                                    placeholder="기업명, 채용제목"
-                                                />
-                                            </span>
-                                        </span>
-                                        <div class="mtcListFillter">
-                                            <!-- 버튼 클릭했을경우 on 클래스 추가, 추가시 lyItems 레이어 영역 display:block 적용됩니다 -->
-                                            <label>진행여부</label>
-                                            <div class="lyTplArea">
-                                                <button
-                                                    type="button"
-                                                    class="btnMtcLySel mtcBtnB"
-                                                    onclick="
-                                                        javascirpt: $(this)
-                                                            .next()
-                                                            .show();
-                                                    "
-                                                >
-                                                    전체
-                                                </button>
-                                                <div
-                                                    class="lyItems devlyIngItems"
-                                                    style="display: none"
-                                                >
-                                                    <ul>
-                                                        <li class="on">
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                data-val="0"
-                                                                >전체</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                data-val="1"
-                                                                >진행중</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                data-val="2"
-                                                                >마감</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mtcListFillter">
-                                            <label>열람여부</label>
-                                            <!-- 버튼 클릭했을경우 on 클래스 추가, 추가시 lyItems 레이어 영역 display:block 적용됩니다 -->
-                                            <div class="lyTplArea">
-                                                <button
-                                                    type="button"
-                                                    class="btnMtcLySel mtcBtnB"
-                                                    onclick="
-                                                        javascirpt: $(this)
-                                                            .next()
-                                                            .show();
-                                                    "
-                                                >
-                                                    전체
-                                                </button>
-                                                <div
-                                                    class="lyItems devlyReadItems"
-                                                    style="display: none"
-                                                >
-                                                    <ul>
-                                                        <li class="on">
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                data-val="0"
-                                                                >전체</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                data-val="1"
-                                                                >열람</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                data-val="2"
-                                                                >미열람</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mtcListFillter status">
-                                            <label>지원상태</label>
-                                            <!-- 버튼 클릭했을경우 on 클래스 추가, 추가시 lyItems 레이어 영역 display:block 적용됩니다 -->
-                                            <div class="lyTplArea">
-                                                <button
-                                                    type="button"
-                                                    class="btnMtcLySel mtcBtnB"
-                                                    onclick="
-                                                        javascirpt: $(this)
-                                                            .next()
-                                                            .show();
-                                                    "
-                                                >
-                                                    전체
-                                                </button>
-                                                <div
-                                                    class="lyItems devlyApplyItems"
-                                                    style="display: none"
-                                                >
-                                                    <ul>
-                                                        <li class="on">
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                data-val="0"
-                                                                >전체</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                data-val="1"
-                                                                >지원완료</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                data-val="2"
-                                                                >지원취소</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <span class="formBx">
-                                        <button
-                                            type="button"
-                                            class="btn btnSearch"
-                                            id="btnSubmit"
-                                        >
-                                            <span>검색</span>
-                                        </button>
-                                    </span>
-                                </div>
+                            <h2 class="hd_1">나의 알림</h2>
+                            <p class="noti">
+                                최근 30일 이내 알림만 확인할 수 있습니다.
+                            </p>
+                            <div class="alarmSort">
+                                <span class="selWrap">
+                                    <select
+                                        data-val="true"
+                                        data-val-number="Ts_Type 필드는 숫자여야 합니다."
+                                        data-val-required="Ts_Type 필드가 필요합니다."
+                                        id="sortSel"
+                                        name="Ts_Type"
+                                        title="나의 알림 선택"
+                                    >
+                                        <option selected="selected" value="0">
+                                            전체 알림
+                                        </option>
+                                        <option value="5">체험 지원 현황</option>
+                                        <option value="9">QnA</option>
+                                    </select>
+                                </span>
                             </div>
-                        </form>
-                        <div class="top-msg">
-                            입사지원 현황은 최대 3년까지 조회할 수 있습니다.
                         </div>
-                        <div class="user-table applymng-list">
-                            <table class="table">
-                                <caption>
-                                    <span class="skip">입사지원 현황</span>
-                                </caption>
-                                <colgroup>
-                                    <col width="118" />
-                                    <col />
-                                    <col width="115" />
-                                    <col width="115" />
-                                    <col width="108" />
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col">
-                                            <button
-                                                type="button"
-                                                class="button button-sort down"
-                                                data-type="Apply"
-                                            >
-                                                지원일
-                                            </button>
-                                        </th>
-                                        <th scope="col">지원내역</th>
-                                        <th scope="col">공고진행상태</th>
-                                        <th scope="col">열람</th>
-                                        <th scope="col">취소/삭제</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td
-                                            class="vertical-align-top"
-                                            rowspan="2"
+                        <section class="alarmListWrap">
+                            <h3 class="skip">나의 알림 리스트</h3>
+                            <div id="js-alarmFrame">
+                                <div class="alarmList" data-date="26.01.29">
+                                    <div class="hd">
+                                        <span class="tahoma"
+                                            >26.01.29 (목)</span
                                         >
-                                            <div
-                                                class="vertical-align-middle apply-status"
-                                            >
-                                                <div class="inner">
-                                                    <div class="item status">
-                                                        지원완료
-                                                    </div>
-                                                    <div class="item date">
-                                                        2026.01.29
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div
-                                                class="vertical-align-middle apply-board"
-                                            >
-                                                <div class="inner">
-                                                    <div class="company">
-                                                        <a
-                                                            href="/Recruit/Co_read/C/27041630?Oem_Code=C1"
-                                                            target="_blank"
-                                                            >㈜제이투이</a
+                                        · 어제
+
+                                        <!--// AI추천 : 푸시.알림 설정  -->
+                                        <!--// AI추천 : 푸시.알림 설정  -->
+                                    </div>
+                                    <article class="cont">
+                                        <ul>
+                                            <li class="type_blue">
+                                                <span class="update"
+                                                    >20:00</span
+                                                >
+                                                <div class="box">
+                                                    <div class="desc">
+                                                        <span class="state"
+                                                            >스크랩 공고
+                                                            리마인드</span
                                                         >
-                                                    </div>
-                                                    <div class="description">
-                                                        <a
-                                                            href="/Recruit/GI_Read/48495036?Oem_Code=C1"
-                                                            target="_blank"
+                                                        <!-- 진행 중 공고 없을 경우 variation_01로 클래스 변경 -->
+                                                        <strong
+                                                            class="title variation_01"
                                                         >
-                                                            [JAVA SI 상암]
-                                                            DevoPS 사업
-                                                            Front-end 개발 (5)
-                                                            (~2/3)
+                                                            <a
+                                                                href=""
+                                                                target="_blank"
+                                                                data-idx="11207006488"
+                                                                >스크랩한
+                                                                공고</a
+                                                            >
+                                                            잊지 않으셨죠?
+                                                        </strong>
+                                                    </div>
+                                                    <div class="booth">
+                                                        <a
+                                                            href=""
+                                                            class="title"
+                                                            target="_blank"
+                                                            data-idx="11207006488"
+                                                        >
+                                                            스크랩한 공고를
+                                                            확인해보세요.
                                                         </a>
                                                     </div>
-                                                    <div class="meta">
-                                                        <div
-                                                            class="item resume"
-                                                        >
-                                                            <a
-                                                                class="button button-resume resumeTile"
-                                                                href="/User/Resume/Apply?passRNo=300582607&amp;corpId=27041630&amp;applyType=1&amp;giNo=50296722&amp;rsNo=0"
-                                                                onclick="
-                                                                    window.open(
-                                                                        this
-                                                                            .href,
-                                                                        '_viewpopup_',
-                                                                        'left=0, top=0, width=1000, height=1200, fullscreen=yes, resizable=no, scrollbars=yes, status=no',
-                                                                    );
-                                                                    return false;
-                                                                "
-                                                                title="입사지원한 이력서의 내용을 확인할 수 있습니다."
-                                                                >지원이력서</a
-                                                            >
-                                                        </div>
-                                                        <div
-                                                            class="item applicants-field"
-                                                        >
-                                                            지원분야 :
-                                                            JAVA/VUE.JS 개발자
-                                                        </div>
-                                                        <div
-                                                            class="item applicants-number"
-                                                        >
-                                                            지원자수 :
-                                                            <a
-                                                                href="#"
-                                                                title="지원현황 통계보기"
-                                                                target="_blank"
-                                                                class="number dev-PopChart"
-                                                                data-gino="50296722"
-                                                                >6</a
-                                                            >명
-                                                        </div>
-                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div
-                                                class="vertical-align-middle apply-progress"
-                                            >
-                                                <div class="inner">
-                                                    <div class="status">
-                                                        진행중
-                                                    </div>
-                                                    <div class="extra">
-                                                        (~02/03)
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div
-                                                class="vertical-align-middle reading"
-                                            >
-                                                <div class="inner">
-                                                    <div class="read-not">
-                                                        미열람
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button
-                                                class="btn btnGyBd devBtnCancel devBtnOddInfo"
-                                                type="button"
-                                                data-memtypecode="C"
-                                                data-idx="422980573"
-                                                data-gidelstat="0"
-                                                data-gino="50296722"
-                                                data-sendgubun="0"
-                                                data-passgubun="1"
-                                                data-agireqno="0"
-                                            >
-                                                <span>지원취소</span>
-                                            </button>
-                                            <div class="oddInfo mtuLayerWrap">
-                                                <div
-                                                    class="mtuLayer mtuLayer_1 mtuLayerRsmCancel"
-                                                    style="
-                                                        top: 10px;
-                                                        width: 320px;
-                                                        right: 20px;
-                                                        display: none;
-                                                    "
+                                            </li>
+                                            <li class="type_red">
+                                                <!-- 읽은 리스트 read 클래스 추가 -->
+                                                <span class="update"
+                                                    >11:10</span
                                                 >
-                                                    <div class="desc desc2">
-                                                        <p class="point">
-                                                            선택한 공고에 대한
-                                                            입사지원을
-                                                            취소하면<br /><strong
-                                                                >지원한 회사에서
-                                                                프로필/이력서를
-                                                                열람할 수
-                                                                없으며,<br />취업활동
-                                                                증명서에도
-                                                                취소한 내역이
-                                                                조회되지
-                                                                않습니다.
-                                                            </strong>
-                                                        </p>
-                                                        <p>
-                                                            단, 지원한 회사에서
-                                                            프로필/이력서를 이미
-                                                            열람한 경우는
-                                                            <br />지원취소를
-                                                            하더라도 면접제의
-                                                            등의 연락을 받으실
-                                                            수도 있습니다.
-                                                        </p>
+                                                <div class="box">
+                                                    <div class="desc">
+                                                        <span class="state"
+                                                            >체험 지원 공고
+                                                            진행상태 변경</span
+                                                        >
+                                                        <strong class="title">
+                                                            지원한
+                                                            <a
+                                                                href=""
+                                                                target="_blank"
+                                                                data-idx="11201638957"
+                                                                >㈜test</a
+                                                            >
+                                                            공고의 진행상태가
+                                                            서류검토로 변경
+                                                            되었습니다.
+                                                        </strong>
+                                                        <ul class="info">
+                                                            <li>
+                                                                지원일
+                                                                <em
+                                                                    class="val tahoma"
+                                                                    >2026.01.29(목)
+                                                                    09:55 -
+                                                                    지원취소
+                                                                </em>
+                                                            </li>
+                                                            <li>
+                                                                진행상태
+                                                                <em
+                                                                    class="val tahoma"
+                                                                >
+                                                                    서류검토
+                                                                </em>
+                                                            </li>
+                                                        </ul>
                                                     </div>
-                                                    <p class="close">
-                                                        <button
-                                                            onclick="
-                                                                Cancel_layerClose(
-                                                                    26250942,
-                                                                )
-                                                            "
-                                                            type="button"
+                                                    <div class="booth">
+                                                        <a
+                                                            href=""
+                                                            class="title"
+                                                            target="_blank"
+                                                            data-idx="11201638957"
+                                                            >test</a
                                                         >
-                                                            <span
-                                                                >레이어
-                                                                닫기</span
+                                                        <span
+                                                            class="deadline tahoma"
+                                                        >
+                                                            공고마감
+                                                        </span>
+                                                        <span class="btnGp">
+                                                            <a
+                                                                class="btn btnGyBd"
+                                                                href=""
+                                                                >자세히보기</a
                                                             >
-                                                        </button>
-                                                    </p>
-                                                    <span
-                                                        class="arrow arrowTop"
-                                                    ></span>
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td colspan="4">
-                                            <div class="similar">
-                                                <div class="header">
-                                                    유사한 추천공고
-                                                    <em class="number">30</em>건
-                                                </div>
-                                                <ul class="similar-list">
-                                                    <li>
-                                                        <div class="company">
-                                                            <a
-                                                                href="/Recruit/Co_Read/C/46178231?Oem_Code=C1"
-                                                                target="_blank"
-                                                                onclick="
-                                                                    GA_Event(
-                                                                        '입사지원현황_PC',
-                                                                        'AI추천공고_상단',
-                                                                        '벳칭㈜ _개발팀 컨버전 팀원 (주니어/신입)',
-                                                                    )
-                                                                "
-                                                                >벳칭㈜
-                                                            </a>
-                                                        </div>
-                                                        <div
-                                                            class="description"
-                                                        >
-                                                            <a
-                                                                href="/Recruit/GI_Read/48440868?Oem_Code=C1&amp;sc=66"
-                                                                target="_blank"
-                                                                class="giread"
-                                                                data-gno="48440868"
-                                                                data-source-type="66"
-                                                                onclick="
-                                                                    GA_Event(
-                                                                        '입사지원현황_PC',
-                                                                        'AI추천공고_상단',
-                                                                        '벳칭㈜ _개발팀 컨버전 팀원 (주니어/신입)',
-                                                                    )
-                                                                "
-                                                                >개발팀 컨버전
-                                                                팀원
-                                                                (주니어/신입)</a
-                                                            >
-                                                        </div>
-                                                        <div
-                                                            class="congrats-beg"
-                                                        >
-                                                            <span
-                                                                class="congrats-tit"
-                                                                ><i
-                                                                    class="ico-congrat"
-                                                                ></i
-                                                                >합격축하금
-                                                                100만원</span
-                                                            >
-                                                        </div>
-                                                        <div class="deadline">
-                                                            ~02.18(수)
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="company">
-                                                            <a
-                                                                href="/Recruit/Co_Read/C/25470?Oem_Code=C1"
-                                                                target="_blank"
-                                                                onclick="
-                                                                    GA_Event(
-                                                                        '입사지원현황_PC',
-                                                                        'AI추천공고_상단',
-                                                                        '위쉬정보기술㈜_남대문 롯데손해보험 사이트 운영 java',
-                                                                    )
-                                                                "
-                                                                >위쉬정보기술㈜</a
-                                                            >
-                                                        </div>
-                                                        <div
-                                                            class="description"
-                                                        >
-                                                            <a
-                                                                href="/Recruit/GI_Read/48499934?Oem_Code=C1&amp;sc=66"
-                                                                target="_blank"
-                                                                class="giread"
-                                                                data-gno="48499934"
-                                                                data-source-type="66"
-                                                                onclick="
-                                                                    GA_Event(
-                                                                        '입사지원현황_PC',
-                                                                        'AI추천공고_상단',
-                                                                        '위쉬정보기술㈜_남대문 롯데손해보험 사이트 운영 java',
-                                                                    )
-                                                                "
-                                                                >남대문
-                                                                롯데손해보험
-                                                                사이트 운영
-                                                                java</a
-                                                            >
-                                                        </div>
-                                                        <div class="deadline">
-                                                            ~02.27(금)
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="company">
-                                                            <a
-                                                                href="/Recruit/Co_Read/C/11688829?Oem_Code=C1"
-                                                                target="_blank"
-                                                                onclick="
-                                                                    GA_Event(
-                                                                        '입사지원현황_PC',
-                                                                        'AI추천공고_상단',
-                                                                        '㈜지에프씨코리아_공공기관 포털 및 시스템 운영, Java 유지관리',
-                                                                    )
-                                                                "
-                                                                >㈜지에프씨코리아</a
-                                                            >
-                                                        </div>
-                                                        <div
-                                                            class="description"
-                                                        >
-                                                            <a
-                                                                href="/Recruit/GI_Read/48499854?Oem_Code=C1&amp;sc=66"
-                                                                target="_blank"
-                                                                class="giread"
-                                                                data-gno="48499854"
-                                                                data-source-type="66"
-                                                                onclick="
-                                                                    GA_Event(
-                                                                        '입사지원현황_PC',
-                                                                        'AI추천공고_상단',
-                                                                        '㈜지에프씨코리아_공공기관 포털 및 시스템 운영, Java 유지관리',
-                                                                    )
-                                                                "
-                                                                >공공기관 포털
-                                                                및 시스템 운영,
-                                                                Java 유지관리</a
-                                                            >
-                                                        </div>
-                                                        <div class="deadline">
-                                                            ~02.27(금)
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <input
-                                                    type="hidden"
-                                                    id="hdnTopDmpLog422980573"
-                                                    class="hdnTopDmpLog"
-                                                    data-passno="422980573"
-                                                    value="3950962faff8c0197b153b2b1269403720a7e43cfbca9cc13d171312a50b23478f92e41fabbace7b83df0edf06e88a3fa380ccaa32183aaa45c8f1daaa540f1dc4c1af26baf3580fd82b9312c5c9daa76c0aa2d8dfeb23f4811b7f9b52262a22e1dabe4f9a80e764098872ecceca5f9df8b300bc46bd23ad8468a1c2ca070d1a2bafdca3d9ba1c5858ea7b96ed41fedafdd48b92e243e772f0f005051dc634657783a3b949727d3337b8aaef9c240b99a0b5300e8d589b873c8e9a687bf262d10c2192d71ea6ef49423f6243bfd8a842494d6adf3cc925b8f931de707ffa89fbf1c124c66c5223cd5112ae5b4b001533a3f7cb14a3728b019d6150477e2997e7cff56bbc325fdb5705115d370e0e3319bfda1557aa86cd6e18af915c1169e88af86f1cebb9fb4decab775b25b313c9ca67c66b5f93ffe331afb315b138b396d3e80312995a2b7b5867997799a0df30147302bc43cca0f9679dd5dd643735950a630818d418da87827a5d9bbae1cab621979e6b4c9a54be58fc1330624aac53b326f19d024f31ca880874743e93030c824a50b0bb0d3faa9727cafc2a5ed3a6eba6e3badc30fa32e68d10e24aebb5914069edf2eedd1183892aef4be74fa55576b38b652ae4addb4a495d87b6efb142895b80ef19b6953c4dd99f71282db4afa1d14b5623daebf020c62a3323831bf5d52d8a5fb2fa21210f7d4ca226f51ec57dac9547d50017e5040e74cc21b920f3cc6b2db7ceb417c5350225c41ed91e63f758f569d1aee4f98908de74c361f12ee5f8791fcf217afdb757e4034bf56aca8e8c2cdd68fa8c526bdb93aa2e65a8f58e261dacbe5b7a7664044e94c41bfbfdc84f5b65a23fa2a0682c7997c81ff972d373f2230691775f0ad94328c2d067d446041450318823e2f50cae61fbf12d7a8222da6de142f85fdd2df61bd13ab17ae199425e2796128788f79933ba575f93da337984251f31e37d3dff1d5250926dd45d73aa786af603e5db20062ee5457ac00e30ff0149a30d8b2d9a404f96c9425d382fd193aa8c9605692c6e18122de987d29a8fd3e8aac0ba3e8a141cbff09aeff1b7f6417a6128696ecde819748ea1afcda076eb85db7bc788e6ef69e32357c08da9ae26d60699da6ddaab815be0e2a00a39b95019938f76f837ead35647f57847cb5d1f64e24e1de5d6297948743f0a5c9b69f4a2974b857fc9e2aa1ddd2140635e754ee1c4c9bdf0dc80c6aa79537499b259955e040e752507182e28530b147749cfce5bf89f26de292e3ddeee51ef310bee3b4a318fb9e6a460ff4f2f20f3e213542fecf32edf59d421ce5fc75799bf0996d789a34a29b0a77f2c11b02a34f33c5ee018629b36e2d781758c881af2d4d8046fcbad793cbb7e8774a081642818ef1c3e52a6ddd9ff7f9bd3342365c596e3409b1fc3c1e5ac483a3ddd730dc4dcbbfe1207a7742990cfc26ab8014f6142939dd43378fb017e7f1773d2a0172a74cd060b56757aaaf6386d2ad9b25e4db20b053eeb13dfa3c68d8f706baaa9afef9891c998d7b44b3dcb7619d2812159782cdcd10c3c7e04477610d86ffc0cb0bf0af52129613d3554098a61d73ccc58ce9bfa3e230b253b93922d017584aa7899da05d549c421aacd9d74f97016da715234add70cd935ee8b11cb788f8ed5f85e8e5233d687ffd7b85ce686ff7644b623d29c1a6dcb2c6f8cbd886b94fb1098e77b9032427c579cbad04dc0d70d24ba041ff35990ddc70f958dd508eca85ef440b027643f8484bdf6370425d059af36c8c7e8ae603caf2b6b05e46f185438b75a674734b187ba135dd6a27e1ad84bf461de7d790b5faa4efc1b1260651c856ff3d471e4ca27905636a6adbfb1cba94f82180d7b7582780b420ce1b4b177261a93b2e29e27eca58b1845ad2f1538c39e3b594bc160ff68c9e37cb018c1005c94a4196b10a0947d964a93be30d5007714483bb49023df81a2537b13373c2f2e2b615f5b398652d871d1bd2d3159d888a7d489fd251a3a0ec498cb5cabd50336709324e17be83228094dfefee743c5943f3558aca46cb502742ebe6bb471e9e77c99615a8ce3a621f9b100bdb9785291be6e539837f121fdafdd4f1309f4782ee34265f4f39d645f70683557ed690e70eb54755bfe3649718f3b2397a2eb45369d82afafcf2f837b041712b62cfa89e2da8540e24084847255bff6fa41770b51e51879c162352ac7499105577573729f2ccada6599c1cb6ae40b67192015254616e0abf215e8b08328f3c45f7de351e58ab7c18534641348a278b5cbd18369b1494515ecc6bce7df7a5cb9480894dd65ab3021f04b4ad54e7a6625be82e5853bdd6675ddd79f94281dbbd55c5c8f2b3b1bfddda766a6566d2d12f6929e883a860d40949cc9b9f76e7e8c5cff1431510fa44faf28cd6c628f86d66945f30fb85ddc76c95f876f52a37c15f70cfa4f48a18f601f75c52081c3292a9043fdc7d5b60dbdd9b1ca76010cc32145820f550db4fcc364e6dcab7304f9a53e8ddc0d323e4da6c84656fc901d186ef5845fe19a35645c9246021fabe6b81ec40d3d2e9fa0246563640500872327f2edfbbf21a307936169a8d73a528a6858502c478d821dbd40466102e9fcb46775144c05a4278bc83f3454ebe0793b31408d5598cffec31da779258891b04e23fd19d7d482b444317e5ac2fcec7b4c83267f1f4a304fb3944d1e3106ec0eede87f1fd0431a73cc2fd836f8c1b40bac6d7caba46b6e94456575a5b82a9308c57c7ff2cb143ba7c1c40281ca36bad71e159a363a7b4a2aa836139e96c4ab89f6d1db665066c5c1fee3c4b572756d933f8f94679b822f4a41c3247b9e525a3d113e3c826502e2c9fe82e3c684b26e0a57b55a6c0eb9f4ba962d87d2e67794f1ed8d142214e8ea4b71c26d712df9d1fcf6bd80686ae7a0b208392290695962d1f9eedd28bd94cefa6a4e638f87c56d407a1513d11b08e64255e170875fdf33c10ec6a9e2981beb76dcf013d661546c292c4975a74a2989ce5d97099c4db433bcac90f069807739795f10d8b6b80e11107264800964b7b0ee707a619de75dc300f102e54f9b9de82f5f6d3b7a3f73cf2ffe2a1aba3eb47e45985a864147e1c4a6cb469ae94f73f0b951586410fabc8307d381aa8930856883ed856dec177d72a51bd8289bc66611e01f02e0eddd66a7f55fa0ab0be67b0e321a89d25314a6b8ecd9fb80974e27fa65d2bf3ae0587fda0363de8de1133ae33bf8140c0282d3501065325471bbe4cccc4c86169783631e445b936ff3493c2d89f2a3"
-                                                />
-                                                <input
-                                                    type="hidden"
-                                                    id="hdnGnos422980573"
-                                                    class="hdnTopGnos"
-                                                    value="48440868,48499934,48499854"
-                                                />
-                                                <button
-                                                    type="button"
-                                                    class="button-more"
-                                                    data-gno="48495036"
-                                                    onclick="
-                                                        GA_Event(
-                                                            '입사지원현황_PC',
-                                                            '추천 더보기',
-                                                            '더보기',
-                                                        )
-                                                    "
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
+                                <div class="alarmList" data-date="26.01.23">
+                                    <div class="hd">
+                                        <span class="tahoma"
+                                            >26.01.23 (금)</span
+                                        >
+                                        <!--// AI추천 : 푸시.알림 설정  -->
+                                    </div>
+                                    <article class="cont">
+                                        <ul>
+                                            <li class="type_red">
+                                                <span class="update"
+                                                    >16:20</span
                                                 >
-                                                    더보기
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                                <div class="box">
+                                                    <div class="desc">
+                                                        <span class="state"
+                                                            >QnA</span
+                                                        >
+                                                        <strong class="title"
+                                                            >test님의
+                                                            <a
+                                                                href=""
+                                                                target="_blank"
+                                                                onclick=""
+                                                            >
+                                                                답변에 댓글</a
+                                                            >이
+                                                            등록되었습니다.</strong
+                                                        >
+                                                        <span
+                                                            class="answer"
+                                                        ></span>
 
-                        <div class="tplPagination">
-                            <ul>
-                                <li><span class="now">1</span></li>
-                            </ul>
-                        </div>
+                                                        <span class="btnGp">
+                                                            <a
+                                                                class="btn btnGyBd"
+                                                                href=""
+                                                                target="_blank"
+                                                                onclick=""
+                                                                >자세히보기</a
+                                                            >
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="type_red">
+                                                <span class="update"
+                                                    >12:15</span
+                                                >
+                                                <div class="box">
+                                                    <div class="desc">
+                                                        <span class="state"
+                                                            >QnA</span
+                                                        >
+                                                        <strong class="title"
+                                                            >test님의
+                                                            <a
+                                                                href=""
+                                                                target="_blank"
+                                                            >
+                                                                답변</a
+                                                            >이
+                                                            채택되었습니다.</strong
+                                                        >
+                                                        <span
+                                                            class="answer"
+                                                        ></span>
 
-                        <input type="hidden" id="UserSmartMatchItems" />
-                        <input type="hidden" id="UserSmartMatchMonitoring" />
-                        <input type="hidden" id="SmartMatchItems" />
-                        <input type="hidden" id="SmartMatchMonitoring" />
+                                                        <span class="btnGp">
+                                                            <a
+                                                                class="btn btnGyBd"
+                                                                href=""
+                                                                target="_blank"
+                                                                onclick=""
+                                                                >자세히보기</a
+                                                            >
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
+                                <div class="alarmList" data-date="26.01.20">
+                                    <div class="hd">
+                                        <span class="tahoma"
+                                            >26.01.20 (화)</span
+                                        >
+                                        <!--// AI추천 : 푸시.알림 설정  -->
+                                    </div>
+                                    <article class="cont">
+                                        <ul>
+                                            <li class="type_red">
+                                                <span class="update"
+                                                    >12:07</span
+                                                >
+                                                <div class="box">
+                                                    <div class="desc">
+                                                        <span class="state"
+                                                            >QnA</span
+                                                        >
+                                                        <strong class="title"
+                                                            >북마크한
+                                                            <a
+                                                                href=""
+                                                                target="_blank"
+                                                                onclick=""
+                                                            >
+                                                                "자바와 파이썬
+                                                                중 ..." 질문에
+                                                                답변</a
+                                                            >이
+                                                            등록되었습니다.</strong
+                                                        >
+                                                        <span
+                                                            class="answer"
+                                                        ></span>
 
-                        <div class="mtuTip">
-                            <strong class="skip">이용 TIP</strong>
-                            <ul class="tipList">
-                                <li>
-                                    입사지원을 한 후 해당 이력서를 수정해도
-                                    <em
-                                        >이전에 지원한 이력서의 내용은 바뀌지
-                                        않으므로</em
-                                    >
-                                    회사마다 이력서 내용을 다르게 지원할 수
-                                    있습니다.
-                                </li>
-                                <li>
-                                    입사지원 내역을 삭제한 경우 지원내역,
-                                    지원취소, 열람여부 확인이 불가능합니다.
-                                </li>
-                                <li>
-                                    지원취소 시 지원한 회사에서 이력서를 열람할
-                                    수 없으며, 취업활동 증명서 조회도
-                                    불가능합니다.
-                                    <button
-                                        class="btnShowTip"
-                                        type="button"
-                                        onclick="
-                                            open_Layer_Popup('#lyApplyCancel')
-                                        "
-                                    >
-                                        <span>지원취소 안내 보기</span>
-                                    </button>
-                                </li>
-                                <li>
-                                    기업에 별도의 채용서류를 제출 했다면, 채용
-                                    여부 확정 후 서류 반환 요청을 할 수
-                                    있습니다.
-                                    <a
-                                        href="http://blog.naver.com/jobkorea1/221622265882"
-                                        target="_blank"
-                                        class="btnShowTip"
-                                        ><span>채용절차법 확인하기</span></a
-                                    >
-                                </li>
-                                <li>
-                                    지원이력서에 포함된 첨부파일은 채용공고
-                                    접수마감일로부터 90일간 확인 가능합니다.
-                                </li>
-                                <li>
-                                    합격축하금은 입사일로부터 6개월(180일)
-                                    이내에 신청하실 수 있습니다. 신청기간이
-                                    지났다면
-                                    <a href="mailto:onepick1@jobkorea.co.kr"
-                                        >onepick1@jobkorea.co.kr</a
-                                    >로 연락주세요.
-                                </li>
-                            </ul>
-                        </div>
+                                                        <span class="btnGp">
+                                                            <a
+                                                                class="btn btnGyBd"
+                                                                href=""
+                                                                target="_blank"
+                                                                onclick=""
+                                                                >자세히보기</a
+                                                            >
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </section>
-                <hr />
-
                 <!--// Lnb Area -->
                 <!-- [개발] 메뉴 선택시 a.on 추가 -->
                 <!-- 사이드바 시작 -->
@@ -863,7 +336,7 @@
                             </li>
 
                             <li>
-                                <a href="" onclick="">MY 알림</a>
+                                <a class="on" href="" onclick="">MY 알림</a>
                             </li>
                         </ul>
                     </div>
@@ -880,9 +353,7 @@
                         </ul>
                     </div>
                 </section>
-
                 <!-- 사이드바 끝 -->
-                <hr />
                 <!-- Lnb Area //-->
             </section>
         </div>

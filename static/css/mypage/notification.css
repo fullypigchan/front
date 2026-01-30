@@ -43,6 +43,22 @@ select, input, option, textarea {
     color: #666;
 }
 
+.btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 6px 10px 8px;
+    font-size: 12px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 form, fieldset, iframe, button {
     border: 0 none;
 }
@@ -54,6 +70,129 @@ address, caption, em {
 
 input, select, button {
     vertical-align: middle;
+}
+
+.hdWrap {
+    position: relative;
+    padding: 42px 0 17px;
+}
+
+.hdWrap .hd_1, .hdWrap .hd_side {
+    display: inline-block;
+    margin-bottom: 0;
+    color: #000;
+}
+
+.hdWrap .hd_1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+}
+
+.hdWrap .noti {
+    margin: -2px 0 0 5px;
+    color: #999;
+}
+
+.hd_2, .hdWrap .noti {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.alarmSort, .hdSort {
+    position: absolute;
+    top: 57px;
+    right: 0;
+}
+
+.hdSort, .alarmSort {
+    position: absolute;
+    top: 57px;
+    right: 0;
+}
+
+.alarmSort {
+    position: absolute;
+    top: 57px;
+    right: 0;
+}
+
+.alarmSort .selWrap, .hdSort .selWrap {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.alarmSort .selWrap {
+    position: relative;
+    display: block;
+}
+
+.alarmSort .selWrap:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 38px;
+    background: #fff;
+    z-index: 1;
+}
+
+.alarmSort .selWrap select, .hdSort .selWrap select {
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #666;
+    vertical-align: top;
+    overflow: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+.hdSort .selWrap select, .alarmSort .selWrap select {
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #666;
+    vertical-align: top;
+    overflow: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+.alarmSort .selWrap select {
+    padding: 2px 24px 2px 0;
+    width: 150px;
+    height: 40px;
+    border: none;
+    direction: rtl;
+}
+
+.alarmSort .selWrap select {
+    padding: 2px 24px 2px 0;
+    width: 158px;
+    height: 40px;
+    border: none;
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #666;
+    vertical-align: top;
+    overflow: hidden;
+    direction: rtl;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+
+.hdSort .selWrap, .alarmSort .selWrap {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
 }
 
 button {
@@ -123,6 +262,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     text-align: left;
     zoom: 1;
 }
+
 
 #container, .container {
     position: relative;
@@ -1443,6 +1583,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     border: 1px solid #dce1eb;
 }
 
+.alarmCont {
+    padding-bottom: 0;
+}
+
 .mtuHome .contWrap {
     padding-top: 39px;
     min-height: auto;
@@ -2041,4 +2185,411 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
     background-image: none;
+}
+
+.alarmSort .selWrap:after, .hdSort .selWrap:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url(/static/images/mtu_spr_recolor_006e3f_star.png);
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.alarmSort .selWrap:after {
+    right: 10px;
+    top: 50%;
+    margin-top: -2px;
+    width: 9px;
+    height: 6px;
+    background-position: -285px -79px;
+}
+
+.hdSort .selWrap:after, .alarmSort .selWrap:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url(/static/images/mtu_spr_recolor_006e3f_star.png);
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.alarmSort .selWrap:after {
+    right: 10px;
+    top: 50%;
+    margin-top: -2px;
+    width: 9px;
+    height: 6px;
+    background-position: -285px -79px;
+}
+
+.alarmSort .selWrap:after {
+    content: "";
+    background: url(/static/images/mtu_spr_recolor_006e3f_star.png) -285px -79px;
+}
+
+.alarmList .hd {
+    padding: 9px 20px 11px;
+    border-top: 1px solid #9aa2b2;
+    background: #f2f4f7;
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.alarmList .cont {
+    position: relative;
+    padding: 28px 0 38px;
+}
+
+.alarmList .cont > ul > li {
+    position: relative;
+    padding: 0 0 12px;
+}
+
+.alarmList .cont > ul > li:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 77px;
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.alarmList .cont li.type_red:before {
+    background: #7BA882;
+}
+
+.alarmList .cont li.type_blue:before {
+    background: #7BA882;
+}
+
+
+.alarmList .cont li .update {
+    float: left;
+    width: 7.3%;
+    padding-right: 6.5%;
+    text-align: right;
+}
+
+.alarmList .cont li .box {
+    position: relative;
+    float: left;
+    margin-top: 2px;
+    width: 86.2%;
+    border: 1px solid #d7dbe3;
+    box-sizing: border-box;
+}
+
+.alarmList .cont li .box .desc {
+    position: relative;
+    padding: 30px 30px;
+}
+
+.alarmList .cont li .box .desc .state {
+    display: inline-block;
+    margin-left: -5px;
+    padding: 5px 12px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    font-size: 12px;
+    letter-spacing: 0px;
+    font-weight: bold;
+}
+
+.alarmList .cont li.type_red .box .state {
+    border-color: #006e3f;
+    color: #006e3f;
+}
+
+
+.alarmList .cont li.type_blue .box .state {
+    border-color: #006e3f;
+    color: #006e3f;
+}
+
+.alarmList .cont li .box .desc .title {
+    display: block;
+    margin-top: 13px;
+    font-size: 17px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    color: #333;
+    line-height: 1.6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.alarmList .cont li .box .desc .title.variation_01 {
+    width: 80%;
+}
+
+.alarmList .cont li .box .desc .title a {
+    color: inherit;
+    border-bottom: 1px solid #333;
+}
+
+.alarmList .cont li .box .desc .answer {
+    overflow: hidden;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 0px;
+    margin-top: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.alarmList .cont li .box .desc .info {
+    margin-top: 20px;
+}
+
+.alarmList .cont li .box .desc .info li {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #999;
+}
+
+.alarmList .cont li .box .desc .info li + li {
+    margin-top: 7px;
+}
+
+.alarmList .cont li .box .desc .info li .val {
+    color: #666;
+}
+
+.alarmList .cont li .box .desc .info li .val:before {
+    content: "";
+    display: inline-block;
+    margin: 0 8px;
+    width: 1px;
+    height: 11px;
+    background: #dcdcdc;
+    vertical-align: -1px;
+}
+
+.alarmList .cont li .box .booth {
+    position: relative;
+    padding: 22px 30px 0;
+    height: 62px;
+    background: #f7f9fb;
+    box-sizing: border-box;
+}
+
+.alarmList .cont li .box .booth .title {
+    display: inline-block;
+    max-width: 56%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 13px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    color: #333;
+    vertical-align: middle;
+}
+
+.alarmList .cont li .box .booth a.title:hover, .alarmList .cont > ul > li:hover .box .booth a.title {
+    text-decoration: underline;
+}
+
+.alarmList .cont li .box .booth .deadline {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #999;
+    vertical-align: middle;
+}
+
+.alarmList .cont li .box .btnGp {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -17px;
+    font-size: 0;
+}
+
+.btnGyBd, a.btnGyBd {
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #666;
+}
+
+.btnGyBd:hover, a.btnGyBd:hover {
+    border-color: #006e3f !important;
+    background: #006e3f !important;
+    color: #fff !important;
+}
+
+.alarmList .cont li .box .btnGp .btn {
+    padding: 8px 0;
+    min-width: 114px;
+}
+
+.alarmList .cont li .box:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -17px;
+    display: block;
+    width: 18px;
+    height: 17px;
+    background: url(/static/images/mtu_spr_recolor_006e3f_star.png) no-repeat -319px -170px;
+}
+
+.alarmList .cont li:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.alarmList .cont:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 82px;
+    display: block;
+    width: 3px;
+    background: #f2f4f7;
+}
+
+.alarmList .hd {
+    padding: 9px 20px 11px;
+    border-top: 1px solid #9aa2b2;
+    background: #f2f4f7;
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.AImodal-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: Pretendard;
+}
+
+.AImodal-popup * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.AImodal-popup .AImodal-common-wrap {
+    position: relative;
+    display: block;
+    width: 480px;
+    padding: 36px 32px 32px;
+    background-color: #fff;
+    border: 1px solid #6a6a6a;
+    border-radius: 8px;
+}
+
+.AImodal-popup .AImodal-common-title {
+    font-size: 24px;
+    letter-spacing: -.5px;
+    color: #222;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.AImodal-missing .AImodal-missing-alram {
+    padding: 16px 18px;
+    margin-top: 16px;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ===== 커스텀 셀렉트 박스 스타일 ===== */
+
+.alarmSort .selWrap {
+    position: relative;
+    display: inline-block;
+}
+
+.alarmSort .selWrap:before {
+    display: none; /* 기존 :before 제거 */
+}
+
+.alarmSort .selWrap:after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #7BA882;
+    pointer-events: none;
+    background: none;
+    z-index: 2;
+}
+
+.alarmSort .selWrap select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 40px 10px 16px;
+    min-width: 140px;
+    height: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #d5dde7;
+    border-radius: 8px;
+    cursor: pointer;
+    direction: ltr;
+    transition: all 0.2s ease;
+}
+
+.alarmSort .selWrap select:hover {
+    border-color: #7BA882;
+    box-shadow: 0 2px 8px rgba(123, 168, 130, 0.15);
+}
+
+.alarmSort .selWrap select:focus {
+    outline: none;
+    border-color: #006e3f;
+    box-shadow: 0 0 0 3px rgba(123, 168, 130, 0.2);
+}
+
+.alarmSort .selWrap select option {
+    padding: 10px;
+    color: #333;
+    background: #fff;
 }
