@@ -3038,3 +3038,8 @@ h1, h2, h3, h4, h5, h6 {
 .qnaWrapBody .mtuLyWrap .dimmed {
     z-index: 10000;
 }
+/* 댓글 좋아요 버튼 커서 비활성화 */
+.cell.devQstnListLike {
+    cursor: default;
+    pointer-events: none;
+}

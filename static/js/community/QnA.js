@@ -97,17 +97,19 @@ buttonBookMark.addEventListener("click", (e) => {
     }
     buttonBookMark.classList.toggle("on");
 });
-// 신고 열리는 버튼
-const reportActiveButton = document.querySelector(
+// 신고 열리는 버튼들 (모든 버튼 선택)
+const reportActiveButtons = document.querySelectorAll(
     ".icon-more-button.qnaSpB.devQnaListPopupMenuButton",
 );
-// 신고창 뜨는 신고버튼
-const reportButton = document.querySelector(
+// 신고창 뜨는 신고버튼들
+const reportButtons = document.querySelectorAll(
     ".view-more-layer.devQnaListPopupMenu",
 );
 
 // 신고창
 const pressReportButton = document.querySelector(".mtuLyWrap.lyQnaReport");
+// 삭제 확인창
+const pressDeleteButton = document.querySelector(".mtuLyWrap.lyQnaDelete");
 // 신고창 x버튼
 const pressReportButtonClose = document.querySelector(
     ".butClose.mtuSpImg.devLyBtnClose",
@@ -136,28 +138,71 @@ reportSubmitButton.addEventListener("click", (e) => {
         location.href = "../community/QnA.html";
     }
 });
+
 // 신고창 text-area 누를 시 문구 삭제
 reportTextArea.addEventListener("click", (e) => {
     reportFormBox.style.display = "none";
-    input.focus();
+    reportTextArea.focus();
 });
 
 // 신고창 text-area 바깥 누를시 다시 문구 띄우기
 reportTextArea.addEventListener("blur", (e) => {
-    reportFormBox.style.display = "block";
+    if (reportTextArea.value.trim() === "") {
+        reportFormBox.style.display = "block";
+    }
 });
 
-// 신고 버튼 활성화 및 눌렀을 시 신고창 띄우기
-reportActiveButton.addEventListener("click", (e) => {
-    reportButton.classList.toggle("active");
-    reportButton.addEventListener("click", (e) => {
-        pressReportButton.style.display = "block";
+// 모든 더보기 버튼에 이벤트 연결
+reportActiveButtons.forEach((btn, index) => {
+    const reportLayer = reportButtons[index];
+
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        // 다른 열린 메뉴들 닫기
+        reportButtons.forEach((layer, i) => {
+            if (i !== index) {
+                layer.classList.remove("active");
+            }
+        });
+
+        // 현재 메뉴 토글
+        reportLayer.classList.toggle("active");
     });
-    reportFirstReasonRadio.forEach((reportFirstReasonRadio) => {
-        if (reportFirstReasonRadio.value === "1") {
-            reportFirstReasonRadio.checked = true;
+
+    // 신고/삭제 버튼 클릭 이벤트
+    reportLayer.addEventListener("click", (e) => {
+        const clickedItem = e.target.closest(".view-more-item");
+        if (!clickedItem) return;
+
+        if (clickedItem.classList.contains("devSingo")) {
+            // 신고 클릭
+            pressReportButton.style.display = "block";
+            reportFirstReasonRadio.forEach((radio) => {
+                if (radio.value === "1") {
+                    radio.checked = true;
+                }
+            });
+        } else if (clickedItem.classList.contains("devDelete")) {
+            // 삭제 클릭
+            const deleteConfirm = confirm("정말 삭제하시겠습니까?");
+            if (deleteConfirm) {
+                alert("삭제되었습니다.");
+                location.href = "../community/QnA.html";
+            }
         }
+
+        reportLayer.classList.remove("active");
     });
+});
+
+// 바깥 클릭 시 메뉴 닫기
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".post-util-item")) {
+        reportButtons.forEach((layer) => {
+            layer.classList.remove("active");
+        });
+    }
 });
 
 // 신고창 닫기
