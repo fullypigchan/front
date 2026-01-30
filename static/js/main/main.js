@@ -101,24 +101,23 @@ const qnaSwiper = new Swiper(".instance-swipwe-5", {
     },
 });
 
-// 기업 체험 공채 슬라이더 (1000대 기업)
+// 기업 체험 공채 슬라이더 (1000대 기업) - 무한 루프
+// Swiper 대신 CSS 애니메이션 사용
 
-const top1000Swiper = new Swiper(".top1000-swiper", {
-    slidesPerView: 8,
-    slidesPerGroup: 1,
-    spaceBetween: 0,
-    loop: true,
-    loopAdditionalSlides: 8,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-    },
-    speed: 500,
-    navigation: {
-        nextEl: ".top1000-next",
-        prevEl: ".top1000-prev",
-    },
+const top1000Container = document.querySelector(".top1000-swiper");
+const top1000Wrapper = top1000Container.querySelector(".swiper-wrapper");
+
+// 슬라이드 복제해서 무한 루프 효과
+const slides = top1000Wrapper.innerHTML;
+top1000Wrapper.innerHTML = slides + slides;
+
+// 마우스 hover 시 멈춤
+top1000Container.addEventListener("mouseenter", () => {
+    top1000Wrapper.style.animationPlayState = "paused";
+});
+
+top1000Container.addEventListener("mouseleave", () => {
+    top1000Wrapper.style.animationPlayState = "running";
 });
 
 // 채용 바로가기 버튼

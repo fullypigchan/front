@@ -3151,3 +3151,22 @@ strong {
     color: #18cc8b;
     border-color: #18cc8b;
 }
+
+/* 기업 체험 공채 무한 루프 애니메이션 */
+.top1000-swiper {
+    overflow: hidden;
+}
+
+.top1000-swiper .swiper-wrapper {
+    display: flex;
+    animation: top1000Scroll 30s linear infinite;
+}
+
+@keyframes top1000Scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
