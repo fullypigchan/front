@@ -468,8 +468,8 @@ jobApplyButton.addEventListener("click", (e) => {
         jobSelectResult.dataset.bizjobtypeCode = jobCode;
         jobSelectResult.textContent = jobName;
 
-        // 최근검색에 추가하는 코드
-        addToRecentSearch(jobName, jobCode);
+        // 최근검색에 추가하는 코드 (서버 연동 시 주석 해제)
+        // addToRecentSearch(jobName, jobCode);
 
         // 나머지 기존 코드...
         if (jobCheckboxForApply) {
