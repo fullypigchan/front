@@ -197,10 +197,13 @@
                             <ul class="line-list">
                                 <li>
                                     <div class="title">검색조건</div>
-                                    <div class="keyword">
+                                </li>
+                                <li class="devSearchFilterItems">
+                                    <!-- javascript: keyword 부분 동적으로 생성  -->
+                                    <!-- <div class="keyword">
                                         <div class="text">졸업</div>
                                         <button class="button-delete devSearchFilterDelBtn" data-filter-group="1_1"></button>
-                                    </div>
+                                    </div> -->
                                 </li>
                             </ul>
                             <button class="reset-button devSearchFilterResetBtn">초기화</button>
@@ -293,90 +296,18 @@
                                         <span class="contact">test@gmail.com</span>
                                     </td>
                                     <td>
-                                        <!-- server, javascript: 자기소개서 파일 불러오기 -->
+                                        <!-- server, javascript: 자기소개서 파일 다운 -->
                                         <button type="button" class="btnMtcTpl devLinkResume">자기소개서 보기</button>
                                     </td>
                                     <td>
                                         <!-- server: 승급 대기 중일 경우 -->
                                         <button type="button" class="btnMtcTpl advancement">승급</button>
                                         <button type="button" class="btnMtcTpl advancement reject">탈락</button>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <!-- 아직 프로그램 참여 중(승급 단계 아님) -->
-                                    <td class="profile-img">
-                                        <div class="tdInner">
-                                            <!-- server, javascript: 개인 프로필 페이지로 이동 -->
-                                            <a class="photoItem linkProfile devLinkProfile" href="">
-                                                <span class="itemWrap">
-                                                    <span class="photoEl not-read">
-                                                        <!-- server, javascript: 프로필 사진없을경우 이미지 태그 삭제, span.imgDefault 추가 -->
-                                                        <span class="imgDefault"></span>
-                                                    </span>
-                                                    <span class="maskEl"></span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <!-- server, javascript: 개인 프로필 페이지로 이동 -->
-                                        <a class="nameItem linkProfile devLinkProfile" href="">
-                                            <span class="name">백OO</span>
-                                            <span class="nmAge">
-                                                <span>여</span> 만 30세
-                                            </span>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <span class="phoneOrEmail">test@gmail.com</span>
-                                    </td>
-                                    <td>
-                                        <!-- server, javascript: 자기소개서 파일 불러오기 -->
-                                        <button type="button" class="btnMtcTpl devLinkResume">자기소개서 보기</button>
-                                    </td>
-                                    <td>
+
                                         <!-- server: 승급 완료한 경우 -->
-                                        <span class="advancement approve">승급 완료</span>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <!-- 승급 대기 중 -->
-                                    <td class="profile-img">
-                                        <div class="tdInner">
-                                            <!-- server, javascript: 개인 프로필 페이지로 이동 -->
-                                            <a class="photoItem linkProfile devLinkProfile" href="">
-                                                <span class="itemWrap">
-                                                    <span class="photoEl not-read">
-                                                        <!-- server, javascript: 프로필 사진없을경우 이미지 태그 삭제, span.imgDefault 추가 -->
-                                                        <span class="imgDefault"></span>
-                                                    </span>
-                                                    <span class="maskEl"></span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <!-- server, javascript: 개인 프로필 페이지로 이동 -->
-                                        <a class="nameItem linkProfile devLinkProfile" href="">
-                                            <span class="name">백OO</span>
-                                            <span class="nmAge">
-                                                <span>여</span> 만 30세
-                                            </span>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <span class="phoneOrEmail">test@gmail.com</span>
-                                    </td>
-                                    <td>
-                                        <!-- server, javascript: 자기소개서 파일 불러오기 -->
-                                        <button type="button" class="btnMtcTpl devLinkResume">자기소개서 보기</button>
-                                    </td>
-                                    <td>
-                                        <!-- server: 승급 대기 중일 경우 -->
-                                        <span class="advancement reject">승급 탈락</span>
-                                        
+                                        <!-- <span class="advancement approve">승급 완료</span> -->
+                                         <!-- server: 승급 대기 중일 경우 -->
+                                        <!-- <span class="advancement reject">승급 탈락</span> -->
                                     </td>
                                     <td></td>
                                 </tr>
@@ -468,4 +399,5 @@
         </div>
     </div>
 </body>
+<script src="/static/js/corporate/participant-list/event.js"></script>
 </html>
