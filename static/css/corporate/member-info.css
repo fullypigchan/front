@@ -142,7 +142,7 @@ address, caption, em {
     font-weight: bold;
 }
 #sideNav .nav li > a:hover, #sideNav .nav li.on > a {
-    color: #39f;
+    color: #006e3f;
 }
 #sideNav .nav li > a {
     color: #000;
@@ -512,7 +512,7 @@ address, caption, em {
     cursor: pointer;
 }
 .mtcRdoBx .bxIpt.chk {
-    color: #39f;
+    color: #006e3f;
     background-position: 0 -110px;
     vertical-align: top;
     cursor: pointer;
@@ -574,7 +574,7 @@ address, caption, em {
     display: inline;
     font-size: 12px;
     letter-spacing: 0px;
-    color: #39f;
+    color: #006e3f;
     padding: 0 12px 0 15px;
     margin-left: 0;
     vertical-align: unset;
@@ -672,7 +672,7 @@ address, caption, em {
     display: inline-block;
     font-size: 13px;
     letter-spacing: 0px;
-    background: #39f;
+    background: #006e3f;
     box-sizing: border-box;
     text-align: center;
 }
