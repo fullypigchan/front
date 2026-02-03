@@ -650,3 +650,15 @@ modifySubmitButtons.forEach((modifySubmitButton) => {
         location.href = "../community/QnA-detail.html";
     });
 });
+
+// ✅ 대댓글 수정 등록 버튼 이벤트 (로그인)
+const comtModifySubmitButtons = document.querySelectorAll(
+    ".btnSbm.devComtEditSubmitButton",
+);
+
+comtModifySubmitButtons.forEach((comtModifySubmitButton) => {
+    comtModifySubmitButton.addEventListener("click", (e) => {
+        alert("댓글 등록이 완료되었습니다.");
+        location.href = "../community/QnA-detail.html";
+    });
+});
