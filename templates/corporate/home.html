@@ -77,97 +77,6 @@
             </div>
         </div> -->
 
-        <!-- 캘린더 바로가기, 사이드바 -->
-        <!-- server: 로그인 시에만 나타나도록 -->
-        <div class="side-banner-wrap">
-            <div class="right-banner">
-                <div class="container">
-                    <!-- quick 상담 -->
-                    <div class="quick-counsel">
-                        <div class="quick-counsel-user">
-                            <ul>
-                                <li>
-                                    <i class="icon-counsel"></i>
-                                </li>
-                                <li>
-                                    <span class="user-text">잡코리아 고객센터</span>
-                                    <strong>1588-9350</strong>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="quick-counsel-opentime">
-                            <ul>
-                                <li>
-                                    <span class="text">평일</span>
-                                    <span class="time">09:00~19:00</span>
-                                </li>
-                                <li>
-                                    <span class="text">토요일</span>
-                                    <span class="time">09:00~15:00</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="quick-counsel-button">
-                            <button type="button" class="btn devLeftInquiryBtn devPrdtInqryBtn">문의하기</button>
-                            <!-- onclick -->
-                        </div>
-                    </div>
-
-                    <!-- quick 캘린더(면접 일정) -->
-                    <div class="quick-calendar">
-                        <p class="today-text">
-                            <i class="icon-calendar"></i>
-                            01.19
-                        </p>
-                        <a href="">
-                            <h5 class="schedule-text">
-                                오늘 면접 일정 <em class="">0</em>건
-                            </h5>
-                        </a>
-                        <!-- onclick -->
-                         <a href="" class="btn-link">
-                            캘린더 바로가기
-                            <i class="icon-link">
-                            </i>
-                         </a>
-                        <!-- onclick -->
-                    </div>
-
-                    <!-- 나인하이어 -->
-                    <div class="ninehire-banner">
-                        <div class="logo"></div>
-                        <div class="texts">
-                            <h2>
-                                <span>채용 업무 시간 87.5% 단축</span>
-                                <br>
-                                채용 오퍼레이션의
-                                <br>
-                                완벽한 자동화,
-                                <br>
-                                나인하이어
-                            </h2>
-                        </div>
-                        <p class="source">
-                            출처 : 2022.10.21
-                            <br>
-                            고객사 건일제약 인터뷰
-                        </p>
-                        <div class="link-bottom">
-                            <a href="" target="_blank" class="link">
-                                <span>무료로 시작하기</span>
-                                <i class="icon arrow"></i>
-                            </a>
-                            <!-- onclick -->
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- javascript: 스크롤 시, fixed 클래스 추가 -->
-        </div>
-
         <!-- 배너 -->
         <!-- server: 로그인 시에만 나타나도록 -->
         <div class="row-article">
@@ -231,20 +140,21 @@
                         <div class="border-round-section">
                             <div class="current-data-wrap">
                                 <div class="current-data">
-                                    <h5>일반 채용 현황</h5>
+                                    <h5>프로그램 현황</h5>
                                     <ul>
                                         <!-- server, javascript: 진행중 공고가 0이면 data-none 클래스 추가 -->
                                         <li class="data-none">
                                             <a href="">
+                                                <!-- server: 체험 개수 반영 -->
                                                 <strong>0</strong>
-                                                <p>진행중 공고</p>
+                                                <p>진행중 체험</p>
                                             </a>
                                             <!-- onclick -->
                                         </li>
-                                        <!-- server, javascript: 진행중 공고가 0이면 data-none 클래스 추가 -->
-                                        <li class="data-none">
+                                        <!-- server, javascript: 진행중 체험이 0이면 data-none 클래스 추가 -->
+                                        <li class="">
                                             <a href="">
-                                                <strong>0</strong>
+                                                <strong>1</strong>
                                                 <p>미열람 이력서</p>
                                             </a>
                                             <!-- onclick -->
@@ -254,7 +164,7 @@
                                 <div class="current-data">
                                     <h5>인재 관리 현황</h5>
                                     <ul>
-                                        <!-- server, javascript: 진행중 공고가 0이면 data-none 클래스 추가 -->
+                                        <!-- server, javascript: 진행중 체험이 0이면 data-none 클래스 추가 -->
                                         <li class="data-none">
                                             <a href="">
                                                 <span>사용안함</span>
@@ -262,7 +172,7 @@
                                             </a>
                                             <!-- onclick -->
                                         </li>
-                                        <!-- server, javascript: 진행중 공고가 0이면 data-none 클래스 추가 -->
+                                        <!-- server, javascript: 진행중 체험이 0이면 data-none 클래스 추가 -->
                                         <li class="data-none">
                                             <a href="">
                                                 <span>사용안함</span>
@@ -277,15 +187,15 @@
                     </div>
                     <div class="recruit-section recruit-normal">
                         <div class="border-round-section">
-                            <!-- server, javascript: 진행중인 공고가 없을 경우 -->
+                            <!-- server, javascript: 진행중인 공고이 없을 경우 -->
                             <!-- <div class="data-none-box">
                                 <div class="contents-box">
                                     <div class="icon jobko-1"></div>
-                                    <div class="title">진행중인 일반 공고가 없습니다.</div>
+                                    <div class="title">진행중인 일반 공고이 없습니다.</div>
                                     <div class="text">인재를 채용할 계획이 있으신가요?</div>
                                     <ul class="button-list clearfix">
                                         <li>
-                                            <a href="" class="btn-blue">공고 등록</a>
+                                            <a href="" class="btn-blue">프로그램 등록</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -488,7 +398,7 @@
 
                             <!-- service -->
                             <div class="onepick-account-service">
-                                <a href="" class="button-service">원픽 서비스 소개</a>
+                                <a href="" class="button-service">TRY-CATCH 서비스 소개</a>
                                 <!-- onclick -->
                                 <ul>
                                     <li>
@@ -966,12 +876,12 @@
                                 <ul class="step-list clearfix">
                                     <li>기업 회원가입</li>
                                     <li>로그인</li>
-                                    <li>채용공고 등록양식 작성</li>
+                                    <li>체험 등록양식 작성</li>
                                     <li>등록 완료</li>
                                 </ul>
                                 <div class="text">
                                     ID가 없으시면 먼저 회원가입부터 진행하여 주세요. 회원가입은 <strong>무료</strong>입니다. <br>
-                                    로그인하신 후 채용공고등록 페이지로 이동하셔서 채용공고 내용을 입력하신 후 채용공고 등록완료 버튼을 클릭하시면 됩니다.
+                                    로그인하신 후 프로그램 등록 페이지로 이동하셔서 채용체험 내용을 입력하신 후 채용공고 등록완료 버튼을 클릭하시면 됩니다.
                                 </div>
                                 <div class="text">
                                     채용공고등록에 대한 별도 등록비용은 없으며, 무료로 등록하신 채용공고는 선택하신 업·직종 및 상세지역 등의 채용정보 리스트에서 게재되어
