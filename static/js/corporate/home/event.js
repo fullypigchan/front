@@ -1,7 +1,6 @@
 // 변수 선언
-
 // 서비스 Q&A 모달
-// 다음/이전 버튼
+//      다음/이전 버튼
 const serviceSwiperWrapper = document.querySelector(
     ".service-modal .swiper-wrapper",
 );
@@ -15,21 +14,16 @@ let serviceCount = 0;
 
 serviceSwiperWrapper.style.width = `${8 * 730}px`;
 
-// 닫기 버튼
+//      닫기 버튼
 const serviceModal = document.querySelector(".service-modal");
 const serviceCloseButton = document.querySelector(
     ".service-modal .close-button",
 );
+//
 
 // 서비스 선택
 const serviceButtonList = document.querySelectorAll(".service-list li button");
 //
-
-// 공지사항
-const noticeBanner = document.querySelector(".notice-box .swiper-wrapper");
-let noticeCount = 0;
-
-noticeBanner.style.height = "260px";
 
 // 홍보 세션
 // 다음/이전 버튼
@@ -46,15 +40,17 @@ let recruitCount = 0;
 
 recruitSwiperWrapper.style.width = "1787.5px";
 recruitSwiperWrapper.style.transition = "transform 0.3s";
+//
 
 // 진행 중인 프로그램
 const programDatas = document.querySelectorAll(
     ".recruit-section .data-box ul li",
 );
+//
 
 // 이벤트
 // 서비스 Q&A 모달
-// 이전/다음 버튼
+//      이전/다음 버튼
 [serviceNextButton, servicePrevButton].forEach((button) => {
     button.addEventListener("click", (e) => {
         servicePrevButton.classList.remove("swiper-button-disabled");
@@ -78,10 +74,11 @@ const programDatas = document.querySelectorAll(
     });
 });
 
-// 닫기 버튼
+//      닫기 버튼
 serviceCloseButton.addEventListener("click", (e) => {
     serviceModal.classList.remove("active");
 });
+//
 
 // 서비스 선택
 serviceButtonList.forEach((button, i) => {
@@ -103,21 +100,6 @@ serviceButtonList.forEach((button, i) => {
     });
 });
 //
-
-// 공지사항
-setInterval(() => {
-    noticeCount++;
-    noticeBanner.style.transform = `translate(0, -${52 * noticeCount}px)`;
-    noticeBanner.style.transition = `transform 0.3s`;
-
-    if (noticeCount === 4) {
-        setTimeout(() => {
-            noticeBanner.style.transform = `translate(0px)`;
-            noticeBanner.style.transition = `transform 0s`;
-        }, 300);
-        noticeCount = 0;
-    }
-}, 3500);
 
 // 홍보 세션
 // 다음/이전 버튼
@@ -144,11 +126,12 @@ setInterval(() => {
         }
     });
 });
+//
 
 // 진행 중인 프로그램
 programDatas.forEach((data, i) => {
     if (i === 0 || i === 1) {
-        data.style.marginTop = "7.5px";
+        data.style.marginTop = "7.8px";
     }
 
     data.style.transition = "transform 0.3s";
@@ -161,3 +144,4 @@ programDatas.forEach((data, i) => {
         data.style.transform = "translateY(0px)";
     });
 });
+//
