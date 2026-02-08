@@ -1,6 +1,6 @@
 NodeList.prototype.filter = Array.prototype.filter;
 
-// header
+// filter
 // server: 메뉴/필터 클릭 시, 페이지 -> 서버 -> (동일한)페이지로 이동
 // server에서 쿼리스트링으로 어느 버튼을 클릭했는지 전달
 // 화면에서 해당 값을 보고 확인
@@ -14,11 +14,6 @@ tabItems.addEventListener("click", (e) => {
         previousItem.classList.remove("on");
         e.target.closest("li").classList.add("on");
     }
-
-    // 예)
-    // url/쿼리스트링 &&
-    // (target = tabItems.tabItems.querySelectorAll("li").filter((li) => li.textContent === url/쿼리스트링))
-    // target.classList.add("on")
 });
 
 // 최근 등록일순
