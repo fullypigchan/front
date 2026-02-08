@@ -26,6 +26,14 @@ function checkLogin() {
     location.href = "로그인" ? e.target.href : "로그인페이지 경로";
 }
 
+// 공지사항
+const noticeBanner = document.querySelector(".notice-box .swiper-wrapper");
+let noticeCount = 0;
+
+noticeBanner.style.height = "260px";
+//
+//
+
 // 공통
 // sub-menu-modal
 subMenuButton.addEventListener("click", (e) => {
@@ -56,6 +64,11 @@ bell.addEventListener("click", (e) => {
     );
 });
 
+// top-menu-modal
+corporateName.addEventListener("click", (e) => {
+    topMenuModal.classList.toggle("active");
+});
+
 document.addEventListener("click", (e) => {
     if (
         !e.target.closest(".notification-menu") &&
@@ -71,8 +84,19 @@ document.addEventListener("click", (e) => {
         topMenuModal.classList.remove("active");
     }
 });
+//
 
-// top-menu-modal
-corporateName.addEventListener("click", (e) => {
-    topMenuModal.classList.toggle("active");
-});
+// 공지사항
+setInterval(() => {
+    noticeCount++;
+    noticeBanner.style.transform = `translate(0, -${52 * noticeCount}px)`;
+    noticeBanner.style.transition = `transform 0.3s`;
+
+    if (noticeCount === 4) {
+        setTimeout(() => {
+            noticeBanner.style.transform = `translate(0px)`;
+            noticeBanner.style.transition = `transform 0s`;
+        }, 300);
+        noticeCount = 0;
+    }
+}, 3500);
